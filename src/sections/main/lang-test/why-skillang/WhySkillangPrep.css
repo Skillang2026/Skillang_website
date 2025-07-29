@@ -1,0 +1,22 @@
+.lang-why-skill-card {
+  /* Frame 1618872817 */
+  box-sizing: border-box !important;
+  padding: 16px !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: #3b3b3b !important;
+  border-radius: 24px !important;
+}
+
+#LSkill1 {
+  background-color: #1966fa !important;
+}
+
+.lang-why-skill-bg {
+  background-image: url("https://cms.skillang.com/uploads/Lwhy_Skill_Bg_78abb858f0.png");
+  background-color: #191919 !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left !important;
+  padding: 48px 0px !important;
+}

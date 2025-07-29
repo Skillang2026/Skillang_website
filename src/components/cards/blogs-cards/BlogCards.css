@@ -1,0 +1,15 @@
+.blogs-trending-cards {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 0px !important;
+    gap: 8px !important;
+    border: none !important;
+
+}
+
+.blog-trending-cards-image {
+    border-radius: 24px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}

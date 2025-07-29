@@ -1,0 +1,29 @@
+.blue-icon-cards {
+  height: 100% !important;
+  align-items: start;
+  display: flex !important;
+  flex-direction: row !important;
+  box-sizing: border-box !important;
+  padding: 24px !important;
+  gap: 16px !important;
+  background: #ffffff;
+  border: 1px solid #e3e3e3 !important;
+  border-radius: 16px !important;
+}
+
+.blue-icon-img {
+  width: 50px !important;
+  height: auto !important;
+}
+
+@media (max-width: 768px) {
+  .blue-icon-cards {
+    padding: 16px !important;
+    gap: 12px !important;
+  }
+
+  .blue-icon-img {
+    width: 32px !important;
+    height: auto !important;
+  }
+}

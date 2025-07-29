@@ -1,0 +1,116 @@
+.form-container {
+    background-color: white;
+    padding: 22px 34px !important;
+    border-radius: 32px;
+    width: 100%;
+    max-width: 450px;
+    border: 2px solid transparent !important;
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(to top left, #8484f0, #efefff) border-box;
+    border-radius: 32px;
+    border-width: 4px;
+    border-style: solid;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+@media (max-width: 640px) {
+    .form-container {
+        margin: 0 !important;
+    }
+}
+
+/* Form fields styling */
+.form-control,
+.form-select {
+    margin-bottom: 16px !important;
+    border-radius: 12px !important;
+    padding: 10px !important;
+    font-size: 16px !important;
+    color: #667085 !important;
+
+    filter: drop-shadow(0px 1px 2px rgba(16, 24, 40, 0.05)) !important;
+    background-color: #f8f8f8 !important;
+    border: 0 !important;
+}
+
+.form-container .form-control::placeholder {
+    color: #667085 !important;
+    font-size: 16px !important;
+}
+
+/* Submit button styling */
+.form-container .btn-primary {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--primary-colour);
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+.form-container .btn-primary:hover {
+    background-color: darken(var(--primary-colour), 10%);
+}
+
+.otp-input,
+.verify-otp-btn {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.resend-enabled {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.resend-disabled {
+    color: grey;
+    cursor: default;
+}
+
+.experience-option {
+    cursor: pointer !important;
+    padding: 6px 12px !important;
+    border: 1px solid #d0d5dd !important;
+    border-radius: 12px !important;
+    background-color: transparent !important;
+    color: var(--content-secondary) !important;
+    transition: all 0.3s ease-in-out !important;
+    text-align: start !important;
+    font-weight: 500 !important;
+    width: fit-content !important;
+    white-space: nowrap !important;
+    /* Prevents text from wrapping */
+    display: inline-block !important;
+    user-select: none !important;
+}
+
+.experience-option.selected {
+    background-color: var(--secondary-variant) !important;
+    color: white !important;
+    border-color: var(--secondary-variant) !important;
+}
+
+/* Make sure the label inside the experience option inherits the styles */
+.experience-option label {
+    cursor: pointer !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    display: block !important;
+    color: inherit !important;
+}
+
+.form-check-input:checked+.experience-option,
+.form-check-input:checked~.experience-option {
+    background-color: var(--secondary-variant) !important;
+    color: white !important;
+    border-color: var(--secondary-variant) !important;
+}
+
+.experience-option:hover {
+    border-color: var(--primary-variant);
+    color: var(--primary-variant);
+}

@@ -1,0 +1,75 @@
+.test-lag-bg {
+  background-image: url('https://cms.skillang.com/uploads/test_Langbg_e0af37b545.png') !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  border-radius: 24px !important;
+  padding: 8px !important;
+}
+
+.test-lang-left-bg {
+  background-image: url('https://cms.skillang.com/uploads/test_Lang_Left_Bg_e8ba12a2c9.png') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  padding: 40px !important;
+  border-radius: 18px !important;
+  height: 600px !important;
+  background-position: right bottom !important;
+  background-color: #DBD0FB !important;
+}
+
+.test-lang-right-col {
+  /* display: flex !important; */
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+}
+
+
+.test-lang-card {
+  box-sizing: border-box;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 24px 24px !important;
+  /* gap: 4px !important; */
+  width: 90% !important;
+  height: 76px !important;
+  text-align: start !important;
+  background-color: #FFFFFF !important;
+  border: 2px solid #E3E3E3 !important;
+  border-radius: 12px !important;
+  margin-bottom: 12px !important;
+}
+
+.test-lang-card span {
+  color: #240A6D !important;
+  background-color: #F3EFFE !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  padding: 4px !important;
+}
+
+@media (max-width: 768px) {
+
+  .test-lang-left-bg {
+    background-image: url('https://cms.skillang.com/uploads/test_Lang_Left_Bg_e8ba12a2c9.png') !important;
+    background-size: contain;
+    background-repeat: no-repeat !important;
+    padding: 24px !important;
+    width: 100% !important;
+    height: 500px !important;
+    border-radius: 18px !important;
+    background-position: bottom !important;
+    /* height: 100% !important; */
+  }
+
+  .test-lang-card {
+    height: 54px !important;
+    text-align: start !important;
+    padding: 16px 24px !important;
+    font-size: 12px !important;
+  }
+
+}

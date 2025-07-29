@@ -1,0 +1,362 @@
+/* GetStart.css - Complete redesign with fixed progress lines */
+
+.getting-started-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    font-family: var(--font-family), sans-serif;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.progress-steps-container {
+    padding: 0;
+    margin: 0 auto;
+}
+
+/* Desktop View */
+.desktop-view {
+    display: block;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ------- FIXED STEP PROGRESS BAR ------- */
+.step-progress-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+/* Style for step items */
+.step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    z-index: 2;
+    position: relative;
+    width: 20%;
+}
+
+.step-label {
+    font-size: 14px;
+    color: var(--content-secondary);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.step-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #dfe1e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    margin-bottom: 15px;
+}
+
+.step-circle svg {
+    stroke: #dfe1e6;
+}
+
+.step-circle.active {
+    background-color: #02A972;
+    border-color: #02A972;
+}
+
+.step-circle.active svg {
+    stroke: white;
+}
+
+/* Progress line - final adjustment to eliminate any overflow */
+.step-progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 48px;
+    /* Position to align with middle of circles */
+    left: 125px;
+    /* Further adjusted to start precisely after first circle */
+    right: 125px;
+    /* Further adjusted to end precisely before last circle */
+    height: 2px;
+    background-color: #dfe1e6;
+    z-index: 1;
+}
+
+/* Active progress line overlay */
+.step-progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 48px;
+    /* Match the position of the background line */
+    left: 125px;
+    /* Start from same position as main line */
+    width: 15%;
+    /* Only covers distance to first step - adjust as needed */
+    height: 2px;
+    background-color: #02A972;
+    z-index: 1;
+}
+
+/* Hide the old progress lines */
+.progress-line {
+    display: none;
+}
+
+.step-title {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    text-align: center;
+    color: var(--content-secondary, #666);
+    white-space: nowrap;
+}
+
+.step-item:first-child .step-title {
+    font-weight: 600;
+    color: var(--content-primary, #333);
+}
+
+.step-description {
+    font-size: 14px;
+    color: var(--content-tertiary, #666);
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* Mobile View with Animation */
+.mobile-view {
+    display: none;
+}
+
+.mobile-view .header-title {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.mobile-view .header-title h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.mobile-view .header-title .subheading-text {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.mobile-timeline-container {
+    position: relative;
+    padding-left: 15px;
+}
+
+.mobile-step-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 40px;
+}
+
+.mobile-step-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #dfe1e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    z-index: 3;
+    position: relative;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+/* Animation for the circle */
+.mobile-step-circle.animated-circle {
+    background-color: #02A972;
+    border-color: #02A972;
+    animation: circleGreen 0.5s ease-in-out forwards;
+}
+
+@keyframes circleGreen {
+    from {
+        background-color: white;
+        border-color: #dfe1e6;
+    }
+
+    to {
+        background-color: #00A86B;
+        border-color: #00A86B;
+    }
+}
+
+/* Animation for the checkmark */
+.mobile-step-circle svg {
+    transition: stroke 0.5s ease;
+}
+
+.mobile-step-circle svg.animated-checkmark {
+    animation: checkmarkAnimate 0.5s ease-in-out forwards;
+}
+
+@keyframes checkmarkAnimate {
+    0% {
+        stroke: #dfe1e6;
+    }
+
+    100% {
+        stroke: white;
+    }
+}
+
+.mobile-step-content {
+    flex-grow: 1;
+}
+
+.mobile-step-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #999;
+    margin: 0;
+    transition: color 0.5s ease, font-weight 0.5s ease;
+}
+
+.mobile-step-title.animated-text {
+    color: var(--content-primary, #333);
+    font-weight: 500;
+}
+
+/* Fixed mobile line positioning */
+.mobile-progress-line {
+    position: absolute;
+    left: 16px;
+    width: 2px;
+    height: 70px;
+    background-color: #E8E8E8;
+    z-index: 1;
+}
+
+.mobile-progress-line.line1 {
+    top: 42px;
+}
+
+.mobile-progress-line.line2 {
+    top: 125px;
+}
+
+.mobile-progress-line.line3 {
+    top: 208px;
+}
+
+.mobile-progress-line.line4 {
+    top: 291px;
+}
+
+.mobile-progress-line.animated-line {
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-progress-line.animated-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #02A972;
+    animation: lineGrow 0.8s ease-in-out forwards;
+}
+
+@keyframes lineGrow {
+    0% {
+        height: 0%;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .header-section {
+        display: none;
+    }
+
+    .desktop-view {
+        display: none;
+    }
+
+    .mobile-view {
+        display: block;
+        padding: 0 15px;
+        position: relative;
+    }
+
+    .mobile-timeline-container {
+        position: relative;
+    }
+
+    .mobile-step-item {
+        padding: 10px 0;
+        z-index: 2;
+    }
+
+    .mobile-view .mobile-timeline-container {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .mobile-view .mobile-progress-line {
+        position: absolute;
+        left: 16px;
+        height: 83px;
+        z-index: 1;
+        background-color: #E8E8E8;
+    }
+
+    .mobile-view .mobile-progress-line.line1 {
+        top: 42px;
+    }
+
+    .mobile-view .mobile-progress-line.line2 {
+        top: 125px;
+    }
+
+    .mobile-view .mobile-progress-line.line3 {
+        top: 208px;
+    }
+
+    .mobile-view .mobile-progress-line.line4 {
+        top: 291px;
+    }
+
+    .mobile-step-item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .mobile-step-title {
+        font-size: 14px;
+    }
+}

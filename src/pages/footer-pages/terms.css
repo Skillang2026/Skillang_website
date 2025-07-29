@@ -1,0 +1,17 @@
+.privacy-cont {
+  height: 80vh !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+  /* background-color: pink; */
+  place-content: center !important;
+  color: #6a3ded !important;
+  background: radial-gradient(circle at top center,
+      rgba(232, 110, 255, 0.473) 0%,
+      rgba(250, 251, 252, 0) 70%);
+}
+
+/* 
+.privacy-wrapper {
+  margin-top: -100px !important;
+} */

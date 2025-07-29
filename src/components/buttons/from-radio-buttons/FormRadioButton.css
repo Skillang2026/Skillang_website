@@ -1,0 +1,56 @@
+/* Renaming classes to match the component name */
+.form-radio-option {
+    /* border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    text-align: center; */
+    cursor: pointer !important;
+    padding: 6px 12px !important;
+    border: 1px solid #d0d5dd !important;
+    border-radius: 12px !important;
+    background-color: transparent !important;
+    color: var(--content-secondary) !important;
+    transition: all 0.3s ease-in-out !important;
+    /* text-align: start !important; */
+    font-weight: 500 !important;
+    width: fit-content !important;
+    white-space: nowrap !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* min-width: 90px; */
+    text-align: center;
+    /* Prevents text from wrapping */
+    /* display: inline-block !important;
+    user-select: none !important; */
+}
+
+.form-radio-option:hover {
+    border-color: #c0c0c0;
+    background-color: #f8f8f8;
+}
+
+.form-radio-option.selected {
+    /* border-color: #2563eb;
+    background-color: rgba(37, 99, 235, 0.1);
+    color: #2563eb; */
+    background-color: var(--secondary-variant) !important;
+    color: white !important;
+    border-color: var(--secondary-variant) !important;
+}
+
+.form-radio-option.selected label {
+    /* color: #2563eb;
+    font-weight: 500; */
+    cursor: pointer !important;
+    padding: 0 !important;
+    width: 100% !important;
+    display: block !important;
+    color: inherit !important;
+}

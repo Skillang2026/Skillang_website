@@ -1,0 +1,149 @@
+/* BookShelf.css */
+
+.bookshelf-container {
+  display: flex;
+  height: 100%;
+  margin: 0.75rem;
+
+}
+
+.book-img{
+    position: relative !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    /* top: 30px !important; */
+}
+
+.book-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  transition: width 0.5s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  height: 400px !important;
+  border-radius: 16px !important;
+    transition: all 0.5s ease;
+}
+
+.book-item.active {
+  width: 832px !important;
+  padding-left: 64px !important;
+  padding-top: 64px !important;
+    position: relative;
+  margin-left: 12px !important;
+
+}
+
+.book-item.inactive {
+  width: 100px !important;
+  transform: rotate(4deg) !important;
+  margin-left: 12px !important;
+  background-position: left !important;
+}
+
+.book-title {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  text-align: start;
+  font-weight: bold;
+  transition: transform 0.5s ease-in-out;
+  white-space: nowrap;
+}
+
+.book-title.inactive {
+  transform: rotate(86deg);
+  transform-origin: top center;
+  white-space: nowrap;
+  position: absolute;
+  left: 20%;
+  top: 92%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+
+.book-content {
+  width: 100%;
+  padding: 0 0.75rem;
+  text-align: start;
+  transition: all 0.8s ease-in-out;
+  transform-origin: top center;
+  overflow: hidden;
+}
+
+.book-content.active {
+  opacity: 1;
+  height: auto;
+}
+
+.book-content.inactive {
+  transform: rotate(90deg);
+  opacity: 0;
+  height: 0;
+}
+
+
+@media (max-width: 768px) {
+  .bookshelf-container {
+    flex-direction: column !important;
+    height: auto;
+    margin: 0.5rem;
+  }
+
+  .book-item {
+    width: 100% !important;
+    height: 64px !important;
+    border-radius: 8px !important;
+    margin-bottom: 12px !important;
+    margin-left: 0 !important;
+    transition: height 0.5s ease, padding 0.5s ease;
+  }
+
+  .book-item.active {
+    width: 100% !important;
+    height: 300px !important;
+    padding: 20px !important;
+    margin: 0 !important;
+  }
+
+  .book-item.inactive {
+    width: 100% !important;
+    height: 80px !important;
+    transform: rotate(0deg) !important;
+    padding: 0 24px !important;
+    display: flex;
+    align-items: center;
+     margin: 0 !important;
+  }
+
+  .book-title {
+    padding: 0.5rem 0;
+  }
+
+  .book-title.inactive {
+    transform: none;
+    position: static;
+    white-space: normal;
+    opacity: 1;
+    display: block;
+  }
+
+  .book-content {
+    width: 100%;
+  }
+
+  .book-content.active {
+    margin-top: 12px !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .book-content.inactive {
+    transform: none !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}

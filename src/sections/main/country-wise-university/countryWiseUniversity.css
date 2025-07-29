@@ -1,0 +1,32 @@
+.country-wise-uni-card {
+    box-sizing: border-box !important;
+    /* Auto layout */
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    padding: 0px !important;
+    /* 
+    width: 1280px;
+    height: 240px; */
+    border: 1px solid #E3E3E3 !important;
+    border-radius: 24px !important;
+}
+
+.display-badge-default-pill {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 4px 8px !important;
+    gap: 4px !important;
+    /*     
+        width: 89px;
+        height: 24px; */
+    background: #F6F6F6 !important;
+    border-radius: 8px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
+    color: #595959 !important;
+}

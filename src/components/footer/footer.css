@@ -1,0 +1,164 @@
+/* Footer.css */
+.footer-wrapper {
+  background-color: #6f42c1;
+  /* border-top-left-radius: 24px !important ; */
+  /* border-top-right-radius: 24px !important ; */
+  padding: 40px 0;
+  z-index: 200 !important;
+  /* color: white; */
+}
+
+#footer-card-1 {
+  background-image: url("../../assets/images/home/footer-bg.png");
+  background-repeat: no-repeat !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-size: cover !important;
+  background-position: top right !important;
+}
+
+.footer-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px !important;
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Banner Styles */
+.professionals-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 0;
+}
+
+.skillang-logo {
+  /* width: 25px; */
+  height: auto;
+}
+
+.skillang-text {
+  font-weight: 500;
+  color: #212529;
+}
+
+.copyright-text {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+/* Navigation Styles */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: black;
+  text-decoration: none;
+  /* font-size: 14px; */
+  /* transition: color 0.2s; */
+  transition: all 0.2s ease-in-out !important;
+}
+
+.footer-links a:hover {
+  color: #6f42c1;
+  transform: scale(1.02) !important;
+}
+
+/* Contact Styles */
+.footer-card h6 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #212529;
+}
+
+.social-icons {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  color: #212529;
+  margin-right: 20px;
+  font-size: 20px;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: #6f42c1;
+  /* transform: scale(1.02); */
+}
+
+.contact-phone {
+  margin-bottom: 15px;
+}
+
+.contact-phone a {
+  display: flex;
+  align-items: center;
+  color: #212529;
+  text-decoration: none;
+}
+
+.contact-phone svg {
+  margin-right: 10px;
+}
+
+.contact-address {
+  display: flex;
+  align-items: flex-start;
+}
+
+.contact-address svg {
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
+/* .contact-address p {
+  margin: 0;
+  font-size: 14px;
+  color: #212529;
+  line-height: 1.5;
+} */
+
+.main-copyright {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+  .banner-title {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .banner-content {
+    /* margin-top: 20px; */
+  }
+}
+
+@media (max-width: 575.98px) {
+  .banner-content {
+    margin-top: 16px !important;
+    margin-left: 16px !important;
+  }
+
+  .footer-wrapper {
+    padding: 20px 0;
+  }
+}

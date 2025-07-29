@@ -1,0 +1,133 @@
+  .scroller-img {
+    height: 68px !important;
+    width: fit-content !important;
+    margin-right: 25px;
+    background-color: white !important;
+    padding: 10px 16px !important;
+    border-radius: 16px !important;
+  }
+
+  .num-cards {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 8px;
+    width: 100% !important;
+    height: 88px;
+    background: #FCFCFF;
+    border: 1px solid #DBD0FB;
+    border-radius: 16px !important;
+    margin: 0 !important;
+  }
+
+  .num-cards-title {
+    color: #360FA3 !important;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 28px;
+  }
+
+  .num-cards-subtitle {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #8A8A8A;
+  }
+
+  .scroll-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .scroller {
+    max-width: 100%;
+  }
+
+  .uni-partner-bg {
+    background-image: url('https://cms.skillang.com/uploads/uni_Partner_Bg_b66ddb929d.svg') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: #E3E3E3 1px solid;
+    border-radius: 24px !important;
+    padding: 48px !important;
+  }
+
+  .scroller__inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg,
+        transparent,
+        white 20%,
+        white 80%,
+        transparent);
+    mask: linear-gradient(90deg,
+        transparent,
+        white 20%,
+        white 80%,
+        transparent);
+  }
+
+  .scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+  }
+
+  .scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+  }
+
+  .scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+  }
+
+  .scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+  }
+
+  .scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+
+  @media (max-width: 768px) {
+    .scroller-img {
+      height: 45px !important;
+      width: fit-content !important;
+      margin-right: 20px !important;
+      background-color: white !important;
+      padding: 10px 16px !important;
+      border-radius: 16px !important;
+    }
+
+    .uni-partner-bg {
+      background-size: cover !important;
+      background-position: top left !important;
+      width: 100% !important;
+      height: 250px !important;
+      padding: 50px 0px !important;
+    }
+
+  }

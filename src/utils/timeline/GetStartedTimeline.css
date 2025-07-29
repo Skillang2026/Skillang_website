@@ -1,0 +1,228 @@
+/* Timeline CSS - Structure and Lines Only */
+
+.timeline-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    --primary-color: #00A86B;
+    --border-color: #dfe1e6;
+}
+
+.timeline-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Desktop Timeline */
+.timeline-steps-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(var(--step-count, 5), 1fr);
+    gap: 1rem;
+    align-items: start;
+}
+
+.timeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.step-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.step-number {
+    margin-bottom: 0.5rem;
+}
+
+.step-circle {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: var(--border-color);
+    position: relative;
+    z-index: 3;
+}
+
+.timeline-step.active .step-circle,
+.timeline-step.animate-step .step-circle {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.step-content {
+    max-width: 200px;
+}
+
+/* Desktop Lines - Fixed positioning to connect circles */
+.timeline-line-bg {
+    position: absolute;
+    top: 3.125rem;
+    /* Align with center of circles */
+    left: calc(50% / var(--step-count));
+    /* Start from center of first circle */
+    right: calc(50% / var(--step-count));
+    /* End at center of last circle */
+    height: 2px;
+    background-color: var(--border-color);
+    z-index: 1;
+}
+
+.timeline-line-progress {
+    position: absolute;
+    top: 3.125rem;
+    left: calc(50% / var(--step-count));
+    /* Same as background line */
+    height: 2px;
+    background-color: var(--primary-color);
+    z-index: 1;
+    width: 0;
+    transition: width 2s ease-out 0.5s;
+}
+
+.animate-in .timeline-line-progress {
+    width: calc(100% - (100% / var(--step-count)));
+    /* Full width minus margins */
+}
+
+/* Mobile Timeline */
+.mobile-timeline {
+    display: none;
+    position: relative;
+}
+
+.mobile-step {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding: 1rem 0;
+    z-index: 2;
+}
+
+.mobile-step-circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    color: var(--border-color);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 3;
+}
+
+.mobile-step.animate-step .mobile-step-circle {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.mobile-step-content {
+    flex: 1;
+    padding-top: 0.25rem;
+}
+
+/* Mobile Lines - Fixed alignment */
+.mobile-line-bg {
+    position: absolute;
+    left: 1rem;
+    /* Align with center of circles (2rem width / 2) */
+    top: 3rem;
+    /* Start after first circle (1rem padding + 2rem circle) */
+    bottom: 3rem;
+    /* End before last circle */
+    width: 2px;
+    background-color: var(--border-color);
+    z-index: 1;
+}
+
+.mobile-line-progress {
+    position: absolute;
+    left: 1rem;
+    /* Same as background line */
+    top: 3rem;
+    /* Same as background line */
+    width: 2px;
+    height: 0;
+    background-color: var(--primary-color);
+    z-index: 1;
+    transition: height 2s ease-out 0.5s;
+}
+
+.animate-in .mobile-line-progress {
+    height: calc(100% - 6rem);
+    /* Adjust for proper spacing */
+}
+
+/* Responsive behavior */
+@media (max-width: 992px) {
+    .timeline-steps-wrapper {
+        display: none;
+    }
+
+    .mobile-timeline {
+        display: block;
+    }
+
+    .timeline-header {
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Animation delays for staggered effect */
+.timeline-step,
+.mobile-step {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: calc(var(--step-index, 0) * 0.15s);
+}
+
+.animate-in .timeline-step,
+.animate-in .mobile-step {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+
+    .timeline-step,
+    .mobile-step {
+        transition: opacity 0.3s ease;
+        transform: none;
+    }
+
+    .timeline-line-progress,
+    .mobile-line-progress {
+        transition: none;
+    }
+
+    .animate-in .timeline-line-progress {
+        width: calc(100% - (100% / var(--step-count)));
+        /* Same calculation for consistency */
+    }
+
+    .animate-in .mobile-line-progress {
+        height: calc(100% - 4rem);
+    }
+}

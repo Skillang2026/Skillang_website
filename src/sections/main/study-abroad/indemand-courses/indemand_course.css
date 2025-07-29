@@ -1,0 +1,132 @@
+.in-demand-courses-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+    background: rgb(255, 246, 224);
+    background: linear-gradient(90deg, rgba(252, 235, 195, 1) #FCEBC3, rgba(0, 0, 0, 1) 100%) !important;
+}
+
+.courses-section {
+    /* flex: 1.5; */
+    padding: 0 !important;
+    /* background-color: pink !important; */
+    display: flex;
+    flex-direction: column;
+}
+
+.demand-header-wrapper {
+    width: 70% !important;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.course-card {
+    overflow: hidden;
+    transition: transform 0.3s !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    padding: 16px !important;
+    background: #3B3B3B !important;
+    border-radius: 24px !important;
+
+}
+
+.card-image-wrapper {
+    width: 40% !important;
+    height: auto !important;
+    height: auto !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 12px !important;
+
+}
+
+.course-image {
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+
+.career-paths {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: 2px 6px !important;
+    width: fit-content !important;
+    height: 24px;
+    color: #996D08 !important;
+    background: #FCEBC3;
+    border-radius: 8px;
+
+}
+
+.career-specializations {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.pagination-button {
+    background-color: #F7D6C8 !important;
+    color: #E86E39 !important;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 12px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0px 16px !important; */
+}
+
+
+@media screen and (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .card-image-wrapper {
+        width: 50% !important;
+        height: auto !important;
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+    .career-paths {
+        align-items: center;
+        padding: 2px 2px !important;
+        width: max-content !important;
+        height: 24px;
+        color: #996D08 !important;
+        background: #FCEBC3;
+        border-radius: 8px;
+
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+}

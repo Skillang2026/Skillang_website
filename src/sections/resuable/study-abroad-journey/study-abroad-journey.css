@@ -1,0 +1,80 @@
+.study-abroad-bg {
+  background-image: url("https://cms.skillang.com/uploads/study_Abroad_Bg_1d133048d9.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top !important;
+  border-radius: 24px !important;
+  /* padding: 16px 0px 16px 80px !important; */
+  padding: 24px 0px 24px 24px !important;
+}
+
+/* Scrollable Row */
+.scrollable-container {
+  display: flex;
+  /* scroll-snap-type: x mandatory !important; */
+  gap: 16px !important;
+  overflow-x: auto !important;
+  white-space: nowrap !important;
+  margin: 0 !important;
+  /* margin-left: 80px !important; */
+  /* background-color: pink; */
+
+  scrollbar-width: none !important;
+}
+
+.card-container {
+  scroll-snap-align: start;
+  min-width: 300px;
+  display: flex !important;
+  /* background-color: pink; */
+
+  /* scroll-margin-left: 80px !important; */
+}
+
+.custom-card {
+  width: 300px !important;
+  border-radius: 16px !important;
+  box-sizing: border-box !important;
+  padding: 12px !important;
+  background-color: #3b3b3b !important;
+  display: flex !important;
+  flex-direction: column !important;
+  word-wrap: break-word !important;
+  white-space: normal !important;
+  flex: 1 !important;
+  /* Make card take full height of container */
+}
+
+/* #study-abroad-card1{
+  margin-left: 50px !important;
+} */
+
+.study-abroad-jounrey-card-image {
+  border-radius: 12px !important;
+  object-fit: cover !important;
+  object-position: right !important;
+  margin-bottom: 12px !important;
+}
+
+/* Card body takes remaining space */
+.custom-card .card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  white-space: normal !important;
+  padding: 0 !important;
+}
+
+.button-container {
+  margin-top: auto !important;
+  width: 100% !important;
+  text-align: start !important;
+}
+
+@media (max-width: 576px) {
+  .study-abroad-bg {
+    /* Frame 1618872842 */
+    padding: 32px 16px !important;
+    gap: 16px;
+  }
+}

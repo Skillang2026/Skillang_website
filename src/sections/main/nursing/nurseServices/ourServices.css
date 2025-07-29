@@ -1,0 +1,83 @@
+.nurse-service-img{
+    width: 100% !important;
+    height: 250px !important;
+    border-radius: 24px !important;
+    object-fit: cover !important;
+    /* object-position: bottom !important; */
+}
+
+.nurse-serv-card{
+    align-items: start;
+    padding-left: 12px !important;
+    border-radius: 0 !important;
+    border-left: 4px solid #9473F2 !important;
+    border-right: none !important;
+    border-top: none !important;  
+    border-bottom: none !important;
+}
+
+/* Styles for auto-scrolling container on desktop/tablet */
+.services-scrollable-container {
+    max-height: 400px; 
+    overflow-y: auto;
+    padding-right: 10px;
+    position: relative;
+ /* Fade effect for bottom of container */
+    -webkit-mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%) !important;
+    mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%) !important;
+    /* Hide scrollbar by default */
+    scrollbar-width: none !important;
+}
+
+/* Show subtle scrollbar when user is manually scrolling */
+.services-scrollable-container.user-scrolling {
+    width: 0px !important;
+    scrollbar-width: none !important;
+}
+
+.services-container{
+    /* -webkit-mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+    mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%); */
+
+    padding-right: 10px;
+    position: relative;
+}
+
+/* Style for the toggle button */
+.btn-secondary-outline {
+    border: 1px solid #9473F2;
+    color: #9473F2;
+    background-color: transparent;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-outline:hover {
+    background-color: #9473F2;
+    color: white;
+}
+
+/* Transition for the expandable content */
+.services-content {
+    width: 100%;
+}
+
+.services-content.expanded .services-container {
+    width: 100%;
+    background-color: pink;
+     -webkit-mask-image: none !important;
+    mask-image: none !important;
+}
+
+@media (max-width: 768px) {
+    .nurse-service-img{
+        height: 206px !important;
+        border-radius: 12px !important;
+        object-fit: cover !important;
+        object-position: top !important;
+    }
+}

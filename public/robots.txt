@@ -1,0 +1,54 @@
+##############################################
+# robots.txt  –  Skillang.com
+# Last-updated: 04-Jul-2025
+# Plain-text, UTF-8 encoded.  Tabs/spaces OK.
+##############################################
+
+# — 1. Global rules (apply to ALL crawlers) —
+User-agent: *
+# Block confidential or duplicate sections
+Disallow: /admin/         # Strapi or CMS back-office
+Disallow: /api/           # JSON endpoints
+Disallow: /internal/      # Staging, experiments, etc.
+
+# Explicitly allow public assets so pages render
+Allow: /static/
+Allow: /uploads/
+
+# Tell well-behaved bots where to find the sitemap
+Sitemap: https://www.skillang.com/sitemap.xml
+
+# — 2. Search & Ads crawlers you WANT —
+# (extra group = overrides the global Disallow list)
+User-agent: Googlebot
+Disallow:
+User-agent: Googlebot-Image
+Disallow:
+User-agent: AdsBot-Google
+Disallow:
+User-agent: Bingbot
+Disallow:
+
+# — 3. Block popular AI-training / data-mining bots —
+# Adapted from WIRED & community opt-out lists :contentReference[oaicite:0]{index=0}
+User-agent: GPTBot
+Disallow: /
+User-agent: ChatGPT-User
+Disallow: /
+User-agent: Google-Extended
+Disallow: /
+User-agent: Amazonbot
+Disallow: /
+User-agent: anthropic-ai
+Disallow: /
+User-agent: Claude-Web
+Disallow: /
+User-agent: PerplexityBot
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: Bytespider
+Disallow: /
+
+# — 4. Optional (Yandex only) —
+Host: www.skillang.com

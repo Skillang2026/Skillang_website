@@ -1,0 +1,149 @@
+.skillshortage-bg {
+  display: flex;
+  justify-content: center;
+  /* padding: 40px 0; */
+  /* background-color: white; */
+}
+
+.skillshortage-container {
+  background-image: url('https://cms.skillang.com/uploads/skillshortage_bg_a8078c352d.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 24px;
+  position: relative;
+  /* color: white; */
+  max-width: 1280px;
+  width: 100%;
+  height: auto;
+  /* Changed from fixed height to auto */
+  min-height: 538px;
+  /* Added min-height instead of fixed height */
+  padding: 80px;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  z-index: 1;
+}
+
+/* Dark Overlay for Readability */
+.skillshortage-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  z-index: -1;
+}
+
+/* Left Section (Fixed Size) */
+.left-content {
+  flex: 1;
+  min-width: 50%;
+}
+
+
+.accordion-dark button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-button:hover {
+  background: none !important;
+}
+
+.accordion-dark button:not(.collapsed) {
+  background-color: #1a1d20 !important;
+  /* Slightly darker when expanded */
+  /* color: white !important; */
+}
+
+/* Remove the default white background that appears when active */
+.accordion-button:not(.collapsed) {
+  background-color: #212529 !important;
+  /* color: white !important; */
+}
+
+/* For the accordion button hover state */
+.accordion-button:hover {
+  background-color: #2c3237 !important;
+  /* color: white; */
+}
+
+/* Dark accordion styling with plus/minus toggle */
+.custom-accordion .dark-accordion-item {
+  border: none !important;
+  /* margin-bottom: 5px; */
+  background-color: transparent !important;
+}
+
+.custom-accordion .accordion-button {
+  background-color: #232323 !important;
+  color: white !important;
+  box-shadow: none !important;
+
+}
+
+.custom-accordion .accordion-button:focus {
+  box-shadow: none !important;
+  border-color: #6c757d !important;
+  border: none !important;
+  background-color: #2C2C2C !important;
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+}
+
+/* Change the default chevron icon to plus */
+.custom-accordion .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z'/%3E%3C/svg%3E") !important;
+  /* transition: transform 0.2s ease-in-out; */
+}
+
+/* Change to minus when expanded */
+.custom-accordion .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E") !important;
+  /* transform: rotate(0deg) !important; */
+  color: white !important;
+}
+
+.custom-accordion .accordion-body {
+  background-color: #2C2C2C !important;
+  /* color: white !important; */
+  border-top: 1px solid #595959 !important;
+  border-bottom-left-radius: 12px !important;
+  border-bottom-right-radius: 12px !important;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 992px) {
+  .skillshortage-container {
+    padding: 40px 20px;
+    flex-direction: column;
+    height: auto;
+    gap: 30px;
+  }
+
+  .left-content,
+  .right-content {
+    width: 100%;
+  }
+
+  .custom-accordion {
+    width: 100%;
+  }
+}
+
+/* Ensure accordion items don't get cut off in mobile view */
+.accordion-collapse {
+  overflow: visible;
+}
+
+/* Additional fix for content overflow issues */
+.custom-accordion {
+  overflow: visible;
+}
+
+.skillshortage-container .row {
+  flex-wrap: wrap;
+}

@@ -1,0 +1,14 @@
+.top-scholars-list {
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 16px !important;
+    gap: 16px !important;
+    /* width: 628px;
+        height: 56px; */
+    border: 2px solid #eaeaea !important;
+    border-radius: 16px !important;
+    cursor: pointer !important;
+}

@@ -1,0 +1,22 @@
+.req-process-container {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevents image from breaking lines */
+}
+
+.req-process-img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .req-process-container {
+        overflow-x: auto; /* Allow horizontal scroll on small screens */
+        scrollbar-width: none !important;
+    }
+
+    .req-process-img {
+        width: auto !important; /* Allow image to expand beyond screen width */
+        height: 293px !important;
+    }
+}

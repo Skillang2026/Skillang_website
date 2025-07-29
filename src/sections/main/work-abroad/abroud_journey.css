@@ -1,0 +1,266 @@
+/* Wrapper with background image - UNCHANGED */
+.work-abroad-wrapper {
+    width: 100% !important;
+    max-width: 2000px !important;
+    height: 538px !important;
+    /* margin: 0 auto; */
+    /* padding: 0 80px; */
+    background-image: url('https://cms.skillang.com/uploads/jorneybg_4667c8261b.png');
+    background-size: contain !important;
+    /* background-position: center !important; */
+    background-repeat: no-repeat !important;
+    background-position: bottom !important;
+    position: relative;
+}
+
+/* Header styles - UNCHANGED */
+.work-abroad-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.work-abroad-header p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Centered Journey Content - UNCHANGED */
+.journey-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+/* Desktop View - UNCHANGED */
+.journey-progress {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    position: relative;
+    z-index: 1;
+    margin-bottom: -40px;
+}
+
+.progress-line-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Mobile Timeline - UNCHANGED */
+.mobile-journey {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.mobile-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.mobile-step-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.mobile-step-icon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.mobile-step-text {
+    flex-grow: 1;
+}
+
+.mobile-step-text h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.active-step {
+    color: #030404 !important;
+}
+
+.pending-step {
+    color: #666;
+}
+
+/* Connector Lines - UNCHANGED */
+.mobile-connector-line {
+    width: 3px;
+    height: 120px !important;
+    /* Increased height to fully touch both circles */
+    background-color: #E5E5E5;
+    margin-left: 24px;
+    margin-top: -10px;
+    /* Pull up to touch the above circle */
+    margin-bottom: -10px;
+    /* Push down to touch the below circle */
+    align-self: flex-start;
+    position: relative;
+}
+
+.mobile-connector-line.first {
+    background: linear-gradient(to bottom, #00C170 15%, #E5E5E5 15%);
+}
+
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
+/* Fixing the curve at the bottom - UNCHANGED */
+.work-abroad-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 50% 50% 0 0 / 100%;
+    box-shadow: 0 40px 0 0 white;
+    z-index: 1;
+}
+
+/* Responsive styles for mobile - ADDED ANIMATIONS HERE */
+@media (max-width: 768px) {
+    .work-abroad-wrapper {
+        padding: 20px;
+        height: auto !important;
+        min-height: auto;
+        background-image: none;
+        background-color: white;
+    }
+
+    .work-abroad-header {
+        padding-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .work-abroad-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .work-abroad-header p {
+        font-size: 3rem;
+    }
+
+    /* Hide desktop elements, show mobile elements */
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    /* Remove the curved bottom in mobile */
+    .work-abroad-wrapper::after {
+        display: none;
+    }
+
+    /* ANIMATION STYLES - ONLY APPLIED IN MOBILE */
+
+    /* Circle animation */
+    .animated-circle {
+        animation: circleGreen 0.5s ease-in-out forwards;
+    }
+
+    @keyframes circleGreen {
+        from {
+            fill: #f9f6f6 !important;
+        }
+
+        to {
+            fill: #00C170;
+        }
+    }
+
+    /* Text color transition */
+    .mobile-step-text h3 {
+        transition: color 0.5s ease-in-out;
+    }
+
+    /* Connector line animation */
+    .mobile-connector-line.animated-line {
+        position: relative;
+        background-color: #E5E5E5;
+        overflow: hidden;
+    }
+
+    .mobile-connector-line.animated-line::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        background-color: #00C170;
+        animation: lineGrow 0.8s ease-in-out forwards;
+    }
+
+    @keyframes lineGrow {
+        from {
+            height: 0%;
+        }
+
+        to {
+            height: 100%;
+        }
+    }
+
+    /* Give some life to the checkmark */
+    .mobile-step-icon path {
+        stroke-dasharray: 30;
+        stroke-dashoffset: 30;
+        transition: stroke-dashoffset 0.5s ease-in-out 0.2s;
+    }
+
+    .mobile-step-icon.completed path {
+        stroke-dashoffset: 0;
+    }
+
+
+    /* Add this to your existing CSS file */
+
+    /* Modify the checkmark animation styles */
+    .mobile-step-icon path {
+        stroke-dasharray: 30;
+        stroke-dashoffset: 0;
+        /* Changed from 30 to 0 to make checkmark visible before animation */
+        transition: stroke 0.5s ease-in-out;
+    }
+
+    /* Add new class for checkmark animation */
+    .mobile-step-icon path.animated-checkmark {
+        animation: checkmarkAnimate 0.5s ease-in-out forwards;
+    }
+
+    @keyframes checkmarkAnimate {
+        0% {
+            stroke: #CCCCCC;
+        }
+
+        100% {
+            stroke: white;
+        }
+    }
+}

@@ -1,0 +1,268 @@
+/* Updated CSS for Service Offerings and Country Guidance */
+
+.service-bg {
+    background-image: url("https://cms.skillang.com/uploads/service_offer_vis_guidence_f436c7a0c8.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100% !important;
+    background-position: top !important;
+    min-height: 100vh;
+    /* Reduced top padding to start content higher */
+}
+
+.section-title {
+    color: #4F8AFB !important;
+}
+
+.service-wave-layout {
+    position: relative;
+    height: 360px;
+    margin: 1.5rem auto 3rem;
+    max-width: 850px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-item {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+
+}
+
+.service-item.top-center {
+    top: -10px;
+    /* Moved up slightly */
+    right: -250px !important;
+    /* transform: translateX(-50%); */
+}
+
+.service-item.top-right {
+    top: -30px;
+    /* Moved up slightly */
+    right: 10px;
+    /* Moved further to the right */
+}
+
+.service-item.bottom-left {
+    top: 120px;
+    /* Adjusted position */
+    left: 130px;
+    /* Moved slightly outward */
+}
+
+.service-item.bottom-right {
+    bottom: 120px;
+    /* Adjusted position */
+    right: 140px;
+    /* Kept previous adjustment */
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.service-name-pill {
+    background-color: white;
+    color: #1966FA !important;
+    padding: 8px 16px !important;
+    border: #C4D8FE 1px solid !important;
+    border-radius: 12px !important;
+    white-space: nowrap !important;
+    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); */
+    cursor: pointer;
+
+    /* Added blue outline */
+}
+
+.service-description-popup {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    padding: 5px 10px !important;
+    transform: translateX(-50%);
+    background: white;
+
+    border: #C4D8FE 1px solid !important;
+    /* padding: 8px 16px; */
+    /* Slightly increased padding for better spacing */
+    border-radius: 12px;
+    /* box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15); */
+    width: 340px;
+    text-align: center;
+    align-items: center !important;
+    justify-content: center !important;
+    height: fit-content !important;
+    /* Align text to the left */
+    z-index: 6;
+    margin-top: 5px;
+    /* border: 2px solid #C4D8FE !important; */
+}
+
+/* Country Guidance Section */
+/* Skill Shortage Visa Tag */
+.tag-button {
+    background: #FEF8EB !important;
+    color: #664905 !important;
+    padding: 10px 12px;
+    border-radius: 8px !important;
+    border: none;
+    max-width: 250px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    /* Adjust this value to move it further up */
+}
+
+.tag-icon {
+    width: 20px !important;
+    height: auto !important;
+    transform: rotate(45deg) !important;
+}
+
+/* Country Cards */
+.country-card {
+    background: #3B3B3B;
+    color: white;
+    padding: 24px;
+    border-radius: 24px;
+    display: flex;
+    height: 100% !important;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.country-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.country-flag {
+    width: 56px !important;
+    height: auto !important;
+    border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .country-flag {
+        width: 40px !important;
+    }
+
+    .service-offering-cards-container {
+        position: relative;
+        overflow: hidden !important;
+        transition: max-height 0.8s ease-in-out !important;
+    }
+
+    .service-offering-cards-container::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20%;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9));
+        pointer-events: none;
+    }
+
+    .service-offering-cards-container.expanded::after {
+        display: none;
+    }
+
+
+    .service-item:hover .service-description-popup {
+        display: none !important;
+    }
+
+    .service-wave-layout {
+        height: auto;
+        background: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 25px;
+    }
+
+    .service-item {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        transform: none;
+        margin: 1rem;
+    }
+
+    .service-item.top-center {
+        top: 0px;
+        left: 80px;
+        /* transform: translateX(-50%); */
+    }
+
+    .service-item.top-right {
+        top: -100px;
+        /* Moved up slightly */
+        right: 100px;
+        /* Moved further to the right */
+    }
+
+    .service-item.bottom-left {
+        top: 80px;
+        /* Adjusted position */
+        left: 130px;
+        /* Moved slightly outward */
+    }
+
+    .service-item.bottom-right {
+        bottom: 150px;
+        /* Adjusted position */
+        right: 120px;
+        /* Kept previous adjustment */
+    }
+
+    .service-description-popup {
+        display: none !important;
+        /* Completely hides the element */
+        visibility: hidden !important;
+        /* Ensures it's not visible */
+        opacity: 0 !important;
+        /* Makes it fully transparent */
+        transition: none !important;
+        /* Disables any animations or transitions */
+    }
+
+    .country-card {
+        margin-bottom: 10px;
+        position: relative;
+        height: fit-content !important;
+        /* Enables movement */
+
+        /* margin-bottom: ; */
+        padding: 12px !important;
+    }
+
+
+
+    .tag-button {
+        background: #FEF8EB !important;
+        color: #664905 !important;
+        padding: 10px 12px;
+        border-radius: 8px !important;
+        border: 20px !important;
+        max-width: 250px !important;
+        /* Enables movement */
+        /* top: 30px; */
+        /* Move button down */
+    }
+}

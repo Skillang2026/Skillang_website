@@ -1,0 +1,11 @@
+.nurseCareerAdvbg {
+    background-image: url('../../../../assets/images/nursing/nurseAdvBg.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: #C4D8FE 1px solid;
+    border-radius: 24px !important;
+    padding: 24px !important;
+}

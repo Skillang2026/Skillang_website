@@ -1,0 +1,24 @@
+.reusable-header-card {
+    background-image: var(--desktop-more-page-bg-image);
+    background-repeat: no-repeat !important;
+    background-position: bottom !important;
+    background-size: cover !important;
+    width: 100% !important;
+    height: 600px !important;
+}
+
+.header-wrapper {
+    width: 60% !important;
+}
+
+@media (max-width: 768px) {
+    .reusable-header-card {
+        background-image: var(--mobile-more-page-bg-image);
+        height: 360px !important;
+        background-size: contain !important;
+    }
+
+    .header-wrapper {
+        width: 100% !important;
+    }
+}

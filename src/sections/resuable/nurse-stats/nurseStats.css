@@ -1,0 +1,46 @@
+.nurseStatsbg {
+    background-image: url('https://cms.skillang.com/uploads/stats_bg_f508add02b.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: top right !important;
+    background-size: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: #C4D8FE 1px solid;
+    border-radius: 24px !important;
+    padding: 24px !important;
+}
+
+.compSal {
+    margin-bottom: 18px;
+    background-color: #4F8AFB;
+    border-radius: 8px !important;
+    color: white;
+    padding: 8px !important;
+    height: 40px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+}
+
+.compSal img {
+    height: 24px !important;
+    width: 24px !important;
+    padding-right: 4px !important;
+
+}
+
+@media (max-width: 768px) {
+    .nurseStatsbg {
+        background-image: url('https://cms.skillang.com/uploads/stats_bg_f508add02b.png') !important;
+        background-repeat: no-repeat !important;
+        background-position: top left !important;
+        background-size: cover !important;
+        width: 100% !important;
+        height: 100% !important;
+        border: #C4D8FE 1px solid;
+        border-radius: 24px !important;
+        padding: 24px !important;
+    }
+}

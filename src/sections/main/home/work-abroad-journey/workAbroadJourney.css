@@ -1,0 +1,165 @@
+/* ParallaxScrollSnap.css with enhanced animations */
+
+/* Main container that holds all the parallax sections */
+.parallax-outer-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar */
+.parallax-outer-container::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Individual parallax sections */
+.parallax-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  scroll-snap-align: start;
+  transform-origin: center center;
+  transition: 
+    opacity 0.5s ease-in-out,
+    transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Custom easing for bounce effect */
+}
+
+/* Exit animation: section shrinks when not active */
+.parallax-section:not(.active) {
+  opacity: 0.2;
+  pointer-events: none;
+  transform: scale(0.5); /* Shrink when exiting */
+}
+
+/* Entry animation: section starts large then settles */
+.parallax-section.active {
+  animation: sectionEnter 0.6s forwards;
+}
+
+@keyframes sectionEnter {
+  0% {
+    transform: scale(1.1); /* Start larger */
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1); /* Settle to normal size */
+    opacity: 1;
+  }
+}
+
+/* Additional animation for the content inside sections */
+.parallax-section .content-container {
+  transition: transform 0.5s ease-out;
+  will-change: transform; /* Performance optimization */
+}
+
+.parallax-section:not(.active) .content-container {
+  transform: scale(0.9); /* Slightly shrink content in inactive sections */
+}
+
+.parallax-section.active .content-container {
+  animation: contentEnter 0.7s 0.1s forwards; /* Slight delay after section animation */
+}
+
+@keyframes contentEnter {
+  0% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Navigation dots styling - kept from original */
+.parallax-nav-dots {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+/* Dots styling */
+.parallax-nav-dot {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 10px 0;
+  opacity: 0.5;
+  transition: opacity 0.3s, width 0.3s, height 0.3s, border-radius 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+/* Custom colors for each dot */
+.parallax-nav-dot:nth-child(1) {
+  background-color: transparent;
+}
+
+.parallax-nav-dot:nth-child(2) {
+  background-color: #E86E39;
+}
+
+.parallax-nav-dot:nth-child(3) {
+  background-color: #F6C24C;
+}
+
+.parallax-nav-dot:nth-child(4) {
+  background-color: #4F8AFB;
+}
+
+.parallax-nav-dot:nth-child(5) {
+  background-color: #9473F2;
+}
+
+.parallax-nav-dot:nth-child(6) {
+  background-color: #6E9AFD;
+}
+
+/* Highlight active dot */
+.parallax-nav-dot.active {
+  opacity: 1;
+  width: 3px !important;
+  height: 64px;
+  border-radius: 2px;
+}
+
+/* Make sure images and content look good */
+.parallax-section .image-fluid {
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+/* Add some style for the Home page section wrapper */
+.parallax-section-wrapper {
+  position: relative;
+}
+
+.work-journey-text-wrap {
+  width: 75% !important;
+}
+
+@media (max-width: 768px) {
+  .work-journey-text-wrap {
+    width: 100% !important;
+    gap: 8px !important;
+    margin-top: 24px !important;
+  }
+  .parallax-nav-dots {
+    display: none !important;
+  }
+}

@@ -1,0 +1,21 @@
+.nurse-path-card {
+    background-image: url('https://cms.skillang.com/uploads/nurse_Path_Bg_4846cc362f.jpg');
+    background-repeat: no-repeat !important;
+    background-position: bottom !important;
+    background-size: cover !important;
+    width: 100% !important;
+    height: 500px !important;
+    /* padding: 24px !important; */
+}
+
+
+
+@media (max-width: 768px) {
+    .nurse-path-card {
+        background-image: url('https://cms.skillang.com/uploads/nurse_Path_Mobile_Bg_86b6f9b27d.jpg');
+        height: 360px !important;
+        background-size: contain !important;
+
+    }
+
+}

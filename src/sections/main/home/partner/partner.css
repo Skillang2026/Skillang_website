@@ -1,0 +1,13 @@
+.partner-bg {
+  background-image: url('../../../assets/images/home/partner-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the image covers the entire area */
+  border-radius: 40px !important;
+  width: 100% !important;
+  height: 100%; /* Add this if needed */
+  min-height: 300px; /* Optional: Controls minimum visible area */
+  display: flex; /* Ensures content alignment inside */
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+}

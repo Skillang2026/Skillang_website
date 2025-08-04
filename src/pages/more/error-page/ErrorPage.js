@@ -6,7 +6,7 @@ import "./ErrorPage.css";
 
 const errorImg = "/assets/images/error-img.jpg";
 
-const ErrorPage = () => {
+const   ErrorPage = () => {
   const handleGoHome = () => {
     window.location.href = "/";
   };

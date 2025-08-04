@@ -19,7 +19,7 @@ const EditorsChoiceSection = () => {
       try {
         setLoading(true);
         const posts = await blogService.getEditorsChoice(3);
-        // console.log("Editor's Choice posts:", posts);
+        console.log("Editor's Choice posts:", posts);
         setEditorsPicks(posts);
       } catch (err) {
         console.error("Error fetching Editor's Choice:", err);

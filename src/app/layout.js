@@ -5,6 +5,7 @@ import Script from "next/script";
 // import FooterSection from "@/components/footer/footer";
 import WhatsappButtonsComp from "@/components/buttons/whatsapp-button/WhatsappButtons";
 import ConditionalLayout from "@/components/ConditionalLayout";
+import Head from "next/head";
 
 export const metadata = {
   title: "Best Abroad Consultancy In Chennai",
@@ -50,9 +51,9 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-
-        {/* Meta Pixel Code */}
-        <Script
+        {/* 
+        /* Meta Pixel Code */}
+        {/* <Script
           id="meta-pixel"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -84,8 +85,34 @@ export default function RootLayout({ children }) {
               fbq("track", "PageView");
             `,
           }}
-        />
+        /> */}
 
+        <Head>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1307874014390768');
+      fbq('track', 'PageView');
+    `,
+            }}
+          />
+        </Head>
+
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            src="https://www.facebook.com/tr?id=1307874014390768&ev=PageView&noscript=1"
+          />
+        </noscript>
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-LKWP21DZ9Q"
@@ -110,7 +137,7 @@ export default function RootLayout({ children }) {
           strategy="lazyOnload"
         />
 
-        <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
+        {/* <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" /> */}
       </head>
 
       <body className="plus-jakarta-sans">

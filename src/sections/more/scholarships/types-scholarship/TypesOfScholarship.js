@@ -50,7 +50,7 @@ const TypesOfScholarship = () => {
         </Row>
         <Row>
           {typesOOfScholarshipData.map((item, index) => (
-            <Col key={index} lg={3} md={3} sm={12} xs={12} className="mb-4">
+            <Col key={index} lg={3} md={6} sm={12} xs={12} className="mb-4">
               <BlueIconCard
                 img={item.img}
                 title={item.title}

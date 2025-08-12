@@ -5,6 +5,7 @@ import countryService from "../services/countryService";
 export const useCountryData = (initialCountrySlug = null) => {
   const [countryData, setCountryData] = useState(null);
   const [allCountries, setAllCountries] = useState([]);
+  const [universitiesData, setUniversitiesData] = useState({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -79,16 +80,72 @@ export const useCountryData = (initialCountrySlug = null) => {
     [allCountries]
   );
 
+  const fetchMultipleCountriesUniversities = useCallback(
+    async (countrySlugs = []) => {
+      if (!countrySlugs.length) {
+        console.warn(
+          "No country slugs provided to fetchMultipleCountriesUniversities"
+        );
+        return;
+      }
+
+      setLoading(true);
+      setError(null);
+
+      try {
+        const promises = countrySlugs.map((slug) =>
+          countryService.getCountryBySlug(slug)
+        );
+        const results = await Promise.all(promises);
+
+        // Combine all countries' data into single object
+        const combinedData = {};
+        results.forEach((countryData) => {
+          const countryKey = Object.keys(countryData)[0];
+          combinedData[countryKey] = countryData[countryKey];
+        });
+
+        setUniversitiesData(combinedData);
+        setCountryData(combinedData); // Also set as countryData for consistency
+      } catch (err) {
+        const errorMessage = err.message || "Failed to fetch universities data";
+        console.error("Error in fetchMultipleCountriesUniversities:", err);
+        setError(errorMessage);
+      } finally {
+        setLoading(false);
+      }
+    },
+    []
+  );
+
+  // Add this helper method to get all universities from multiple countries
+  const getAllUniversitiesFromCountries = useCallback(() => {
+    if (!universitiesData || Object.keys(universitiesData).length === 0) {
+      return [];
+    }
+
+    const allUniversities = [];
+    Object.values(universitiesData).forEach((countryData) => {
+      if (countryData.education?.partnerUniversities) {
+        allUniversities.push(...countryData.education.partnerUniversities);
+      }
+    });
+
+    return allUniversities;
+  }, [universitiesData]);
+
   return {
     // Data
     countryData,
     allCountries,
+    universitiesData,
     loading,
     error,
 
     // Actions
     fetchCountryData,
     fetchAllCountries,
+    fetchMultipleCountriesUniversities,
     refetch,
     clearData,
     getCountryFromCache,
@@ -97,6 +154,7 @@ export const useCountryData = (initialCountrySlug = null) => {
     hasCountryData: !!countryData,
     hasAllCountries: allCountries.length > 0,
     isInitialLoading: loading && !countryData && !allCountries.length,
+    getAllUniversitiesFromCountries,
   };
 };
 

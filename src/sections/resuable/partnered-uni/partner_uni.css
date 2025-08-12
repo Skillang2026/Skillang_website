@@ -65,22 +65,18 @@
 
 /* Pagination button styling */
 .pagination-button {
-    width: 32px;
-    /* Slightly smaller */
-    height: 32px;
-    /* Slightly smaller */
+    background-color: #F7D6C8 !important;
+    color: #E86E39 !important;
     border: none;
-    background-color: #ffddc9;
-    color: #333;
-    border-radius: 4px;
-    margin: 0 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    /* Slightly smaller */
+    width: 40px;
+    height: 40px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    border-radius: 12px !important;
+    display: flex;
+    margin: 0 5px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .pagination-button:hover {
@@ -119,13 +115,12 @@
 
     .tab-button {
         font-size: 1rem;
-        /* Normal font size on desktop */
         padding: 0.5rem 0.75rem !important;
-        /* Normal padding on desktop */
+        text-transform: capitalize !important;
     }
 
-    .tab-nav-container {
+    /* .tab-nav-container {
         overflow-x: visible;
         white-space: normal;
-    }
+    } */
 }

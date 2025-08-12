@@ -10,7 +10,7 @@ import UniPartner from "../../sections/resuable/uni-partner/uni-partner";
 const StudyAbroadPage = () => {
   return (
     <>
-      <div className="section-spacing">
+      <div className="section-spacin">
         <StudyAbroadHeader />
       </div>
       <div className="section-spacing">

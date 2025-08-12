@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Plus Jakarta Sans";
-  src: url("../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+  src: url("/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
   font-weight: 200 800;
   /* Define the range of weights */
   font-style: normal;
@@ -527,17 +527,17 @@ section {
 
 .section-spacing {
   /* background-color: #000; */
-  padding-bottom: 154px !important;
+  padding-bottom: 120px !important;
   margin-bottom: 0px !important;
 }
 
 .homepage-section-spacing {
-  padding-bottom: 96px !important;
+  padding-bottom: 120px !important;
   margin-bottom: 0px !important;
 }
 
 .country-page-spacing {
-  padding-bottom: 154px !important;
+  padding-bottom: 120px !important;
   margin-bottom: 0px !important;
 }
 
@@ -549,11 +549,11 @@ section {
 @media (max-width: 768px) {
   .section-spacing {
     /* background-color: pink !important; */
-    padding-bottom: 80px !important;
+    padding-bottom: 60px !important;
   }
 
   .homepage-section-spacing {
-    padding-bottom: 80px !important;
+    padding-bottom: 60px !important;
   }
 
   .country-page-spacing {

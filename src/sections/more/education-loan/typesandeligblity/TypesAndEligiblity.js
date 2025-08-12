@@ -4,14 +4,10 @@ import React, { useState, useRef, useEffect } from "react";
 import { Container, Col, Row, Card, CardBody, CardImg } from "react-bootstrap";
 import "./TypesAndEligiblity.css";
 
-const loan1 =
-  "../../../../assets/images/education-loan/TypesOfEduLoan/loan1.svg";
-const loan2 =
-  "../../../../assets/images/education-loan/TypesOfEduLoan/loan2.svg";
-const loan3 =
-  "../../../../assets/images/education-loan/TypesOfEduLoan/loan3.svg";
-const loan4 =
-  "../../../../assets/images/education-loan/TypesOfEduLoan/loan4.svg";
+const loan1 = "/assets/images/education-loan/TypesOfEduLoan/loan1.svg";
+const loan2 = "/assets/images/education-loan/TypesOfEduLoan/loan2.svg";
+const loan3 = "/assets/images/education-loan/TypesOfEduLoan/loan3.svg";
+const loan4 = "/assets/images/education-loan/TypesOfEduLoan/loan4.svg";
 
 const TypesEduLoanData = [
   {
@@ -44,8 +40,8 @@ const TypesAndEligiblity = () => {
   return (
     <div>
       <Container>
-        <Row>
-          <div className="heading-big-medium text-content-primary text-center mb-4">
+        <Row className="mb-4">
+          <div className="heading-big-medium text-content-primary text-center ">
             Types of Education Loans
           </div>
         </Row>

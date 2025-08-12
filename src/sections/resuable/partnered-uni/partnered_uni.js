@@ -1,14 +1,27 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import useCountryData from "@/hooks/useCountryData";
 import "./partner_uni.css";
+import { ChevronLeft, ChevronRight } from "react-bootstrap-icons";
+
 const partner = "/assets/images/reusable/partnereduni.png";
 
 const PartneredUni = () => {
   // Reference for the tab container for scrolling
   const tabContainerRef = useRef(null);
 
-  // State for managing tab data - will be populated from Strapi
+  // Use the country data hook
+  const {
+    universitiesData,
+    allCountries,
+    loading: dataLoading,
+    error: dataError,
+    fetchMultipleCountriesUniversities,
+    fetchAllCountries,
+  } = useCountryData();
+
+  // State for managing tab data
   const [tabs, setTabs] = useState([]);
 
   // Store university logos per tab
@@ -32,8 +45,8 @@ const PartneredUni = () => {
   // Responsive logos per page based on screen size
   const [logosPerPage, setLogosPerPage] = useState(21);
 
-  // Strapi configuration
-  const STRAPI_URL = "https://cms.skillang.com";
+  // Countries to fetch data for - will be populated from API
+  const [countriesToFetch, setCountriesToFetch] = useState([]);
 
   // Update logos per page based on screen size
   useEffect(() => {
@@ -57,321 +70,18 @@ const PartneredUni = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Function to fetch all university data from Strapi on initial load
+  // Function to fetch and process university data from CMS
   const fetchAllUniversityData = async () => {
     try {
       setInitialLoading(true);
       setError(null);
 
-      // console.log("🚀 Starting to fetch data from Strapi...");
-      // console.log("📍 Strapi URL:", STRAPI_URL);
-
-      // Fetch all files from Strapi media library
-      const response = await fetch(
-        `${STRAPI_URL}/api/upload/files?pagination[pageSize]=1000`
-      );
-
-      // console.log("📡 Response status:", response.status);
-      // console.log("📡 Response ok:", response.ok);
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      // console.log("📦 Total files received from Strapi:", data.length);
-      // console.log("📦 Sample of first 3 files:", data.slice(0, 3));
-
-      // Let's see what the file structure looks like
-      data.forEach((file, index) => {
-        if (index < 5) {
-          // Log first 5 files for inspection
-          // console.log(`File ${index + 1}:`, {
-          //   id: file.id,
-          //   name: file.name,
-          //   folderPath: file.folderPath,
-          //   folder: file.folder, // Alternative property
-          //   path: file.path, // Alternative property
-          //   url: file.url,
-          //   alternativeText: file.alternativeText,
-          //   // Let's see all properties
-          //   allProperties: Object.keys(file),
-          // });
-        }
-      });
-
-      // Filter files that are in university-partners folder
-      // First, let's try folderPath
-      let universityFiles = data.filter(
-        (file) =>
-          file.folderPath && file.folderPath.includes("university-partners")
-      );
-
-      // If no files found with folderPath, try alternative approaches
-      if (universityFiles.length === 0) {
-        // console.log(
-        //   "⚠️ No files found with folderPath, trying alternative approaches..."
-        // );
-
-        // Try filtering by file name patterns (e.g., files starting with university or partner)
-        universityFiles = data.filter(
-          (file) =>
-            file.name &&
-            (file.name.toLowerCase().includes("uni") ||
-              file.name.toLowerCase().includes("partner") ||
-              file.name.toLowerCase().includes("college") ||
-              file.name.toLowerCase().includes("university"))
-        );
-        // console.log("🔍 Files found by name pattern:", universityFiles.length);
-
-        // If still no files, let's check if there's a folder property
-        if (universityFiles.length === 0) {
-          universityFiles = data.filter(
-            (file) =>
-              file.folder &&
-              (file.folder.name === "university-partners" ||
-                file.folder.path === "university-partners")
-          );
-          // console.log(
-          //   "🔍 Files found by folder property:",
-          //   universityFiles.length
-          // );
-        }
-
-        // Last resort: check all university-related files regardless of folder
-        if (universityFiles.length === 0) {
-          // console.log(
-          //   '🔍 All available files with "uni" or "partner" in name:'
-          // );
-          data.forEach((file, index) => {
-            if (
-              file.name &&
-              (file.name.toLowerCase().includes("uni") ||
-                file.name.toLowerCase().includes("partner"))
-            ) {
-              // console.log(`Match ${index + 1}:`, file.name, file);
-              universityFiles.push(file);
-            }
-          });
-        }
-      }
-
-      // console.log(
-      //   "🎓 Files in university-partners folder:",
-      //   universityFiles.length
-      // );
-      // console.log("🎓 University files details:", universityFiles);
-
-      // Group files by country (folder name)
-      const groupedByCountry = universityFiles.reduce((acc, file) => {
-        // console.log(
-        //   "🔍 Processing file:",
-        //   file.name,
-        //   "with folderPath:",
-        //   file.folderPath
-        // );
-
-        let country = null;
-
-        // Method 1: Extract from folderPath
-        if (file.folderPath) {
-          const pathParts = file.folderPath
-            .split("/")
-            .filter((part) => part.length > 0);
-          // console.log("📂 Path parts:", pathParts);
-
-          const countryIndex = pathParts.indexOf("university-partners") + 1;
-          // console.log("🌍 Country index:", countryIndex);
-
-          country = pathParts[countryIndex];
-          // console.log("🌍 Extracted country from folderPath:", country);
-        }
-
-        // Method 2: Extract from folder object
-        if (!country && file.folder) {
-          if (file.folder.name && file.folder.name !== "university-partners") {
-            country = file.folder.name;
-            // console.log("🌍 Extracted country from folder.name:", country);
-          } else if (file.folder.parent && file.folder.parent.name) {
-            country = file.folder.parent.name;
-            // console.log(
-            //   "🌍 Extracted country from folder.parent.name:",
-            //   country
-            // );
-          }
-        }
-
-        // Method 3: Extract from file name pattern (fallback)
-        if (!country) {
-          const fileName = file.name.toLowerCase();
-
-          // Look for country patterns in filename
-          const countryPatterns = {
-            usa: "USA",
-            us: "USA",
-            uk: "UK",
-            canada: "Canada",
-            australia: "Australia",
-            newzealand: "NewZealand",
-            nz: "NewZealand",
-            singapore: "Singapore",
-            germany: "Germany",
-            switzerland: "Switzerland",
-            ireland: "Ireland",
-            france: "France",
-          };
-
-          for (const [pattern, countryName] of Object.entries(
-            countryPatterns
-          )) {
-            if (fileName.includes(pattern)) {
-              country = countryName;
-              // console.log(
-              //   "🌍 Extracted country from filename pattern:",
-              //   country
-              // );
-              break;
-            }
-          }
-        }
-
-        // Method 4: Default fallback - assign to "International" or based on file position
-        if (!country) {
-          country = "International";
-          // console.log("🌍 Using fallback country:", country);
-        }
-
-        if (country) {
-          // Clean up country name (remove spaces, handle special cases)
-          const originalCountry = country;
-          country = country.replace(/\s+/g, ""); // Remove spaces
-          // console.log(
-          //   "🧹 Cleaned country name:",
-          //   originalCountry,
-          //   "→",
-          //   country
-          // );
-
-          // Map folder names to display names if needed
-          const countryMapping = {
-            NewZealand: "NewZealand",
-            UnitedStates: "USA",
-            UnitedKingdom: "UK",
-            US: "USA",
-            International: "International",
-          };
-
-          const displayCountry = countryMapping[country] || country;
-          // console.log("🏷️ Final display country:", displayCountry);
-
-          if (!acc[displayCountry]) {
-            acc[displayCountry] = [];
-            // console.log("✨ Created new country group:", displayCountry);
-          }
-
-          acc[displayCountry].push({
-            id: file.id,
-            logo: `${STRAPI_URL}${file.url}`,
-            name: file.name,
-            alternativeText: file.alternativeText || "University logo",
-            caption: file.caption,
-          });
-
-          // console.log(
-          //   "➕ Added file to",
-          //   displayCountry,
-          //   "Total in group:",
-          //   acc[displayCountry].length
-          // );
-        } else {
-          // console.log("⚠️ No country found for file:", file.name);
-        }
-
-        return acc;
-      }, {});
-
-      // console.log("🗂️ Final grouped data:", groupedByCountry);
-      // console.log("🗂️ Countries found:", Object.keys(groupedByCountry));
-
-      // Create "All" tab data
-      const allUniversities = Object.values(groupedByCountry).flat();
-      // console.log("🌐 All universities count:", allUniversities.length);
-
-      const completeTabData = {
-        All: allUniversities,
-        ...groupedByCountry,
-      };
-      // console.log("📊 Complete tab data:", completeTabData);
-
-      // Create tabs array with counts
-      const countries = Object.keys(groupedByCountry);
-      // console.log("🏁 Countries for tabs:", countries);
-
-      const tabsArray = [
-        { name: "All", count: allUniversities.length },
-        ...countries.map((country) => ({
-          name: country,
-          count: groupedByCountry[country].length,
-        })),
-      ];
-      // console.log("📋 Final tabs array:", tabsArray);
-
-      // Initialize pagination state for all tabs
-      const initialPaginationState = {};
-      tabsArray.forEach((tab) => {
-        initialPaginationState[tab.name] = { currentPage: 1 };
-      });
-      // console.log("📄 Pagination state initialized:", initialPaginationState);
-
-      // Update state
-      setTabs(tabsArray);
-      setTabData(completeTabData);
-      setPaginationState(initialPaginationState);
-
-      // console.log("✅ State updated successfully");
-      // console.log("✅ Active tab will be set to:", activeTab || "All");
-
-      // Set first tab as active if not already set
-      if (tabsArray.length > 0 && !activeTab) {
-        setActiveTab("All");
-        // console.log('✅ Active tab set to "All"');
-      }
+      // First fetch all available countries
+      await fetchAllCountries();
     } catch (err) {
-      console.error("❌ Error fetching university data:", err);
-      console.error("❌ Error details:", {
-        message: err.message,
-        name: err.name,
-        stack: err.stack,
-      });
-
-      setError("Failed to load university partners. Please try again later.");
-
-      // Fallback to dummy data if API fails
-      // console.log("🔄 Falling back to dummy data...");
-      const fallbackTabs = [
-        { name: "All", count: 0 },
-        { name: "USA", count: 0 },
-        { name: "UK", count: 0 },
-        { name: "Canada", count: 0 },
-        { name: "Australia", count: 0 },
-        { name: "Ireland", count: 0 },
-        { name: "NewZealand", count: 0 },
-        { name: "Singapore", count: 0 },
-        { name: "Switzerland", count: 0 },
-        { name: "Asia", count: 0 },
-        { name: "Europe", count: 0 },
-      ];
-
-      setTabs(fallbackTabs);
-      setTabData({ All: [] });
-
-      const fallbackPaginationState = {};
-      fallbackTabs.forEach((tab) => {
-        fallbackPaginationState[tab.name] = { currentPage: 1 };
-      });
-      setPaginationState(fallbackPaginationState);
+      console.error("Error fetching university data:", err);
+      setError("Data not available");
     } finally {
-      // console.log("🏁 Fetch process completed");
       setInitialLoading(false);
       setLoading(false);
     }
@@ -381,6 +91,91 @@ const PartneredUni = () => {
   useEffect(() => {
     fetchAllUniversityData();
   }, []);
+  useEffect(() => {
+    if (universitiesData && Object.keys(universitiesData).length > 0) {
+      try {
+        // Group universities by country and extract logos
+        const groupedByCountry = {};
+        const allLogos = [];
+
+        Object.entries(universitiesData).forEach(
+          ([countrySlug, countryData]) => {
+            if (countryData.education?.partnerUniversities) {
+              const countryLogos = countryData.education.partnerUniversities
+                .filter((uni) => uni.collegeLogo) // Only universities with logos
+                .map((uni) => ({
+                  id: uni.id,
+                  logo: uni.collegeLogo,
+                  name: uni.name,
+                  alternativeText: `${uni.name} logo`,
+                }));
+
+              if (countryLogos.length > 0) {
+                // Use the slug directly as display name
+                const displayName = countrySlug;
+                groupedByCountry[displayName] = countryLogos;
+                allLogos.push(...countryLogos);
+              }
+            }
+          }
+        );
+
+        // Create "All" tab data
+        const completeTabData = {
+          All: allLogos,
+          ...groupedByCountry,
+        };
+
+        // Create tabs array with counts
+        const countries = Object.keys(groupedByCountry);
+        const tabsArray = [
+          { name: "All", count: allLogos.length },
+          ...countries.map((country) => ({
+            name: country,
+            count: groupedByCountry[country].length,
+          })),
+        ];
+
+        // Initialize pagination state for all tabs
+        const initialPaginationState = {};
+        tabsArray.forEach((tab) => {
+          initialPaginationState[tab.name] = { currentPage: 1 };
+        });
+
+        // Update state
+        setTabs(tabsArray);
+        setTabData(completeTabData);
+        setPaginationState(initialPaginationState);
+
+        // Set first tab as active if not already set
+        if (tabsArray.length > 0 && !activeTab) {
+          setActiveTab("All");
+        }
+
+        setLoading(false);
+      } catch (err) {
+        console.error("Error processing university data:", err);
+        setError("Failed to process university data");
+        setLoading(false);
+      }
+    }
+  }, [universitiesData]);
+
+  // Effect to fetch countries when allCountries changes
+  useEffect(() => {
+    if (allCountries && allCountries.length > 0) {
+      // Extract slugs from available countries
+      const availableSlugs = allCountries
+        .map((country) => country.slug)
+        .filter(Boolean);
+      setCountriesToFetch(availableSlugs);
+
+      // Now fetch university data for these countries
+      if (availableSlugs.length > 0) {
+        fetchMultipleCountriesUniversities(availableSlugs);
+      }
+    }
+  }, [allCountries, fetchMultipleCountriesUniversities]);
 
   // Function to handle tab change and scroll into view
   const handleTabChange = (tabName) => {
@@ -410,9 +205,6 @@ const PartneredUni = () => {
 
   // Get current logos for the active tab
   const currentTabLogos = tabData[activeTab] || [];
-  // console.log("🎯 Current tab:", activeTab);
-  // console.log("🎯 Current tab logos:", currentTabLogos);
-  // console.log("🎯 Current tab logos count:", currentTabLogos.length);
 
   // Get current page of logos
   const currentPage = paginationState[activeTab]?.currentPage || 1;
@@ -459,13 +251,13 @@ const PartneredUni = () => {
         <div className="university-logo-grid">
           <div className="col-12 text-center py-5">
             <p className="text-muted">
-              {error
-                ? "Unable to load university partners"
+              {error || dataError
+                ? "Data not available"
                 : activeTab === "All"
                 ? "No university partners available"
                 : `No universities found for ${activeTab}`}
             </p>
-            {error && (
+            {(error || dataError) && (
               <button
                 className="btn btn-primary mt-2"
                 onClick={fetchAllUniversityData}
@@ -494,11 +286,6 @@ const PartneredUni = () => {
                 }}
                 loading="lazy"
               />
-              {logo.caption && (
-                <div className="logo-caption">
-                  <small>{logo.caption}</small>
-                </div>
-              )}
             </div>
           </div>
         ))}
@@ -507,7 +294,7 @@ const PartneredUni = () => {
   };
 
   // Render initial loading state
-  if (initialLoading) {
+  if (initialLoading || dataLoading) {
     return (
       <div
         className="container-fluid py-5"
@@ -538,33 +325,15 @@ const PartneredUni = () => {
         </div>
 
         {/* Error Alert */}
-        {error && (
+        {(error || dataError) && (
           <div className="alert alert-warning text-center mb-4" role="alert">
-            <small>{error}</small>
+            <small>{error || dataError}</small>
           </div>
         )}
 
-        {/* Debug Panel - Remove this in production */}
-        {process.env.NODE_ENV === "development" && (
-          <div className="alert alert-info mb-4" role="alert">
-            <h6>🐛 Debug Info:</h6>
-            <small>
-              <strong>Tabs:</strong> {JSON.stringify(tabs)}
-              <br />
-              <strong>Active Tab:</strong> {activeTab}
-              <br />
-              <strong>Tab Data Keys:</strong> {Object.keys(tabData).join(", ")}
-              <br />
-              <strong>Current Tab Logos:</strong> {currentTabLogos.length}
-              <br />
-              <strong>Strapi URL:</strong> {STRAPI_URL}
-            </small>
-          </div>
-        )}
-
-        {/* Navigation Tabs - Scrollable on mobile */}
+        {/* Navigation Tabs - Scrollable on both mobile and desktop */}
         <div className="tab-nav-container" ref={tabContainerRef}>
-          <div className="d-flex justify-content-start justify-content-md-center position-relative">
+          <div className="d-flex justify-content-start position-relative">
             {tabs.map((tab) => (
               <button
                 key={tab.name}
@@ -609,14 +378,14 @@ const PartneredUni = () => {
               onClick={prevPage}
               disabled={currentPage === 1}
             >
-              <span>&lt;</span>
+              <ChevronLeft />
             </button>
             <button
               className="pagination-button"
               onClick={nextPage}
               disabled={currentPage >= totalPages}
             >
-              <span>&gt;</span>
+              <ChevronRight />
             </button>
           </div>
         )}

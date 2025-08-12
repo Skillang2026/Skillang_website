@@ -14,11 +14,12 @@ import PermResidentSection from "../../sections/main/nursing/nurse-citizenship/p
 import NurseCareerAdvSection from "../../sections/main/nursing/career-adv/nurseCareerAdvSection";
 import NursePartner from "../../sections/resuable/partner-with-us/partnerWithUs";
 import TypesHealthCareSection from "../../sections/main/nursing/types-nurse/typesHealthCareSection";
+import CourseFeeInfoComp from "@/sections/main/nursing/course-fee-info/CourseFeeInfoComp";
 
 const NursePage = () => {
   return (
     <>
-      <div className="section-spacing">
+      <div className="section-spacin">
         <NurseMainHeader />
       </div>
       <div className="section-spacing">
@@ -26,6 +27,9 @@ const NursePage = () => {
       </div>
       <div className="section-spacing">
         <WhyNursingSection />
+      </div>
+      <div className="section-spacing">
+        <NurseStats />
       </div>
       <div className="section-spacing">
         <WhySkillangSection />
@@ -40,14 +44,15 @@ const NursePage = () => {
         <NurseLangSection />
       </div>
       <div className="section-spacing">
+        <CourseFeeInfoComp />
+      </div>
+      <div className="section-spacing">
         <NursingPosition />
       </div>
       <div className="section-spacing">
         <NurseChallengeSection />
       </div>
-      <div className="section-spacing">
-        <NurseStats />
-      </div>
+
       <div className="section-spacing">
         <NurseEligibility />
       </div>

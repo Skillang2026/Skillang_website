@@ -16,8 +16,8 @@ const PartnerWithUsSection = () => {
   const handleShow = () => setShowModal(true);
   return (
     <div className="d-flex flex-column align-items-center justify-content-center ">
-      <Container className="nurse-partner-bg text-start">
-        <Row>
+      <Container className="nurse-partner-bg text-start rounded-5">
+        <Row className="py-4">
           <Col className="d-none d-md-block" md={6} sm={12} xs={12}>
             <Image fluid src={nursePartnerImg} alt="" />
           </Col>

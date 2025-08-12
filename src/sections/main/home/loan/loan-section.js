@@ -44,13 +44,13 @@ const LoanSection = () => {
             </div>
             <button
               className="btn-primary"
-              onClick={() => handleNavigation("/more/scholarships")}
+              onClick={() => handleNavigation("/scholarships")}
             >
               Apply Now
             </button>
           </Col>
 
-          <Col xs={12} sm={12} md={6} lg={6} className="mb-4 d-none d-md-block">
+          <Col xs={12} sm={12} md={5} lg={6} className="mb-4 d-none d-md-block">
             <Image
               fluid
               src="https://cms.skillang.com/uploads/loan_img_b98ce382ae.jpg"

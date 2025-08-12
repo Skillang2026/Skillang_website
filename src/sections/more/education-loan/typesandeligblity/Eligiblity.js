@@ -37,16 +37,16 @@ const eligibilityData = [
 
 const LoanEligibility = () => {
   return (
-    <div className="loan-eligible-bg d-flex justify-content-end align-items-center">
+    <div className="loan-eligible-bg d-flex justify-content-end align-items-center ">
       <Container className="my-5 py-5 d-flex justify-content-end align-items-center flex-column">
-        <Row>
-          <div className="heading-big-medium text-content-primary text-center my-5">
+        <Row className="mb-4">
+          <div className="heading-big-medium text-content-primary text-center mt-5 pt-5">
             Eligibility and Requirements
           </div>
         </Row>
         <Row>
           {eligibilityData.map((item, index) => (
-            <Col key={index} lg={3} md={3} sm={12} xs={12} className="mb-4">
+            <Col key={index} lg={3} md={6} sm={12} xs={12} className="mb-4">
               <BlueIconCards
                 img={item.img}
                 title={item.title}

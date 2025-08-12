@@ -61,7 +61,8 @@ class CountryService {
           "populate[countryFlag]": true,
           "populate[overviewFactItem]": true,
           "populate[educationUniversityRanking]": true,
-          "populate[partnerUniversity][populate]": "image",
+          "populate[partnerUniversity][populate][0]": "image",
+          "populate[partnerUniversity][populate][1]": "collegeLogo",
           "populate[studyProgram]": true,
           "populate[entranceExam]": true,
           "populate[scholarshipDetails]": true,
@@ -134,6 +135,30 @@ class CountryService {
           .filter((reason) => reason.length > 0);
       }
 
+      const transformedUniversities = partnerUniversity.map((university) => ({
+        id: university.id,
+        name: university.name,
+        image: university.image?.url
+          ? `https://cms.skillang.com${university.image.url}`
+          : "/assets/images/study-abroad-county-wise/uni-list.jpg", // Default fallback
+        collegeLogo: university.collegeLogo?.url // ✅ Fixed: changed uni to university
+          ? `https://cms.skillang.com${university.collegeLogo.url}`
+          : null,
+        location: university.location,
+        type: university.CollegeType,
+        ranking: `#${university.qsRank}`,
+        courses: university.noOfCoursesOffered,
+        livingCost: `INR ${parseInt(
+          university.avgLivingCost
+        ).toLocaleString()}`,
+        country: shortForm.trim(), // Use country shortForm
+        // Default values for filters (since not available in API)
+        fee: "<10 Lakhs", // Default value
+        exams: ["IELTS"], // Default value
+        duration: "2-3 Years", // Default value
+        degree: "Masters", // Default value
+      }));
+
       // Transform facts with proper icon handling
       const transformedFacts = overviewFactItem.map((fact) => ({
         key: fact.key,
@@ -143,7 +168,7 @@ class CountryService {
         hasSplit: fact.hasSplit,
         splitChar: fact.hasSplit ? this.getSplitChar(fact.value) : undefined,
       }));
-      console.log("🏳️ Country flag data:", countryFlag);
+      // console.log("🏳️ Country flag data:", countryFlag);
       return {
         [slug]: {
           shortForm,
@@ -176,7 +201,20 @@ class CountryService {
               image: uni.image?.url
                 ? `https://cms.skillang.com${uni.image.url}`
                 : this.getLocalPartnerUniImage(index),
-              qsRank: uni.qsRank,
+              collegeLogo: uni.collegeLogo?.url // ✅ Fixed: changed uni to university
+                ? `https://cms.skillang.com${uni.collegeLogo.url}`
+                : null,
+              type: uni.CollegeType, // Add this
+              ranking: `#${uni.qsRank}`, // Change from qsRank to ranking with #
+              courses: uni.noOfCoursesOffered, // Add this
+              livingCost: `INR ${parseInt(uni.avgLivingCost).toLocaleString()}`, // Add this
+              country: shortForm.trim(), // Add this
+              // Default values for filtering (since not available in API)
+              fee: "<10 Lakhs", // Add this
+              exams: ["IELTS"], // Add this
+              duration: "2-3 Years", // Add this
+              degree: "Masters", // Add this
+              qsRank: uni.qsRank, // Keep original for other components
             })),
 
             topPrograms: studyProgram.map((program, index) => ({

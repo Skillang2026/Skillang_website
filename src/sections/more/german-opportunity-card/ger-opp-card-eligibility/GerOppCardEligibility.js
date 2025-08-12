@@ -1,9 +1,9 @@
 import React from "react";
 import EligibilityBarCardsComponent from "../../../../components/cards/EligibilityBarCards";
-const eli1 = "../../../../assets/icons/german-opp-card/GerOppCardEli1.svg";
-const eli2 = "../../../../assets/icons/german-opp-card/GerOppCardEli2.svg";
-const eli3 = "../../../../assets/icons/german-opp-card/GerOppCardEli3.svg";
-const eli4 = "../../../../assets/icons/german-opp-card/GerOppCardEli4.svg";
+const eli1 = "/assets/icons/german-opp-card/GerOppCardEli1.svg";
+const eli2 = "/assets/icons/german-opp-card/GerOppCardEli2.svg";
+const eli3 = "/assets/icons/german-opp-card/GerOppCardEli3.svg";
+const eli4 = "/assets/icons/german-opp-card/GerOppCardEli4.svg";
 
 const GerOppCardEligibilityData = [
   {

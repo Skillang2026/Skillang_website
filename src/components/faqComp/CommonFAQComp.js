@@ -6,8 +6,12 @@ import { Container, Row, Accordion, Button } from "react-bootstrap";
 import { Plus, X } from "react-bootstrap-icons";
 import "./CommonFAQComp.css";
 
-const CommonFAQComp = ({ faqData, showButtons = false }) => {
-  const [activeKey, setActiveKey] = useState(null); // Changed from "1" to null
+const CommonFAQComp = ({
+  faqData,
+  showButtons = false,
+  title = "Frequently Asked Questions",
+}) => {
+  const [activeKey, setActiveKey] = useState("1");
   const [activeFilter, setActiveFilter] = useState("");
 
   // Extract unique categories from FAQ data
@@ -40,7 +44,7 @@ const CommonFAQComp = ({ faqData, showButtons = false }) => {
     <div>
       <Container className="d-flex flex-column align-items-center p-0">
         <Row className="text-center mb-4">
-          <h1 className="heading-big-medium">Frequently Asked Questions</h1>
+          <h1 className="heading-big-medium">{title}</h1>
         </Row>
 
         {/* Category Filter Buttons */}

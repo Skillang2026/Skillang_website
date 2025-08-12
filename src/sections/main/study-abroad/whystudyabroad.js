@@ -14,7 +14,7 @@ const WhyStudyAbroad = () => {
   return (
     <Container className="">
       <Row className="align-items-center">
-        <Col md={7} className="">
+        <Col lg={7} md={12} className="">
           <div className="heading-big-medium">Why Study Abroad?</div>
           <p className="paragraph-big-medium text-content-secondary mt-1">
             Free German Courses, Online & In-Person Training & Flexible Learning
@@ -65,7 +65,7 @@ const WhyStudyAbroad = () => {
             ))}
           </Row>
         </Col>
-        <Col md={5} className="">
+        <Col md={12} lg={5} className="">
           <div className="image-container">
             <img
               src={whystudyabroad}

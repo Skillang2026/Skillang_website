@@ -51,7 +51,7 @@ const LangTestPrepProgs = () => {
         </Row>
         <Row>
           {programs.map((program, index) => (
-            <Col key={index} lg={4} sm={12} xs={12}>
+            <Col key={index} lg={4} sm={12} xs={12} className="mb-3">
               <Card className="lang-program-card mb-3" id={program.cardIdName}>
                 <CardTitle>{program.title}</CardTitle>
                 <CardText>{program.text}</CardText>

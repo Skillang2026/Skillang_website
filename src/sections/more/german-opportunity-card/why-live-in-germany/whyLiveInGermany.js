@@ -10,14 +10,10 @@ import {
   CardTitle,
 } from "react-bootstrap";
 
-const whyLiveGerImg =
-  "../../../../assets/images/german-opp-card/WhyLiveGerImg.jpg";
-const whyLiveGerIcon1 =
-  "../../../../assets/icons/german-opp-card/whyLiveGerIcon1.svg";
-const whyLiveGerIcon2 =
-  "../../../../assets/icons/german-opp-card/whyLiveGerIcon2.svg";
-const whyLiveGerIcon3 =
-  "../../../../assets/icons/german-opp-card/whyLiveGerIcon3.svg";
+const whyLiveGerImg = "/assets/images/german-opp-card/WhyLiveGerImg.jpg";
+const whyLiveGerIcon1 = "/assets/icons/german-opp-card/whyLiveGerIcon1.svg";
+const whyLiveGerIcon2 = "/assets/icons/german-opp-card/whyLiveGerIcon2.svg";
+const whyLiveGerIcon3 = "/assets/icons/german-opp-card/whyLiveGerIcon3.svg";
 
 const WhyLiveInGermanyComp = () => {
   const WhyLiveInGermanyCardData = [

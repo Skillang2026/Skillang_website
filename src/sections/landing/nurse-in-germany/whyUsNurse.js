@@ -8,15 +8,15 @@ import {
   CardBody,
   CardText,
 } from "react-bootstrap";
-import whynurse1 from "../../../assets/images/landing/whyus1.svg";
-import whynurse2 from "../../../assets/images/landing/whyus2.svg";
-import whynurse3 from "../../../assets/images/landing/whyus3.svg";
-import whynurse4 from "../../../assets/images/landing/whyus4.svg";
-import whynurse5 from "../../../assets/images/landing/whyus5.svg";
-import whynurse6 from "../../../assets/images/landing/whyus6.svg";
-import whynurse7 from "../../../assets/images/landing/whyus7.svg";
-import whynurse8 from "../../../assets/images/landing/whyus8.svg";
-import whynurse9 from "../../../assets/images/landing/whyus9.svg";
+const whynurse1 = "/assets/images/landing/whyus1.svg";
+const whynurse2 = "/assets/images/landing/whyus2.svg";
+const whynurse3 = "/assets/images/landing/whyus3.svg";
+const whynurse4 = "/assets/images/landing/whyus4.svg";
+const whynurse5 = "/assets/images/landing/whyus5.svg";
+const whynurse6 = "/assets/images/landing/whyus6.svg";
+const whynurse7 = "/assets/images/landing/whyus7.svg";
+const whynurse8 = "/assets/images/landing/whyus8.svg";
+const whynurse9 = "/assets/images/landing/whyus9.svg";
 import "./whyUsNurse.css"; // Import the CSS file
 
 const WhyUsNurse = () => {

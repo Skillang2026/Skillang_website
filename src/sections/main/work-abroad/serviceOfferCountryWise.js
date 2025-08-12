@@ -215,20 +215,8 @@ const ServiceOfferCountryWise = () => {
               ))}
             </Row>
           </div>
-          <div className="d-flex justify-content-center mx-auto align-items-center mt-2 visadiscrip">
-            <button
-              className="btn-primary"
-              onClick={() => {
-                // window.scrollTo({ top: 0, behavior: "smooth" });
-                handleShow();
-              }}
-            >
-              Book Free Consultation
-            </button>
-          </div>
-
           {/* Toggle Button */}
-          <div className="text-center d-block d-md-none mt-5">
+          <div className="text-center d-block d-md-none mt-3">
             <button
               className="btn-secondary-outline"
               onClick={() => setShowAll(!showAll)}
@@ -242,6 +230,17 @@ const ServiceOfferCountryWise = () => {
                   View All <ChevronDown className="ms-1" />
                 </>
               )}
+            </button>
+          </div>
+          <div className="d-flex justify-content-center mx-auto align-items-center mt-4">
+            <button
+              className="btn-primary"
+              onClick={() => {
+                // window.scrollTo({ top: 0, behavior: "smooth" });
+                handleShow();
+              }}
+            >
+              Book Free Consultation
             </button>
           </div>
         </Container>

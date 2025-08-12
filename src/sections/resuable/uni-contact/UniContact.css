@@ -3,7 +3,7 @@
       rgba(230, 230, 255, 0.5) 0%,
       rgba(240, 224, 255, 0.5) 35%,
       rgba(255, 226, 240, 0.5) 100%);
-  background-image: url("../../../assets/images/study-abroad-county-wise/countryBG.jpg");
+  background-image: url("/assets/images/study-abroad-county-wise/countryBG.jpg");
   border-radius: 16px;
   background-repeat: no-repeat !important;
   background-position: left !important;

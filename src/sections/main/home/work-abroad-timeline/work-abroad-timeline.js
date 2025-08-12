@@ -10,11 +10,11 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import { Container, Image } from "react-bootstrap";
 
-// import wjourney1 from "../../../../assets/images/home/workJourney1.jpg";
-// import wjourney2 from "../../../../assets/images/home/workJourney2.jpg";
-// import wjourney3 from "../../../../assets/images/home/workJoureny3.jpg";
-// import wjourney4 from "../../../../assets/images/home/workJoureny4.jpg";
-// import wjourney5 from "../../../../assets/images/home/workJoureny5.jpg";
+// const wjourney1 = "/assets/images/home/workJourney1.jpg";
+// const wjourney2 = "/assets/images/home/workJourney2.jpg";
+// const wjourney3 = "/assets/images/home/workJoureny3.jpg";
+// const wjourney4 = "/assets/images/home/workJoureny4.jpg";
+// const wjourney5 = "/assets/images/home/workJoureny5.jpg";
 
 import "./work-abroad-timeline.css";
 
@@ -123,7 +123,7 @@ const WorkAbroadJourneyTimeline = () => {
 
   return (
     <section>
-      <Container>
+      <Container className="bg-primar">
         <div className="text-center heading-big-medium">
           Work Abroad Journey
         </div>
@@ -133,13 +133,13 @@ const WorkAbroadJourneyTimeline = () => {
 
         <Timeline
           position={isMobile ? "right" : "alternate"}
-          className="p-0 m-0 bg-primar"
+          className="p-0 m-0 bg-dar"
         >
           {timelineData.map((item, index) => (
             <TimelineItem
               key={index}
               ref={(el) => (timelineRefs.current[index] = el)}
-              className="py-2 p-0 m-0 bg-dar"
+              className="py-2 p-0 m-0 bg-succes"
             >
               <TimelineOppositeContent
                 style={{ flex: isMobile ? "0" : "1" }}

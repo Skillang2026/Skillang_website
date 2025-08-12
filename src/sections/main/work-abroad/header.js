@@ -32,7 +32,7 @@ const WorkAbroadHeader = () => {
       experienceLabel="Experience"
       // Layout styling
       containerClass="bg-dar"
-      headerClass="d-flex align-items-start justify-content-center bg-primar"
+      headerClass="d-flex align-items-start justify-content-start"
       // Button styling
       buttonText="Book your free consultation"
     />

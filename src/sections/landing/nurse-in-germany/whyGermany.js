@@ -67,10 +67,8 @@ const WhyGermany = () => {
                       style={{ width: "48px", height: "48px" }}
                     />
                     <CardBody className="why-ger-body p-0">
-                      <CardText className="paragraph-small-medium text-content-secondary">
-                        <div className="paragraph-small-medium text-content-secondary why-ger-text text-start">
-                          {service.text}
-                        </div>
+                      <CardText className="paragraph-small-medium text-content-secondary why-ger-text text-start">
+                        {service.text}
                       </CardText>
                     </CardBody>
                   </Card>

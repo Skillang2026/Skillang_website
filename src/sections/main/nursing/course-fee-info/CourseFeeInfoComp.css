@@ -1,0 +1,52 @@
+.course-fee-info-card {
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start; */
+    /* padding: 40px; */
+    /* gap: 24px; */
+    background: #FFFFFF;
+    border-radius: 24px;
+    background: linear-gradient(90deg,
+            rgba(230, 230, 255, 0.5) 0%,
+            rgba(240, 224, 255, 0.5) 35%,
+            rgba(255, 226, 240, 0.5) 100%);
+    /* background-image: url("/assets/images/study-abroad-county-wise/countryBG.jpg"); */
+    background-repeat: no-repeat !important;
+    background-position: bottom center !important;
+    background-size: cover !important;
+    overflow: hidden;
+}
+
+.comfeeinfo-badge {
+    background-color: #02266C;
+    border-radius: 8px !important;
+    color: white;
+    padding: 8px !important;
+    /* height: 40px; */
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+}
+
+.courseinfo-box {
+    padding: 16px;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+    background: #1966FA;
+    color: white !important;
+    border: 1px solid #E3E3E3 !important;
+    border-radius: 16px;
+    margin-bottom: 8px;
+}
+
+.comfeeinfo-box {
+    padding: 16px;
+    gap: 8px;
+    background: #02266C;
+    color: white !important;
+    border: 1px solid #E3E3E3 !important;
+    border-radius: 16px;
+}

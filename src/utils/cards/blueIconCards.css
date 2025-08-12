@@ -9,11 +9,24 @@
   background: #ffffff;
   border: 1px solid #e3e3e3 !important;
   border-radius: 16px !important;
+  overflow: hidden !important;
 }
 
 .blue-icon-img {
   width: 50px !important;
   height: auto !important;
+}
+
+@media (max-width: 1200px) {
+  .blue-icon-cards {
+    padding: 18px !important;
+    gap: 14px !important;
+  }
+
+  .blue-icon-img {
+    width: 40px !important;
+    height: auto !important;
+  }
 }
 
 @media (max-width: 768px) {

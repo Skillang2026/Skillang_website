@@ -218,8 +218,8 @@ const TermsPage = () => {
             </h2>
 
             <p className="paragraph-small-regular text-content-secondary mb-2">
-              These terms are governed by the laws of Singapore. Disputes will
-              be resolved in the courts of Singapore.
+              These terms are governed by Indian laws. Disputes will be resolved
+              in the courts of India.
             </p>
           </div>
 

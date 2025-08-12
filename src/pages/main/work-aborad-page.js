@@ -10,7 +10,7 @@ import PartnerWithUsSection from "../../sections/resuable/partner-with-us/partne
 const WorkAboradPage = () => {
   return (
     <>
-      <div className="section-spacing">
+      <div className="section-spacin">
         <WorkAbroadHeader />
       </div>
       <div className="section-spacing">

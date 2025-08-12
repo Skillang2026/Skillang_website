@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./footer.css";
+import Link from "next/link";
 
 const foorImg = "/assets/images/home/footer-img.png";
 const logo = "/assets/images/logos/logo-3.svg";
@@ -68,84 +69,84 @@ const Footer = () => {
           <Col lg={8} className="pe-lg-2 mb-4 mb-lg-0">
             <div className="footer-card">
               <Row>
-                <Col xs={6} md={4}>
+                <Col xs={6} lg={3}>
                   <ul className="footer-links">
                     <li>
-                      <a href="/">
+                      <Link href="/">
                         <div className="caption-medium"> Home</div>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/nursing">
+                      <Link href="/nursing">
                         <div className="caption-medium">Nursing</div>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/work-abroad">
+                      <Link href="/work-abroad">
                         <div className="caption-medium">Work Abroad</div>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </Col>
-                <Col xs={6} md={4}>
+                <Col xs={6} lg={3}>
                   <ul className="footer-links">
                     <li>
-                      <a href="/study-abroad">
+                      <Link href="/study-abroad">
                         <div className="caption-medium"> Study Abroad</div>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/lang-test-prep">
+                      <Link href="/lang-test-prep">
                         <div className="caption-medium "> Language Prep</div>
-                      </a>
+                      </Link>
                     </li>
-                    <li className="d-none d-md-block">
-                      <a href="/lang-test-prep">
+                    <li className="">
+                      <Link href="/lang-test-prep">
                         <div className="caption-medium"> Test Prep</div>
-                      </a>
+                      </Link>
                     </li>
-                    <li className="d-block d-md-none">
-                      <a href="/more/contact-us">
+                    {/* <li className="">
+                      <Link href="/more/contact-us">
                         <div className="caption-medium"> Contact Us</div>
-                      </a>
-                    </li>
+                      </Link>
+                    </li> */}
                   </ul>
                 </Col>
-                {/* <Col xs={6} md={3} className="mt-4 mt-md-0 d-none d-md-block">
+                <Col xs={6} lg={3} className="mt-4 mt-md-0 ">
                   <ul className="footer-links">
-                    <li>
+                    {/* <li>
                       <a href="/">
                         <div className="caption-medium">Login/Sign Up</div>
                       </a>
-                    </li>
+                    </li> */}
                     <li>
-                      <a href="/">
+                      <Link href="/contact-us">
                         <div className="caption-medium">Contact Us</div>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/">
-                        <div className="caption-medium">News & Blogs</div>
-                      </a>
+                      <Link href="/blogs">
+                        <div className="caption-medium">Blogs</div>
+                      </Link>
                     </li>
                   </ul>
-                </Col> */}
-                <Col xs={6} md={4} className="mt-4 mt-md-0 d-none d-md-block">
+                </Col>
+                <Col xs={6} lg={3} className="mt-4 mt-md-0 ">
                   <ul className="footer-links">
                     <li>
-                      <a href="/terms-of-use">
+                      <Link href="/terms-of-use">
                         <div className="caption-medium">Terms of Use</div>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/privacy-policy">
+                      <Link href="/privacy-policy">
                         <div className="caption-medium">Privacy Policy</div>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/more/contact-us">
-                        <div className="caption-medium">Contact Us</div>
-                      </a>
+                      <Link href="/refund-policy">
+                        <div className="caption-medium">Refund Policy</div>
+                      </Link>
                     </li>
                   </ul>
                 </Col>

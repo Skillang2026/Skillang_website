@@ -65,8 +65,8 @@ const MainFormComp = ({
   studyLevelLabel = "Looking for ?", // For study level in home form
 
   // Layout props
-  imageColSize = { lg: 7, md: 5, sm: 12, xs: 12 },
-  formColSize = { lg: 4, md: 6, sm: 12, xs: 12 },
+  imageColSize = { lg: 7, md: 12, sm: 12, xs: 12 },
+  formColSize = { lg: 5, md: 12, sm: 12, xs: 12 },
   showSpacer = true,
 
   // Custom CSS classes
@@ -183,7 +183,7 @@ const MainFormComp = ({
 
   return (
     <header className={headerClass}>
-      <Container className={containerClass}>
+      <Container className={` ${containerClass} pt-3`}>
         <Row>
           {/* Image Column */}
           <Col
@@ -191,15 +191,20 @@ const MainFormComp = ({
             md={imageColSize.md}
             sm={imageColSize.sm}
             xs={imageColSize.xs}
-            className="d-flex flex-column align-items-start justify-content-center"
+            className="d-flex flex-column align-items-start justify-content-center  lg:pe-5"
           >
             {headerImage && (
-              <Image src={headerImage} fluid className="w-100" alt={imageAlt} />
+              <Image
+                src={headerImage}
+                fluid
+                className="w-100  lg:pe-5"
+                alt={imageAlt}
+              />
             )}
           </Col>
 
           {/* Spacer Column */}
-          {showSpacer && <Col lg={1} className="d-none d-md-block"></Col>}
+          {/* {showSpacer && <Col lg={1} className="d-none d-md-block"></Col>} */}
 
           {/* Form Column */}
           <Col
@@ -207,10 +212,10 @@ const MainFormComp = ({
             md={formColSize.md}
             sm={formColSize.sm}
             xs={formColSize.xs}
-            className="d-flex align-items-start justify-content-center"
+            className="d-flex align-items-start justify-content-end"
           >
-            <Container className="d-flex align-items-center justify-content-center flex-column">
-              <div className="form-container m-0">
+            <Container className="d-flex align-items-center justify-content-end  p-0">
+              <div className="form-container m-0 bg-success justify-content-end">
                 {/* Form Title */}
                 <div
                   className="d-none d-md-block subheading-small-medium text-center"

@@ -13,7 +13,7 @@ import WorkAbroadJourneyTimeline from "../../sections/main/home/work-abroad-time
 const HomePage = () => {
   return (
     <div className="home-page-container">
-      <div className="homepage-section-spacing">
+      <div className="homepage-section-spacin">
         <HomeHeader2 />
       </div>
       <div className="homepage-section-spacing">

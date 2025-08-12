@@ -2,12 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import "./workAbroadJourney.css";
 import { Col, Container, Row, Image } from "react-bootstrap";
 
-// import workJor0 from '../../../assets/images/home/workJoureny0.png';
-import workJor1 from "../../../../assets/images/home/workJourney1.jpg";
-import workJor2 from "../../../../assets/images/home/workJourney2.jpg";
-import workJor3 from "../../../../assets/images/home/workJoureny3.jpg";
-import workJor4 from "../../../../assets/images/home/workJoureny4.jpg";
-import workJor5 from "../../../../assets/images/home/workJoureny5.jpg";
+// import workJor0 from '/assets/images/home/workJoureny0.png';
+const workJor1 = "/assets/images/home/workJourney1.jpg";
+const workJor2 = "/assets/images/home/workJourney2.jpg";
+const workJor3 = "/assets/images/home/workJoureny3.jpg";
+const workJor4 = "/assets/images/home/workJoureny4.jpg";
+const workJor5 = "/assets/images/home/workJoureny5.jpg";
 
 const ParallaxScrollSnap = () => {
   const containerRef = useRef(null);

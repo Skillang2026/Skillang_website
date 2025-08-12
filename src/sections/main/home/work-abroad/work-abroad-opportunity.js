@@ -94,7 +94,7 @@ const WorkAbroadOpportunity = () => {
                     src={card.img}
                     alt="Card image"
                   />
-                  <CardBody className="d-flex flex-column justify-content-between p-2">
+                  <CardBody className="d-flex flex-column justify-content-between p-0 pt-2">
                     <div className="card-header-sectio flex-column">
                       <CardTitle className="subheading-small-medium">
                         {card.title}
@@ -121,9 +121,11 @@ const WorkAbroadOpportunity = () => {
         <div className="w-100">
           <Row className="bg-primar w-100 mx-0">
             <Col
-              lg={8}
-              md={4}
-              className="work-abroad-left-bg flex-column text-white d-flex align-items-end justify-content-start text-start p-0"
+              lg={12}
+              md={12}
+              sm={12}
+              xs={12}
+              className="work-abroad-left-bg bg-primary flex-column text-white d-flex align-items-end justify-content-start text-start p-0"
             >
               <div className="work-ops-textwrap bg-primar">
                 <h2 className="text-white heading-small-medium">
@@ -143,8 +145,8 @@ const WorkAbroadOpportunity = () => {
                 </div>
               </div>
             </Col>
-            <Col lg={4} md={8} className="pe-0">
-              <div className="work-abroad-right-bg ">
+            {/* <Col lg={4} md={12} className="pe-0 mt-2">
+              <div className="work-abroad-right-bg bg-light">
                 <Row className="">
                   {secCardData.map((service, index) => (
                     <Col key={index} className="mb-3 " lg={6} sm={6} xs={6}>
@@ -165,7 +167,7 @@ const WorkAbroadOpportunity = () => {
                   ))}
                 </Row>
               </div>
-            </Col>
+            </Col> */}
           </Row>
         </div>
       </Container>

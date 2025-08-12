@@ -65,20 +65,24 @@ const PartnerTypeSection = () => {
                   className="why-nurse-card-img"
                   alt={`partner wish us icon ${index + 1}`}
                 />
-                <Card.Body className="px-1">
-                  <Card.Title className="subheading-small-medium">
-                    {partner.title}
-                  </Card.Title>
-                  <Card.Text className="paragraph-big-medium text-content-secondary">
-                    {partner.description}
-                  </Card.Text>
+                <Card.Body className="px-1 d-flex flex-row justify-between">
+                  <div>
+                    <Card.Title className="subheading-small-medium">
+                      {partner.title}
+                    </Card.Title>
+                    <Card.Text className="paragraph-big-medium text-content-secondary">
+                      {partner.description}
+                    </Card.Text>
+                  </div>
+                </Card.Body>
+                <Card.Footer className="p-0 bg-white border-top-0">
                   <button
                     className="btn-primary"
                     onClick={() => handleShow(partner.type)}
                   >
                     Know More
                   </button>
-                </Card.Body>
+                </Card.Footer>
               </Card>
             </Col>
           ))}

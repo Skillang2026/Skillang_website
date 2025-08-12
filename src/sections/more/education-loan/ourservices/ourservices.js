@@ -61,7 +61,7 @@ const EduLoanOurServices = () => {
         <Row className="w-100 d-flex justify-content-center align-items-center">
           <Col
             lg={7}
-            md={6}
+            md={12}
             sm={12}
             xs={12}
             className="d-flex flex-column justify-content-center align-items-stretch"
@@ -112,7 +112,7 @@ const EduLoanOurServices = () => {
           <Col
             lg={5}
             md={6}
-            className="d-flex justify-content-center align-items-center d-none d-md-block overflow-hidden  p-0"
+            className="d-flex justify-content-center align-items-center d-none d-lg-block overflow-hidden  p-0"
           >
             <img
               src={eduourserviceImg}

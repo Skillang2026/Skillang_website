@@ -68,7 +68,7 @@ function FreshNavbar() {
   };
 
   const handleContactClick = () => {
-    handleNavigation("/more/contact-us");
+    handleNavigation("/contact-us");
   };
 
   const toggleMore = () => {

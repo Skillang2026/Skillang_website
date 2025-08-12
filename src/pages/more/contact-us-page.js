@@ -13,7 +13,6 @@ const ContactUsPage = () => {
         <ContactLocationComp />
       </div>
       <div className="section-spacing">
-        {" "}
         <ContactFAQComp />
       </div>
     </>

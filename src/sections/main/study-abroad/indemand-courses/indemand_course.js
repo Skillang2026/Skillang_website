@@ -148,12 +148,12 @@ const IndemandCourse = () => {
                   alt={course.title}
                 />
 
-                <CardBody className="course-details d-flex flex-column justify-content-between">
+                <CardBody className="course-details d-flex flex-column justify-content-between gap-3">
                   <div className="subheading-small-medium text-content-primaryInverse">
                     {course.title}
                   </div>
-                  <div>
-                    <div className="career-paths">Career Paths</div>
+                  <div className="">
+                    <div className="career-paths mb-1">Career Paths</div>
                     <div className="career-specializations text-content-grey-500">
                       {course.paths}
                     </div>

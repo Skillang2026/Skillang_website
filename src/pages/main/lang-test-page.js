@@ -9,7 +9,7 @@ import LangContactUs from "../../sections/main/lang-test/lang-connect/LangContac
 const LangTestPage = () => {
   return (
     <>
-      <div className="section-spacin">
+      <div className="section-spacing">
         <LangTestHeader />
       </div>
       <div className="section-spacing">

@@ -17,12 +17,12 @@ const LangContactUs = () => {
     <div>
       <Container className="lang-conteact-us-bg">
         <Row>
-          <Col lg={6} md={6} sm={12} xs={12} className="d-none d-md-block">
+          <Col lg={6} md={12} sm={12} xs={12} className="d-none d-lg-block">
             <img src={LPartnerImg} />
           </Col>
           <Col
             lg={6}
-            md={6}
+            md={12}
             sm={12}
             xs={12}
             className="d-flex flex-column align-items-start justify-content-center"
@@ -33,7 +33,7 @@ const LangContactUs = () => {
                   className="heading-big-medium"
                   style={{ color: "#023655" }}
                 >
-                  Still have queries? Let’s Connect
+                  Still have queries? Let's Connect
                 </div>
                 <div
                   className="paragraph-big-medium  "
@@ -57,7 +57,7 @@ const LangContactUs = () => {
               </div>
             </div>
           </Col>
-          <Col lg={6} md={6} sm={12} xs={12} className="d-block d-md-none">
+          <Col lg={6} md={12} sm={12} xs={12} className="d-block d-lg-none">
             <img src={LPartnerImg} className="img-fluid" />
           </Col>
         </Row>

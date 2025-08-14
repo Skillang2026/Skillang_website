@@ -1,6 +1,5 @@
 .privacy-cont {
-  height: 80vh !important;
-
+  height: 70vh !important;
   align-items: center !important;
   justify-content: center !important;
   /* background-color: pink; */
@@ -9,6 +8,12 @@
   background: radial-gradient(circle at top center,
       rgba(232, 110, 255, 0.473) 0%,
       rgba(250, 251, 252, 0) 70%);
+}
+
+@media (max-width: 768px) {
+  .privacy-cont {
+    height: 40vh !important;
+  }
 }
 
 /* 

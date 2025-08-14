@@ -22,7 +22,7 @@ const BlogMainPageHeader = () => {
       <section>
         <Container>
           <Row>
-            <Col sm={12} xs={12} md={7} className="bg-primar">
+            <Col sm={12} xs={12} md={12} lg={7} className="bg-primar">
               <div
                 className="w-100 blog-main-header-left-img bg-light placeholder-glow d-flex align-items-center justify-content-center"
                 style={{ height: "300px" }}
@@ -33,7 +33,7 @@ const BlogMainPageHeader = () => {
                 <span className="placeholder col-8 heading-big-medium"></span>
               </div>
             </Col>
-            <Col sm={12} xs={12} md={5}>
+            <Col sm={12} xs={12} md={12} lg={5}>
               <BlogSidebar />
             </Col>
           </Row>

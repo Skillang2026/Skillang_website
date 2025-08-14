@@ -17,48 +17,56 @@ const whyNurse8 = "/assets/icons/nurse/whyNurse8.svg";
 const WhyNurseCardData = [
   {
     title: "High Demand in Healthcare",
+    subtitle: "5 Lakhs Nurses Needed",
     desc: "Free German Courses, Online & In-Person Training & Flexible Learning Schedules all in One Place",
     img: whyNurse1,
     color: "#FFFBFB",
   },
   {
     title: "Advanced Medical Technology",
+    subtitle: "5 Lakhs Nurses Needed",
     desc: "Working with cutting-edge medical equipment and innovative practices enhances professional development",
     img: whyNurse2,
     color: "#FFFBF3",
   },
   {
     title: "Career Growth & Specialization",
+    subtitle: "5 Lakhs Nurses Needed",
     desc: "Healthcare careers offer continuous opportunities for growth, specialization, and upward mobility in various fields.",
     img: whyNurse3,
     color: "#F8FAFF",
   },
   {
     title: "Competitive Salary & Benefits",
+    subtitle: "5 Lakhs Nurses Needed",
     desc: "Healthcare professionals enjoy attractive salary packages and comprehensive benefits, ensuring financial stability",
     img: whyNurse4,
     color: "#F9F7FF",
   },
   {
     title: "Work-Life Balance",
+    subtitle: "5 Lakhs Nurses Needed",
     desc: "Enjoy a healthy work-life balance in regions, making it easier to maintain both career and personal well-being",
     img: whyNurse5,
     color: "#F8FAFF",
   },
   {
     title: "Language Support for Integration",
+    subtitle: "5 Lakhs Nurses Needed",
     desc: "Language programs make it easier for healthcare professionals to integrate into new communities",
     img: whyNurse6,
     color: "#FFF9FD",
   },
   {
     title: "Healthcare Worker Rights",
+    subtitle: "5 Lakhs Nurses Needed",
     desc: "Healthcare systems prioritize the wellbeing and rights of their workers, ensuring a supportive and secure",
     img: whyNurse7,
     color: "#FFFBF3",
   },
   {
     title: "Vibrant & Cultural Cities",
+    subtitle: "5 Lakhs Nurses Needed",
     desc: "Experience life in vibrant cities with rich cultural experiences, stunning architecture, and a diverse, welcoming atmosphere.",
     img: whyNurse8,
     color: "#FFFBFB",
@@ -129,6 +137,9 @@ const WhyNursingSection = () => {
                       <div className="subheading-small-medium text-content-secondary mb-1">
                         {card.title}
                       </div>
+                      <div className="subheading-big-medium text-content-secondary mb-1">
+                        {card.subtitle}
+                      </div>
                       <div className="paragraph-small-medium text-content-secondary">
                         {card.desc}
                       </div>
@@ -197,6 +208,9 @@ const WhyNursingSection = () => {
                     <div className="subheading-small-medium text-content-secondary mb-1">
                       {card.title}
                     </div>
+                    {/* <div className="subheading-small-medium text-content-secondary mb-1">
+                      {card.subtitle}
+                    </div> */}
                     <div className="paragraph-small-medium text-content-secondary">
                       {card.desc}
                     </div>

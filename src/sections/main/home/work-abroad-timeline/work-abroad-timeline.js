@@ -127,7 +127,7 @@ const WorkAbroadJourneyTimeline = () => {
         <div className="text-center heading-big-medium">
           Work Abroad Journey
         </div>
-        <div className="text-center paragraph-big-medium text-content-secondary mb-2 mb-md-5">
+        <div className="text-center paragraph-big-medium text-content-secondary  mb-md-5">
           Start your work abroad journey in 5 simple steps
         </div>
 
@@ -141,19 +141,16 @@ const WorkAbroadJourneyTimeline = () => {
               ref={(el) => (timelineRefs.current[index] = el)}
               className="py-2 p-0 m-0 bg-succes"
             >
-              <TimelineOppositeContent
-                style={{ flex: isMobile ? "0" : "1" }}
-                className=""
-              >
-                <div className="d-none d-md-block">
+              {!isMobile && (
+                <TimelineOppositeContent>
                   <Image
                     fluid
                     className="custom-image"
                     src={item.image}
                     alt={item.title}
                   />
-                </div>
-              </TimelineOppositeContent>
+                </TimelineOppositeContent>
+              )}
               <TimelineSeparator>
                 <TimelineDot
                   className={`timeline-dot ${

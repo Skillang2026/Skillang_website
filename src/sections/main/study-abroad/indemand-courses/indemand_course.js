@@ -148,7 +148,7 @@ const IndemandCourse = () => {
                   alt={course.title}
                 />
 
-                <CardBody className="course-details d-flex flex-column justify-content-between gap-3">
+                <CardBody className="course-details px-0 d-flex flex-column justify-content-between gap-3">
                   <div className="subheading-small-medium text-content-primaryInverse">
                     {course.title}
                   </div>

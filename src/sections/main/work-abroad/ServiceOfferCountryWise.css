@@ -1,7 +1,7 @@
 /* Updated CSS for Service Offerings and Country Guidance */
 
 .service-bg {
-    background-image: url("https://cms.skillang.com/uploads/service_offer_vis_guidence_f436c7a0c8.png");
+    background-image: url("https://cms.skillang.com/uploads/work_abroad_bg_0a163ce804.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -153,7 +153,7 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 766px) {
 
     .country-flag {
         width: 40px !important;
@@ -162,7 +162,7 @@
     .service-offering-cards-container {
         position: relative;
         overflow: hidden !important;
-        transition: max-height 0.8s ease-in-out !important;
+        transition: all 0.8s ease-in-out !important;
     }
 
     .service-offering-cards-container::after {
@@ -189,9 +189,10 @@
         height: auto;
         background: none;
         display: flex;
+        margin: 0;
+        padding: 0;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 25px;
     }
 
     .service-item {
@@ -201,58 +202,42 @@
         right: auto;
         bottom: auto;
         transform: none;
-        margin: 1rem;
+        margin: 0.5rem;
     }
 
     .service-item.top-center {
         top: 0px;
         left: 80px;
-        /* transform: translateX(-50%); */
     }
 
     .service-item.top-right {
         top: -100px;
-        /* Moved up slightly */
         right: 100px;
-        /* Moved further to the right */
     }
 
     .service-item.bottom-left {
         top: 80px;
-        /* Adjusted position */
         left: 130px;
-        /* Moved slightly outward */
     }
 
     .service-item.bottom-right {
         bottom: 150px;
-        /* Adjusted position */
-        right: 120px;
-        /* Kept previous adjustment */
+        right: 100px;
     }
 
     .service-description-popup {
         display: none !important;
-        /* Completely hides the element */
         visibility: hidden !important;
-        /* Ensures it's not visible */
         opacity: 0 !important;
-        /* Makes it fully transparent */
         transition: none !important;
-        /* Disables any animations or transitions */
     }
 
     .country-card {
         margin-bottom: 10px;
         position: relative;
         height: fit-content !important;
-        /* Enables movement */
-
-        /* margin-bottom: ; */
         padding: 12px !important;
     }
-
-
 
     .tag-button {
         background: #FEF8EB !important;
@@ -261,8 +246,5 @@
         border-radius: 8px !important;
         border: 20px !important;
         max-width: 250px !important;
-        /* Enables movement */
-        /* top: 30px; */
-        /* Move button down */
     }
 }

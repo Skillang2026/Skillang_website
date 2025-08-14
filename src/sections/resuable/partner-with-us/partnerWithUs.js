@@ -17,7 +17,7 @@ const PartnerWithUsSection = () => {
   return (
     <div className="d-flex flex-column align-items-center justify-content-center ">
       <Container className="nurse-partner-bg text-start rounded-5">
-        <Row className="py-4">
+        <Row className="py-">
           <Col className="d-none d-md-block" md={6} sm={12} xs={12}>
             <Image fluid src={nursePartnerImg} alt="" />
           </Col>
@@ -55,7 +55,6 @@ const PartnerWithUsSection = () => {
                 // window.scrollTo({ top: 0, behavior: "smooth" });
               }}
             >
-              {" "}
               Connect Now
             </button>
           </Col>

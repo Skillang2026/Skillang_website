@@ -37,7 +37,7 @@ const eligibilityData = [
 
 const LoanEligibility = () => {
   return (
-    <div className="loan-eligible-bg d-flex justify-content-end align-items-center ">
+    <div className="loan-eligible-bg d-flex justify-content-end align-items-center">
       <Container className="my-5 py-5 d-flex justify-content-end align-items-center flex-column">
         <Row className="mb-4">
           <div className="heading-big-medium text-content-primary text-center mt-5 pt-5">

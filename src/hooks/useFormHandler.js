@@ -7,6 +7,8 @@ const useFormHandler = () => {
   // State variables remain the same
   const [validated, setValidated] = useState(false);
   const [otpVisible, setOtpVisible] = useState(false);
+  const [lookingForError, setLookingForError] = useState("");
+  const [qualificationError, setQualificationError] = useState("");
   const [otp, setOtp] = useState("");
   const [showToast, setShowToast] = useState(false);
   const [toastVariant, setToastVariant] = useState("success");
@@ -192,7 +194,7 @@ const useFormHandler = () => {
       resetOtp();
     } catch (error) {
       console.error("❌ Error submitting inquiry:", error);
-      setStatus("❌ Error submitting inquiry. Please try again.");
+      setStatus(`❌ Error submitting inquiry: ${getErrorMessage(error)}`);
       setToastVariant("danger");
       setShowToast(true);
     }
@@ -275,9 +277,15 @@ const useFormHandler = () => {
     // }
 
     if (!formData.lookingFor) {
-      setStatus("❌ Please select what you're looking for.");
-      setToastVariant("danger");
-      setShowToast(true);
+      // setStatus("❌ Please select what you're looking for.");
+      // setToastVariant("danger");
+      // setShowToast(true);
+      setLookingForError("Please select what you're looking for.");
+      return;
+    }
+
+    if (!formData.qualification) {
+      setQualificationError("Please select your qualification.");
       return;
     }
 
@@ -359,6 +367,10 @@ const useFormHandler = () => {
     setShowToast,
     setFormType,
     setPartnerFormData,
+    qualificationError,
+    setQualificationError,
+    lookingForError,
+    setLookingForError,
   };
 };
 

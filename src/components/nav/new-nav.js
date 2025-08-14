@@ -199,10 +199,10 @@ function FreshNavbar() {
           </Nav>
 
           {/* Contact Button */}
-          <div className="d-flex justify-content-center align-items-center mt-3">
+          <div className="contact-nav-button mt-3">
             <Button
               variant="outline-primary"
-              className="btn-primary-outline  "
+              className="btn-primary-outline w-100 "
               onClick={handleContactClick}
             >
               <FiPhoneCall

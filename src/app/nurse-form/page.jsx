@@ -241,8 +241,6 @@ const NurseFormPage = () => {
                 })
               }
               controlId="formQualification"
-              labelClassName="fw-bold mb-3"
-              optionClassName="fs-6"
             />
           </div>
         );
@@ -269,8 +267,6 @@ const NurseFormPage = () => {
                 })
               }
               controlId="formExperience"
-              labelClassName="fw-bold mb-3"
-              optionClassName="fs-6"
             />
           </div>
         );
@@ -292,8 +288,6 @@ const NurseFormPage = () => {
                 })
               }
               controlId="formAge"
-              labelClassName="fw-bold mb-3"
-              optionClassName="fs-6"
             />
           </div>
         );
@@ -315,8 +309,6 @@ const NurseFormPage = () => {
                 })
               }
               controlId="formGermanStatus"
-              labelClassName="fw-bold mb-3"
-              optionClassName="fs-6"
             />
           </div>
         );
@@ -338,8 +330,6 @@ const NurseFormPage = () => {
                 })
               }
               controlId="formStartPlanning"
-              labelClassName="fw-bold mb-3"
-              optionClassName="fs-6"
             />
           </div>
         );
@@ -361,8 +351,6 @@ const NurseFormPage = () => {
                 })
               }
               controlId="formCallBack"
-              labelClassName="fw-bold mb-3"
-              optionClassName="fs-6"
             />
           </div>
         );

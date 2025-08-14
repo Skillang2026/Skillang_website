@@ -41,15 +41,15 @@ const benefits = [
 
 const PermResidentSection = () => {
   return (
-    <div className="bg-dark ">
+    <div className="nurse-perm-section-bg">
       <Container>
-        <Row className="py-4">
+        <Row className=" pb-2">
           <Col lg={6} className="d-block d-md-none">
             <Image
               fluid
               src={nurseResi}
               alt="Permanent Residency"
-              style={{ borderRadius: "12px" }}
+              className="nurse-perm-resi-image mb-3"
             />
           </Col>
           <Col lg={5} sm={12} xs={12}>
@@ -62,8 +62,7 @@ const PermResidentSection = () => {
               fluid
               src={nurseResi}
               alt="Permanent Residency"
-              className="w-100 h-auto"
-              style={{ borderRadius: "24px" }}
+              className="nurse-perm-resi-image"
             />
           </Col>
         </Row>

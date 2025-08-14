@@ -85,7 +85,9 @@ const CountryPage = ({ country = "uk" }) => {
 
   return (
     <div>
-      <CountryWiseHeaderComp country={country} countryData={countryData} />
+      <section id="overview" className="country-page-spacing">
+        <CountryWiseHeaderComp country={country} countryData={countryData} />
+      </section>
       <NavSecondary />
       <section id="overview" className="country-page-spacing">
         <StudyAbroadCountryOverview

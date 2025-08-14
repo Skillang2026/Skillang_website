@@ -34,9 +34,28 @@
     z-index: 2;
 }
 
+.custom-image {
+    height: 100%;
+    width: 100% !important;
+    object-fit: contain !important;
+}
+
 @media (max-width: 480px) {
     .custom-image {
-        height: 140px !important;
-        width: auto !important;
+        height: 180px;
+        width: 100% !important;
+        object-fit: contain !important;
     }
+}
+
+.MuiTimelineItem-missingOppositeContent::before {
+    display: none !important;
+}
+
+.MuiTimelineItem-missingOppositeContent {
+    min-height: auto !important;
+}
+
+.MuiTimelineItem-positionRight .MuiTimelineContent-root {
+    padding-left: 16px !important;
 }

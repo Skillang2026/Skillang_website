@@ -8,8 +8,9 @@
 
 @media (max-width: 1000px) {
   .modal-90w {
-    width: 99% !important;
-    max-width: 100% !important;
+    width: 90% !important;
+    max-width: 90% !important;
+    margin: 0 auto !important;
   }
 }
 

@@ -96,9 +96,11 @@ const CourseFeeInfoComp = () => {
                 </span>
               </div>
               <div className="paragraph-small-regular text-content-tertiaryInverse">
-                Screening Process, Interview Preparation, Job Placement
-                Assistance, Visa Assistance, Cultural Integration, Relocation
-                Services, Ongoing Career Support
+                Pedagogy, LMS access, interactive live sessions, mock
+                interviews, flashcards, gamified learning, medical terminology,
+                cultural integration, recruiter interactions, Job matching,
+                document management, visa assistance, skill recognition, housing
+                support, guided tours, career mentorship
               </div>
             </div>
             <div className="caption-regular mt-4 text-content-secondary">

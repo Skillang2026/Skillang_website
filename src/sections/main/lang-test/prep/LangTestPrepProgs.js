@@ -52,10 +52,12 @@ const LangTestPrepProgs = () => {
         <Row>
           {programs.map((program, index) => (
             <Col key={index} lg={4} sm={12} xs={12} className="mb-3">
-              <Card className="lang-program-card mb-3" id={program.cardIdName}>
-                <CardTitle>{program.title}</CardTitle>
-                <CardText>{program.text}</CardText>
-                <div>
+              <Card className="lang-program-card" id={program.cardIdName}>
+                <div className="card-content">
+                  <CardTitle>{program.title}</CardTitle>
+                  <CardText>{program.text}</CardText>
+                </div>
+                <div className="card-button mt-2">
                   <button
                     className={program.buttonClass}
                     onClick={() => {

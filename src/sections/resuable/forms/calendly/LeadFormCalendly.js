@@ -37,6 +37,9 @@ const ConsultationModal = ({
     handleResendOtp,
     setOtp,
     setShowToast,
+    qualificationError,
+    setValidated,
+    setQualificationError,
   } = useFormHandler();
   formData.origin = "Calendly Form";
   formData.pincode = "No applicable";
@@ -224,6 +227,15 @@ const ConsultationModal = ({
       return;
     }
 
+    if (!formData.qualification) {
+      setQualificationError("Please select your highest qualification."); // You need this from hook
+      setValidated(true);
+      return;
+    }
+
+    // Clear error if valid
+    setQualificationError("");
+
     // Check if all required fields are filled
     if (
       !formData.name ||
@@ -291,7 +303,11 @@ const ConsultationModal = ({
               style={{ maxHeight: "500px" }}
             />
           </Col>
-          <Col md={6} className="p-5" style={{ minHeight: "500px" }}>
+          <Col
+            md={6}
+            className="p-md-5 py-3 px-4"
+            style={{ minHeight: "500px" }}
+          >
             {currentStep === 1 ? (
               /* Step 1: Initial Form */
               <>
@@ -358,9 +374,12 @@ const ConsultationModal = ({
                         })
                       }
                       controlId="formQualification"
-                      labelClassName="text-start paragraph-small-regular text-content-secondary"
-                      optionClassName=""
                     />
+                    {qualificationError && (
+                      <div className="text-danger small mt-1">
+                        ❌ {qualificationError}
+                      </div>
+                    )}
                   </Form.Group>
                   <div className="d-grid">
                     <Button

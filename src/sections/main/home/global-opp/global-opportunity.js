@@ -4,9 +4,11 @@ import React from "react";
 import { Container, Row } from "react-bootstrap";
 import "./global-opportunity.css";
 import { useRouter } from "next/navigation"; // Next.js navigation
+import { useToast } from "@/hooks/useToast";
 
 const GlobalOpportunity = () => {
   const router = useRouter(); // Next.js router
+  const { showToast } = useToast(); // ADD THIS HOOK
 
   const handleLearnMore = () => {
     router.push("/work-abroad"); // Next.js navigation
@@ -16,8 +18,17 @@ const GlobalOpportunity = () => {
     });
   };
 
+  // ADD THIS TEST FUNCTION
+  const handleTestToast = () => {
+    showToast(
+      "success",
+      "Test Success!",
+      "This is a test notification to verify Sonner is working properly"
+    );
+  };
+
   return (
-    <div className="d-flex align-items-center justify-content-center py-lg-1 bg-primar">
+    <div className="d-flex align-items-center justify-content-center py-lg-1">
       <Container className="d-flex align-items-center justify-content-center text-center">
         <Row className="d-flex align-items-center justify-content-center global-opp-text-wrap">
           <div className="heading-big-medium d-none d-md-block">
@@ -31,10 +42,16 @@ const GlobalOpportunity = () => {
             abroad, language and test preparation services. Tailored guidance to
             help you succeed in your dream career abroad!
           </p>
-          <div>
+
+          {/* UPDATE THIS SECTION - Add both buttons */}
+          <div className="d-flex gap-3 justify-content-center flex-wrap">
             <button className="btn-primary-outline" onClick={handleLearnMore}>
               Learn More
             </button>
+            {/* ADD THIS TEST BUTTON */}
+            {/* <button className="btn btn-warning" onClick={handleTestToast}>
+              Test Toast
+            </button> */}
           </div>
         </Row>
       </Container>

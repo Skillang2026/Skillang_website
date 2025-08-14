@@ -84,18 +84,6 @@
     /* Make header more compact on mobile */
     .modal-header {
         padding: 12px 16px !important;
-        display: flex !important;
-        justify-content: start !important;
-        align-items: center !important;
-        text-align: start !important;
-    }
-
-    .modal-header {
-        padding: 12px 16px !important;
-        display: flex !important;
-        justify-content: start !important;
-        align-items: center !important;
-        text-align: start !important;
     }
 
     /* Scholarship items spacing for mobile */
@@ -119,17 +107,13 @@
 
     /* Specific styles for extra small devices */
     .scholarship-modal .modal-dialog {
-        /* margin: 0 !important; */
+        margin: 10px !important;
         height: 100%;
-        width: 100% !important;
+        width: 90% !important;
     }
 
     .scholarship-modal .modal-content {
         min-height: max-content;
-        justify-content: center !important;
-        align-items: center !important;
-        /* padding: 24px 12px !important; */
-
     }
 
     /* Remove unnecessary padding */

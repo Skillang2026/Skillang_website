@@ -19,7 +19,7 @@ import CourseFeeInfoComp from "@/sections/main/nursing/course-fee-info/CourseFee
 const NursePage = () => {
   return (
     <>
-      <div className="section-spacin">
+      <div className="section-spacing">
         <NurseMainHeader />
       </div>
       <div className="section-spacing">

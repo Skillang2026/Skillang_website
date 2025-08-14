@@ -64,7 +64,7 @@ const internCardData = [
     img: intern3,
     mobileImg: intern3Mobile,
     id: "intern-mobile-card-full",
-    desc: "Students earn and gain industry experience through paid internships.",
+    desc: "Students earn and gain industry experience through paid apprenticeship.",
     colSpan: 4,
     mobileColSpan: 12,
   },
@@ -142,11 +142,11 @@ const InternshipSection = () => {
       <Container className="d-flex flex-column align-items-center justify-content-center gap-4">
         <Row className=" text-center intern-heading-wrapper">
           <div className="heading-big-medium">
-            Ausbildung (Internship) Program in Germany
+            Ausbildung ( Apprenticeship ) Program in Germany
           </div>
           <div className="paragraph-big-medium text-content-secondary">
             Gain hands-on experience and build a successful career in Germany
-            with the Ausbildung Internship Program.
+            with the Ausbildung Apprenticeship Program.
           </div>
         </Row>
         <div
@@ -185,7 +185,7 @@ const InternshipSection = () => {
                   <CardBody className="d-flex flex-column justify-content-start align-items-start p-0">
                     <div className="intern-card-text-wrapper">
                       <CardTitle>
-                        <div className="subheading-small-medium text-content-secondary">
+                        <div className="subheading-small-medium text-content-primary">
                           {card.title}
                         </div>
                       </CardTitle>

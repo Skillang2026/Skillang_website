@@ -142,7 +142,7 @@ const ScholarshipAbroadCountry = ({ country = "uk", countryData }) => {
     <>
       <section className="d-flex justify-content-end edu-scholarship-bg">
         <Container>
-          <Row className="align-items-center mt-5">
+          <Row className="align-items-center mt-5 pt-5 pt-md-0">
             <Col lg={6} md={12}>
               <div className="scholarship-content">
                 <div className="heading-big-medium text-white mb-3">

@@ -62,7 +62,7 @@ const BlogSidebar = ({
         </Row>
         <Row>
           {Array.from({ length: maxPosts }).map((_, index) => (
-            <Col sm={12} xs={12} md={6} key={index} className="mb-3">
+            <Col sm={12} xs={12} md={12} lg={6} key={index} className="mb-3">
               <div className="card">
                 <div
                   className="card-img-top bg-light placeholder-glow"
@@ -131,7 +131,7 @@ const BlogSidebar = ({
       {/* Blog Posts Grid */}
       <Row>
         {filteredPosts.map((post) => (
-          <Col sm={12} xs={12} md={6} key={post.id} className="mb-3">
+          <Col sm={12} xs={12} md={12} lg={6} key={post.id} className="mb-3">
             <BlogCardComp post={post} onClick={handleCardClick} />
           </Col>
         ))}

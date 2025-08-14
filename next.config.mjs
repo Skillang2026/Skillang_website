@@ -19,6 +19,16 @@ const nextConfig = {
     return config;
   },
 
+  turbopack: {
+    rules: {
+      // Configure TTF handling for Turbopack
+      "*.ttf": {
+        loaders: ["file-loader"],
+        as: "*.ttf",
+      },
+    },
+  },
+
   // Image optimization
   images: {
     formats: ["image/webp", "image/avif"],

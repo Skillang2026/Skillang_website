@@ -29,19 +29,27 @@ const ViewOneScholarshipModal = ({
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <div className="scholarship-detail-content">
-          <h4>Benefits</h4>
-          <p>{selectedScholarship.benefits}</p>
+        <div className="scholarship-detail-content ">
+          <div className="mb-3">
+            <div className="subheading-small-medium">Benefits</div>
+            <div className="paragraph-small-regular">
+              {selectedScholarship.benefits}
+            </div>
+          </div>
 
-          <h4>Eligibility Criteria</h4>
+          <div className="subheading-small-medium">Eligibility Criteria</div>
           <ul className="eligibility-list">
             {selectedScholarship.eligibility.map((criterion, index) => (
-              <li key={index}>{criterion}</li>
+              <li key={index} className="paragraph-small-regular">
+                {criterion}
+              </li>
             ))}
           </ul>
 
-          <h4>When to Apply/Deadline</h4>
-          <p>{selectedScholarship.deadline}</p>
+          <div className="subheading-small-medium">When to Apply/Deadline</div>
+          <div className="paragraph-small-regular">
+            {selectedScholarship.deadline}
+          </div>
 
           <div className="text-center mt-4">
             <a

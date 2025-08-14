@@ -31,7 +31,7 @@
 
 .course-card {
     overflow: hidden;
-    transition: transform 0.3s !important;
+    transition: all 0.3s !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: row !important;
@@ -106,11 +106,16 @@
         flex-direction: column;
     }
 
+    .demand-header-wrapper {
+        width: 100% !important;
+    }
+
     .card-image-wrapper {
-        width: 50% !important;
+        width: 100% !important;
+        max-height: 120px !important;
         height: auto !important;
         object-fit: cover !important;
-        object-position: center !important;
+        object-position: top !important;
     }
 
     .career-paths {
@@ -128,5 +133,11 @@
         grid-template-columns: 1fr;
     }
 
+    .in-demand-courses-container {
+        padding: 1.5rem 0.2rem;
+    }
 
+    .course-card {
+        flex-direction: column !important;
+    }
 }

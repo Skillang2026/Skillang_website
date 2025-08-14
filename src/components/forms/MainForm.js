@@ -94,6 +94,7 @@ const MainFormComp = ({
     handleResendOtp,
     setOtp,
     setShowToast,
+    lookingForError,
   } = useFormHandler();
 
   // Local loading states
@@ -292,16 +293,21 @@ const MainFormComp = ({
 
                   {/* Looking For Field (Conditional) */}
                   {showLookingForField && (
-                    <FormRadioButton
-                      label={lookingForLabel}
-                      options={lookingForOptions}
-                      name="lookingFor"
-                      value={formData.lookingFor}
-                      onChange={handleLookingForSelect}
-                      controlId="formLookingFor"
-                      labelClassName="text-start paragraph-small-regular text-content-secondary"
-                      optionClassName="caption-regular text-content-secondary"
-                    />
+                    <>
+                      <FormRadioButton
+                        label={lookingForLabel}
+                        options={lookingForOptions}
+                        name="lookingFor"
+                        value={formData.lookingFor}
+                        onChange={handleLookingForSelect}
+                        controlId="formLookingFor"
+                      />
+                      {lookingForError && (
+                        <div className="text-danger small mt-1">
+                          ⚠️ {lookingForError}
+                        </div>
+                      )}
+                    </>
                   )}
 
                   {/* Experience Field (Conditional) */}
@@ -313,8 +319,6 @@ const MainFormComp = ({
                       value={formData.experience}
                       onChange={handleExperienceSelect}
                       controlId="formExperience"
-                      labelClassName="text-start paragraph-small-regular text-content-secondary"
-                      optionClassName="caption-regular text-content-secondary"
                     />
                   )}
 
@@ -327,8 +331,6 @@ const MainFormComp = ({
                       value={formData.studyLevel}
                       onChange={handleStudyLevelSelect}
                       controlId="formStudyLevel"
-                      labelClassName="text-start paragraph-small-regular text-content-secondary"
-                      optionClassName="caption-regular text-content-secondary"
                     />
                   )}
 
@@ -341,8 +343,6 @@ const MainFormComp = ({
                       value={formData.country}
                       onChange={handleCountrySelect}
                       controlId="formCountry"
-                      labelClassName="text-start paragraph-small-regular text-content-secondary"
-                      optionClassName="caption-regular text-content-secondary"
                     />
                   )}
 

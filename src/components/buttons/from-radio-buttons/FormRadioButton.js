@@ -24,7 +24,7 @@ const FormRadioButton = ({
   onChange,
   controlId,
   className = "",
-  labelClassName = "text-start paragraph-small-regular text-content-secondary",
+  labelClassName = "text-start paragraph-small-medium text-content-secondary",
   optionClassName = "caption-regular text-content-secondary",
 }) => {
   return (

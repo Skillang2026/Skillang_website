@@ -176,13 +176,13 @@ const TopScholarshipComp = () => {
   return (
     <>
       <Container>
-        <div className="heading-big-medium mb-5 pb-5">Top Scholarships</div>
+        <div className="heading-big-medium ">Top Scholarships</div>
 
         {/* Country selection tabs */}
         {availableCountries.length > 0 && (
           <Nav
             variant="pills"
-            className="flex-row flex-nowrap mb-4 overflow-auto"
+            className="flex-row flex-nowrap mb-4 overflow-auto py-2 py-md-5"
             style={{ gap: "10px" }}
           >
             {availableCountries.map((country) => (

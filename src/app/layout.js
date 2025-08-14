@@ -3,7 +3,7 @@ import "./globals.css";
 import Script from "next/script";
 import WhatsappButtonsComp from "@/components/buttons/whatsapp-button/WhatsappButtons";
 import ConditionalLayout from "@/components/ConditionalLayout";
-import Head from "next/head";
+import { Toaster, toast } from "sonner";
 
 export const metadata = {
   title: "Best Abroad Consultancy In Chennai",
@@ -129,6 +129,19 @@ export default function RootLayout({ children }) {
 
         {/* WhatsApp Button */}
         <WhatsappButtonsComp />
+        {/* <Toaster
+          position="top-center"
+          richColors
+          closeButton
+          duration={4000}
+          expand={false}
+          visibleToasts={3}
+          toastOptions={{
+            style: {
+              zIndex: 999999, // Higher than Bootstrap modal z-index
+            },
+          }}
+        /> */}
       </body>
     </html>
   );

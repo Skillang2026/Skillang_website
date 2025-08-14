@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Row, Col, Card, Nav } from "react-bootstrap";
+import { Row, Col, Card, Nav, Button } from "react-bootstrap";
 import { IoBookmarksOutline } from "react-icons/io5";
 import { FaGraduationCap } from "react-icons/fa6";
 import { IoLocationOutline } from "react-icons/io5";
@@ -202,17 +202,17 @@ const EduTopProgramsComponent = ({ country = "uk", countryData }) => {
                   </div>
 
                   <div className="d-flex justify-content-between mt-auto">
-                    {/* <button className="btn-primary-outline me-2">
+                    <button className="btn-primary-outline me-2">
                       <IoBookmarksOutline
                         style={{ width: "24px", height: "24px" }}
                       />
-                    </button> */}
-                    <button
+                    </button>
+                    <Button
                       className="btn-primary w-100"
                       onClick={handleButtonClick}
                     >
                       Check Eligibility
-                    </button>
+                    </Button>
                   </div>
                 </Card.Body>
               </Card>
@@ -262,11 +262,11 @@ const EduTopProgramsComponent = ({ country = "uk", countryData }) => {
                   </div>
 
                   <div className="d-flex justify-content-between mt-auto">
-                    {/* <button className="btn-primary-outline me-2">
+                    <button className="btn-primary-outline me-2">
                       <IoBookmarksOutline
                         style={{ width: "24px", height: "24px" }}
                       />
-                    </button> */}
+                    </button>
                     <button
                       className="btn-primary w-100"
                       onClick={handleButtonClick}

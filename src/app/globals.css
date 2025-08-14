@@ -37,6 +37,12 @@
   --content-tertiaryInverse: #e3e3e3 !important;
   --content-grey-500: #bcbcbc !important;
   --grey-200: #fbfbfb !important;
+  --grey-800: #3B3B3B !important;
+  --grey-900: #232323 !important;
+
+  --navy-blue-900: #021A48 !important;
+  --navy-blue-800: #02266C !important;
+  --navy-blue-700: #043AA1 !important;
 
   --font-family: "Plus Jakarta Sans", sans-serif !important;
 
@@ -174,6 +180,14 @@
 /* .text-content-grey-500 {
   color: #e3e3e3 !important;
 } */
+
+.text-content-navyBlue-900 {
+  color: var(--navy-blue-900) !important;
+}
+
+.text-content-navyBlue-800 {
+  color: var(--navy-blue-800) !important;
+}
 
 .text-content-primary-accent {
   color: var(--primary-accent) !important;
@@ -565,9 +579,9 @@ section {
   }
 }
 
-header {
-  min-height: 100vh !important;
-}
+/* header { */
+/* min-height: 100vh !important; */
+/* } */
 
 h1 {
   font-size: 48px !important;

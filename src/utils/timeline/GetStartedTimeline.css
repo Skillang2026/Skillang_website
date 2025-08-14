@@ -1,15 +1,26 @@
-/* Timeline CSS - Structure and Lines Only */
+/* GetStartedTimeline CSS - Fixed icon alignment with connecting lines */
 
 .timeline-container {
     max-width: 1200px;
     margin: 0 auto;
     --primary-color: #00A86B;
     --border-color: #dfe1e6;
+    padding: 60px 20px;
 }
 
 .timeline-header {
     text-align: center;
     margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+    .timeline-container {
+        padding: 16px;
+    }
+
+    .timeline-header {
+        margin-bottom: 1.2rem;
+    }
 }
 
 /* Desktop Timeline */
@@ -28,6 +39,7 @@
     text-align: center;
     position: relative;
     z-index: 2;
+    padding: 0 10px;
 }
 
 .step-indicator {
@@ -37,23 +49,20 @@
     margin-bottom: 1rem;
 }
 
-.step-number {
-    margin-bottom: 0.5rem;
-}
-
 .step-circle {
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: white;
-    border: 2px solid var(--border-color);
+    border: 1px solid var(--border-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     color: var(--border-color);
     position: relative;
     z-index: 3;
+    margin-top: 10px;
 }
 
 .timeline-step.active .step-circle,
@@ -67,15 +76,35 @@
     max-width: 200px;
 }
 
-/* Desktop Lines - Fixed positioning to connect circles */
+.step-content h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: var(--content-secondary, #666);
+    white-space: nowrap;
+}
+
+.timeline-step.active .step-content h3 {
+    font-weight: 600;
+    color: var(--content-primary, #333);
+}
+
+.step-content p {
+    font-size: 14px;
+    color: var(--content-tertiary, #666);
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* Desktop Lines - Perfect alignment from GetStart component */
 .timeline-line-bg {
     position: absolute;
-    top: 3.125rem;
-    /* Align with center of circles */
-    left: calc(50% / var(--step-count));
-    /* Start from center of first circle */
-    right: calc(50% / var(--step-count));
-    /* End at center of last circle */
+    top: 48px;
+    /* Align with center of circles (30px height + 10px margin + 8px offset) */
+    left: 125px;
+    /* Start after first circle */
+    right: 125px;
+    /* End before last circle */
     height: 2px;
     background-color: var(--border-color);
     z-index: 1;
@@ -83,9 +112,10 @@
 
 .timeline-line-progress {
     position: absolute;
-    top: 3.125rem;
-    left: calc(50% / var(--step-count));
+    top: 48px;
     /* Same as background line */
+    left: 125px;
+    /* Same starting position */
     height: 2px;
     background-color: var(--primary-color);
     z-index: 1;
@@ -94,8 +124,8 @@
 }
 
 .animate-in .timeline-line-progress {
-    width: calc(100% - (100% / var(--step-count)));
-    /* Full width minus margins */
+    width: calc(100% - 250px);
+    /* Account for both left and right margins */
 }
 
 /* Mobile Timeline */
@@ -106,25 +136,25 @@
 
 .mobile-step {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     position: relative;
-    padding: 1rem 0;
+    margin-bottom: 40px;
     z-index: 2;
 }
 
 .mobile-step-circle {
-    width: 2rem;
-    height: 2rem;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     background-color: white;
-    border: 2px solid var(--border-color);
+    border: 1px solid var(--border-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 1rem;
+    margin-right: 15px;
     flex-shrink: 0;
     color: var(--border-color);
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     position: relative;
     z-index: 3;
 }
@@ -133,19 +163,51 @@
     background-color: var(--primary-color);
     border-color: var(--primary-color);
     color: white;
+    animation: circleGreen 0.5s ease-in-out forwards;
+}
+
+@keyframes circleGreen {
+    from {
+        background-color: white;
+        border-color: var(--border-color);
+    }
+
+    to {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
 }
 
 .mobile-step-content {
     flex: 1;
-    padding-top: 0.25rem;
 }
 
-/* Mobile Lines - Fixed alignment */
+.mobile-step-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #999;
+    margin: 0;
+    transition: color 0.5s ease, font-weight 0.5s ease;
+}
+
+.mobile-step.animate-step .mobile-step-title {
+    color: var(--content-primary, #333);
+    font-weight: 500;
+}
+
+.mobile-step-description {
+    font-size: 14px;
+    color: var(--content-tertiary, #666);
+    line-height: 1.5;
+    margin: 5px 0 0 0;
+}
+
+/* Mobile Lines - Keep original perfect animation */
 .mobile-line-bg {
     position: absolute;
     left: 1rem;
     /* Align with center of circles (2rem width / 2) */
-    top: 3rem;
+    top: 2.8rem;
     /* Start after first circle (1rem padding + 2rem circle) */
     bottom: 3rem;
     /* End before last circle */
@@ -157,9 +219,7 @@
 .mobile-line-progress {
     position: absolute;
     left: 1rem;
-    /* Same as background line */
-    top: 3rem;
-    /* Same as background line */
+    top: 2.8rem;
     width: 2px;
     height: 0;
     background-color: var(--primary-color);
@@ -174,17 +234,14 @@
 
 /* Responsive behavior */
 @media (max-width: 992px) {
+
+
     .timeline-steps-wrapper {
         display: none;
     }
 
     .mobile-timeline {
         display: block;
-    }
-
-    .timeline-header {
-        text-align: left;
-        margin-bottom: 2rem;
     }
 }
 
@@ -203,6 +260,11 @@
     transform: translateY(0);
 }
 
+/* Enhanced mobile step animation - simplified */
+.mobile-step.animate-step .mobile-step-circle svg {
+    transition: stroke 0.5s ease;
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
 
@@ -217,12 +279,12 @@
         transition: none;
     }
 
-    .animate-in .timeline-line-progress {
-        width: calc(100% - (100% / var(--step-count)));
-        /* Same calculation for consistency */
+    .mobile-step.animate-step:not(:last-child)::before {
+        animation: none;
+        height: 70px;
     }
 
-    .animate-in .mobile-line-progress {
-        height: calc(100% - 4rem);
+    .animate-in .timeline-line-progress {
+        width: calc(100% - 250px);
     }
 }

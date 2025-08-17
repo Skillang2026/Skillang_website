@@ -296,7 +296,7 @@ const EduTopProgramsComponent = ({ country = "uk", countryData }) => {
       <ConsultationModal
         show={showModal}
         handleClose={handleClose}
-        lookingFor={"Edu Top Programs"}
+        // lookingFor={"Edu Top Programs"}
       />
     </>
   );

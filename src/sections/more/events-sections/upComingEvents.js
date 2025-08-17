@@ -287,7 +287,7 @@ const UpcomingEvents = ({ eventSlug = null }) => {
         show={showModal}
         handleClose={handleClose}
         showCalendly={false}
-        lookingFor={getLookingForValue()}
+        // lookingFor={getLookingForValue()}
       />
     </div>
   );

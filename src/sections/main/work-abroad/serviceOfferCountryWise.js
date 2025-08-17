@@ -248,7 +248,7 @@ const ServiceOfferCountryWise = () => {
       <ConsultationModal
         show={showModal}
         handleClose={handleClose}
-        lookingFor={"service"}
+        // lookingFor={"service"}
       />
     </div>
   );

@@ -109,7 +109,7 @@ const useFormHandler = () => {
 
       // Send OTP
       const payload = { email, name };
-      await axios.post("https://www.skillang.com/api/send-otp", payload);
+      await axios.post("https://www.leadg.in/api/send-otp", payload);
 
       setStatus("📩 OTP has been sent to your mail!");
       setToastVariant("info");
@@ -139,13 +139,10 @@ const useFormHandler = () => {
         formType === "partner" ? partnerFormData : formData;
       const email = activeFormData.email;
 
-      const response = await axios.post(
-        "https://www.skillang.com/api/verify-otp",
-        {
-          email: email,
-          otp: otp.trim(),
-        }
-      );
+      const response = await axios.post("https://www.leadg.in/api/verify-otp", {
+        email: email,
+        otp: otp.trim(),
+      });
 
       if (response.data.success) {
         setIsOtpVerified(true);
@@ -167,15 +164,46 @@ const useFormHandler = () => {
     }
   };
 
+  const lookingForMapping = {
+    // Display Value : Backend Value
+    IELTS: "Language_Test_Prep",
+    TOEFL: "Language_Test_Prep",
+    GRE: "Language_Test_Prep",
+    GMAT: "Language_Test_Prep",
+    PTE: "Language_Test_Prep",
+    "German language": "German Language",
+    Others: "Language_Test_Prep",
+    Nursing: "Nursing",
+    "Study Abroad": "Study Abroad",
+    "Work Abroad": "Work Abroad",
+  };
+
   // Submit functions - keep these separate
   const submitInquiry = async () => {
     try {
-      const response = await axios.post(
-        "https://www.skillang.com/api/submit-to-google-sheets",
-        formData
-      );
+      const apiPayload = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        pincode: formData.pincode,
+        category: lookingForMapping[formData.lookingFor] || formData.lookingFor, // ✅ lookingFor maps to category
+        experience: formData.experience || "",
+        country: formData.country || formData.county || "",
+        qualification: formData.qualification || "",
+        age: formData.age ? parseInt(formData.age) : null,
+        form_source: formData.origin || "Form Submission",
+      };
 
-      setStatus(response.data.message || "✅ Inquiry submitted successfully!");
+      console.log("🚀 Sending data:", apiPayload);
+      const response = await axios.post(
+        "https://www.leadg.in/api/integrations/skillang/form-submission",
+        apiPayload
+      );
+      console.log("✅ Response:", response.data); // ✅ Debug log
+
+      setStatus(
+        "Inquiry submitted successfully! Our Team will reach out to you shortly."
+      );
       setToastVariant("success");
       setShowToast(true);
 
@@ -188,13 +216,41 @@ const useFormHandler = () => {
         lookingFor: "",
         experience: "",
         country: "",
+        county: "",
+        qualification: "",
+        age: "",
         origin: "",
       });
 
       resetOtp();
     } catch (error) {
+      if (error.response?.status === 409) {
+        setStatus(
+          "⚠️ You have already contacted Skillang. Our team will reach out to you again soon."
+        );
+        setToastVariant("success"); // Show as success since it's not really an "error" from user perspective
+        setShowToast(true);
+
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          pincode: "",
+          lookingFor: "",
+          experience: "",
+          country: "",
+          county: "",
+          qualification: "",
+          age: "",
+          origin: "",
+        });
+        resetOtp();
+        return;
+      }
+
       console.error("❌ Error submitting inquiry:", error);
-      setStatus(`❌ Error submitting inquiry: ${getErrorMessage(error)}`);
+      setStatus(`❌ Error submitting inquiry, Please try again later.`);
       setToastVariant("danger");
       setShowToast(true);
     }
@@ -228,7 +284,7 @@ const useFormHandler = () => {
       resetOtp();
     } catch (error) {
       console.error("❌ Error submitting partnership inquiry:", error);
-      setStatus("❌ Error submitting inquiry. Please try again.");
+      setStatus(`❌ Error submitting inquiry, Please try again later.`);
       setToastVariant("danger");
       setShowToast(true);
     }
@@ -249,14 +305,18 @@ const useFormHandler = () => {
   // *** NEW: Separate handlers for different form types ***
   const handleStandardSubmit = (e) => {
     e.preventDefault();
+    console.log("🔍 Form submission started");
+    console.log("🔍 Form data:", formData);
     const form = e.currentTarget;
     setFormType("standard");
 
     if (form.checkValidity() === false) {
+      console.log("❌ Form validation failed");
       e.stopPropagation();
       setValidated(true);
       return;
     }
+    console.log("✅ Form validation passed");
 
     // if (!isOtpSent) {
     //   const success = sendFormData("standard");
@@ -277,17 +337,20 @@ const useFormHandler = () => {
     // }
 
     if (!formData.lookingFor) {
-      // setStatus("❌ Please select what you're looking for.");
-      // setToastVariant("danger");
-      // setShowToast(true);
+      console.log("❌ Missing lookingFor field");
+      setStatus("❌ Please select what you're looking for.");
+      setToastVariant("danger");
+      setShowToast(true);
       setLookingForError("Please select what you're looking for.");
       return;
     }
+    console.log("✅ LookingFor field is present:", formData.lookingFor);
 
-    if (!formData.qualification) {
-      setQualificationError("Please select your qualification.");
-      return;
-    }
+    // if (!formData.qualification) {
+    //   setQualificationError("Please select your qualification.");
+    //   return;
+    // }
+    console.log("🚀 About to call submitInquiry()");
 
     submitInquiry();
     setValidated(true);
@@ -328,6 +391,12 @@ const useFormHandler = () => {
 
   // Legacy handler that picks the right function based on form type
   const handleSubmit = (e, type = "auto") => {
+    console.log("🔄 handleSubmit called with type:", type);
+    console.log("🔄 partnerFormData values:", Object.values(partnerFormData));
+    console.log(
+      "🔄 partnerFormData has values:",
+      Object.values(partnerFormData).some((v) => v)
+    );
     if (
       type === "partner" ||
       (type === "auto" && Object.values(partnerFormData).some((v) => v))

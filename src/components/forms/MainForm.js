@@ -36,7 +36,7 @@ const MainFormComp = ({
     "GRE",
     "GMAT",
     "PTE",
-    "German language",
+    "German Language",
     "Others",
   ],
   experienceOptions = [
@@ -158,9 +158,17 @@ const MainFormComp = ({
 
   // Handle form submission with loading
   const handleFormSubmit = async (event) => {
+    console.log("🎯 MainFormComp: handleFormSubmit called");
+    console.log("🎯 Event:", event);
+    console.log("🎯 Current formData:", formData);
+    setIsSubmitting(true);
     setIsSubmitting(true);
     try {
+      console.log("🎯 About to call handleSubmit from hook");
       await handleSubmit(event);
+      console.log("🎯 handleSubmit completed successfully");
+    } catch (error) {
+      console.error("🎯 Error in handleFormSubmit:", error);
     } finally {
       // Reset loading after form resets or completes
       setTimeout(() => {
@@ -233,7 +241,12 @@ const MainFormComp = ({
                 <Form
                   noValidate
                   validated={validated}
-                  onSubmit={handleFormSubmit}
+                  onSubmit={(e) => {
+                    console.log("🔥 Form onSubmit triggered");
+                    console.log("🔥 Event target:", e.target);
+                    console.log("🔥 Form validity:", e.target.checkValidity());
+                    handleFormSubmit(e);
+                  }}
                 >
                   {/* Name Field */}
                   <Form.Group className="" controlId="formName">
@@ -273,6 +286,8 @@ const MainFormComp = ({
                           onChange={handleInputChange}
                           required
                           pattern="[0-9]{10}"
+                          maxLength={10}
+                          minLength={10}
                         />
                       </Form.Group>
                     </Col>

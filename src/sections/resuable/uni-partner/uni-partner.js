@@ -74,7 +74,7 @@ const UniPartner = () => {
         show={showModal}
         handleClose={handleClose}
         showCalendly={false}
-        lookingFor={"Partner Universities"}
+        // lookingFor={"Partner Universities"}
       />
     </div>
   );

@@ -52,7 +52,7 @@ const UniContactComp = ({
         show={showModal}
         handleClose={handleClose}
         showCalendly={false}
-        lookingFor={"Contact Uni"}
+        // lookingFor={"Contact Uni"}
       />
     </div>
   );

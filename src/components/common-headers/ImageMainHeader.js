@@ -50,7 +50,7 @@ const ImageHeaderComponent = ({
         show={showModal}
         handleClose={handleClose}
         showCalendly={false}
-        lookingFor={title}
+        // lookingFor={title}
       />
     </header>
   );

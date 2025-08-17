@@ -37,7 +37,7 @@ const GerOppCardConnectComp = () => {
         show={showModal}
         handleClose={handleClose}
         showCalendly={false}
-        lookingFor={"Ger Opp card connect"}
+        // lookingFor={"Ger Opp card connect"}
       />
       ;
     </div>

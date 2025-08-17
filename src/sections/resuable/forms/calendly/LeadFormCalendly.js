@@ -42,8 +42,7 @@ const ConsultationModal = ({
     setQualificationError,
   } = useFormHandler();
   formData.origin = "Calendly Form";
-  formData.pincode = "No applicable";
-  formData.lookingFor = lookingFor;
+  // formData.lookingFor = lookingFor;
 
   // State to track current step (1: form, 3: Calendly)
   const [currentStep, setCurrentStep] = useState(1);
@@ -133,7 +132,7 @@ const ConsultationModal = ({
       const timer = setTimeout(() => {
         console.log("Timer executing: calling handleClose");
         handleClose();
-      }, 3000);
+      }, 5300);
 
       return () => {
         console.log("Cleaning up close timer");
@@ -228,7 +227,7 @@ const ConsultationModal = ({
     }
 
     if (!formData.qualification) {
-      setQualificationError("Please select your highest qualification."); // You need this from hook
+      setQualificationError("Please select your highest qualification.");
       setValidated(true);
       return;
     }
@@ -247,23 +246,25 @@ const ConsultationModal = ({
     }
 
     setFormIsValid(true);
+    setIsSubmitting(true);
 
-    if (showCalendly) {
-      // Normal flow - call handleSubmit and proceed to Calendly step
-      handleSubmit(e);
-      setCurrentStep(3);
-    } else {
-      // Mark as submitting and call handleSubmit
-      setIsSubmitting(true);
-      handleSubmit(e);
+    try {
+      // ✅ Use the hook's handleSubmit function - it has all the correct logic!
+      await handleSubmit(e);
 
-      // Fallback: if form doesn't close in 10 seconds, force close
-      setTimeout(() => {
-        if (isSubmitting) {
-          console.log("Fallback: Force closing modal after 10 seconds");
+      if (showCalendly) {
+        // Proceed to Calendly step
+        setCurrentStep(3);
+      } else {
+        // Close modal after 3 seconds
+        setTimeout(() => {
           handleClose();
-        }
-      }, 10000);
+        }, 3000);
+      }
+    } catch (error) {
+      console.error("❌ Error submitting form:", error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -360,6 +361,24 @@ const ConsultationModal = ({
                       required
                       minLength={10}
                       maxLength={50}
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-2">
+                    <FormRadioButton
+                      label="Looking For?"
+                      options={[
+                        "Nursing",
+                        "Study Abroad",
+                        "Work Abroad",
+                        "Test & Lang Prep",
+                      ]}
+                      name="lookingFor"
+                      value={formData.lookingFor}
+                      // onChange={handleLookingForSelect}
+                      onChange={(option) =>
+                        handleOptionSelect("lookingFor", option)
+                      }
+                      controlId="formLookingFor"
                     />
                   </Form.Group>
                   <Form.Group className="mb-4">

@@ -117,7 +117,7 @@ const NavStudyLanding = ({ formRef, formMounted }) => {
         show={showModal}
         handleClose={handleClose}
         showCalendly={false}
-        lookingFor={"Landing Study Page"}
+        // lookingFor={"Landing Study Page"}
       />
     </>
   );

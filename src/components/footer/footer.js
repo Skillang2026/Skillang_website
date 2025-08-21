@@ -125,7 +125,7 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/blogs">
+                      <Link href="/blog">
                         <div className="caption-medium">Blogs</div>
                       </Link>
                     </li>

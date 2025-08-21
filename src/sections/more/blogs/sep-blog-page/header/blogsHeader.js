@@ -162,7 +162,7 @@ const BlogsSepPageHeader = () => {
               </div>
 
               {/* Blog Title */}
-              <div className="heading-big-medium mb-4">{title}</div>
+              <h1 className="heading-big-medium mb-4">{title}</h1>
 
               {/* Blog Content */}
               <div className="blog-content">

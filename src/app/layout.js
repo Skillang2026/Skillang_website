@@ -3,7 +3,7 @@ import "./globals.css";
 import Script from "next/script";
 import WhatsappButtonsComp from "@/components/buttons/whatsapp-button/WhatsappButtons";
 import ConditionalLayout from "@/components/ConditionalLayout";
-import { Toaster, toast } from "sonner";
+// import { Toaster, toast } from "sonner";
 
 export const metadata = {
   title: "Best Abroad Consultancy In Chennai",
@@ -29,6 +29,27 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Google site */}
+        <meta
+          name="google-site-verification"
+          content="-VICBophpmm2uIkWMB4GMrQg7Yvr3aFeVsoTOvZA33o"
+        />
+
+        {/* Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-FVV7MB911P"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FVV7MB911P');`,
+          }}
+        ></script>
+
         {/* Google Tag Manager */}
         <Script
           id="gtm-script"

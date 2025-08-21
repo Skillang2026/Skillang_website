@@ -76,9 +76,9 @@ const NurseFormPage = () => {
 
   // Set default values for nurse form
   useEffect(() => {
-    handleOptionSelect("lookingFor", "Nursing Abroad");
+    handleOptionSelect("lookingFor", "Nursing");
     handleOptionSelect("origin", "Nurse Form landing Page");
-    handleOptionSelect("pincode", "-");
+    handleOptionSelect("pincode", "");
   }, []);
 
   // ✅ SIMPLE: Watch for form data reset (which happens on successful submission)

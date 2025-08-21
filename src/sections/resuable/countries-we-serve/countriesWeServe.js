@@ -73,9 +73,9 @@ const CountriesWeServe = () => {
     <Container className="">
       <Row className="d-flex flex-column align-items-center justify-content-center">
         <div className="text-center mb-4 demand-header-wrapper d-flex flex-column align-items-center justify-content-center">
-          <div className="heading-big-medium text-content-primary ">
+          <h1 className="heading-big-medium text-content-primary ">
             Countries We Serve
-          </div>
+          </h1>
           <div className="paragraph-small-regular text-content-secondary text-center">
             Each destination offers unique opportunities and challenges. We
             provide tailored guidance on job markets, salary expectations,

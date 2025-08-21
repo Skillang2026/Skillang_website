@@ -12,7 +12,6 @@ const LandingWorkAbroadPage = () => {
       <div className="section-spacing">
         <WorkForm />
       </div>
-
       <div className="section-spacing">
         <WorkAbroadOpportunity />
       </div>

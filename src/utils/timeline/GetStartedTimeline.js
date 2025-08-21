@@ -53,7 +53,7 @@ const GetStartedTimeline = ({
       >
         {/* Header */}
         <div className="timeline-header">
-          <h1 className="heading-big-medium text-content-primary">{title}</h1>
+          <div className="heading-big-medium text-content-primary">{title}</div>
           <div className="paragraph-big-medium text-content-secondary">
             {subtitle}
           </div>

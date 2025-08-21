@@ -11,9 +11,9 @@ const LangTestPartners = () => {
     <div className="text-center ">
       <Container className="">
         <Row>
-          <div className="heading-big-medium mb-5 pb-4 header-wrapper">
+          <h1 className="heading-big-medium mb-5 pb-4 header-wrapper">
             Our Language & Test Prep Programs
-          </div>
+          </h1>
         </Row>
         <Row>
           <div className="d-flex gap-lg-5 gap-2 flex-wrap justify-content-center">

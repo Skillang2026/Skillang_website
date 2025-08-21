@@ -28,7 +28,6 @@ const GermanOpportunityCardsPage = () => {
       <div className="section-spacing">
         <WhyLiveInGermanyComp />
       </div>
-
       <div className="section-spacing">
         <GerOppCardConnectComp />
       </div>

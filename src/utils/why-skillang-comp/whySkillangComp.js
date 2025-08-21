@@ -46,12 +46,12 @@ const ReusableWhyComponent = ({
           </Row>
         )}
         <Row>
-          <h1 className="heading-big-medium mb-2">
+          <div className="heading-big-medium mb-2">
             {title}{" "}
             {showHighlight && (
               <span style={{ color: highlightColor }}>{highlightText}</span>
             )}
-          </h1>
+          </div>
           <div className="paragraph-big-regular">{subtitle}</div>
         </Row>
       </Container>

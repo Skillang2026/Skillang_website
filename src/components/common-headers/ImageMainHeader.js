@@ -31,7 +31,7 @@ const ImageHeaderComponent = ({
           <Image src={imageSrc} alt={imageAlt} className="country-wise-img" />
         </Row>
         <Row>
-          <div className="heading-big-medium mt-3">{title}</div>
+          <h1 className="heading-big-medium mt-3">{title}</h1>
         </Row>
         <Row className="d-flex align-items-center justify-content-center my-2">
           <div className="paragraph-big-medium study-aborad-country-text-wrapper text-content-secondary">

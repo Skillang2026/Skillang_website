@@ -16,7 +16,6 @@ const NurseCareerAdvSection = () => {
               Career Advancement Opportunities
             </div>
           </Row>
-
           <Col
             lg={3}
             sm={12}

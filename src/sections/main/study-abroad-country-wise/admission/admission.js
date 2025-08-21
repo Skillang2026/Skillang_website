@@ -86,9 +86,9 @@ const AdmissionAbroadCountry = ({ country = "uk", countryData }) => {
       <Container>
         <Row>
           <Col>
-            <h1 className="heading-big-medium mb-5">
+            <div className="heading-big-medium mb-5">
               Admissions in {data.fullForm}
-            </h1>
+            </div>
           </Col>
         </Row>
         <div className="country-subsection-spacing">

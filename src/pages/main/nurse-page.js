@@ -52,7 +52,6 @@ const NursePage = () => {
       <div className="section-spacing">
         <NurseChallengeSection />
       </div>
-
       <div className="section-spacing">
         <NurseEligibility />
       </div>

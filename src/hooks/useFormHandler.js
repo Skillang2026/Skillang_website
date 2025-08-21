@@ -192,6 +192,9 @@ const useFormHandler = () => {
         qualification: formData.qualification || "",
         age: formData.age ? parseInt(formData.age) : null,
         form_source: formData.origin || "Form Submission",
+        german_status: formData.germanStatus || "",
+        start_planning: formData.startPlanning || "",
+        call_back: formData.callBack || "",
       };
 
       console.log("🚀 Sending data:", apiPayload);
@@ -220,6 +223,9 @@ const useFormHandler = () => {
         qualification: "",
         age: "",
         origin: "",
+        germanStatus: "",    // ADD THIS
+        startPlanning: "",   // ADD THIS
+        callBack: "",
       });
 
       resetOtp();
@@ -265,7 +271,7 @@ const useFormHandler = () => {
 
       setStatus(
         response.data.message ||
-          "✅ Partnership inquiry submitted successfully!"
+        "✅ Partnership inquiry submitted successfully!"
       );
       setToastVariant("success");
       setShowToast(true);

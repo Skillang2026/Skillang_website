@@ -75,7 +75,7 @@ const BlogMainPageHeader = () => {
               className="w-100 blog-main-header-left-img"
               alt="Study Abroad Consultants In Chennai"
             />
-            <h1 className="heading-big-medium mt-3">
+            <h1 className="heading-small-medium mt-3">
               {blogsData.mainFeature?.title || "Latest Blog Posts"}
             </h1>
             {blogsData.mainFeature?.excerpt && (

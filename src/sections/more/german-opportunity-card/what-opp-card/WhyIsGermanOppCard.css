@@ -1,6 +1,7 @@
 .WhyGerOppCardImp {
     /* width: 620px; */
     height: 413.84px !important;
+    width: 100% !important;
     border-radius: 32px !important;
     object-fit: cover !important;
     object-position: center !important;

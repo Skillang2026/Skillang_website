@@ -61,7 +61,7 @@ const LandingCountryWeServeComp = () => {
       <Container className="d-flex justify-content-center align-items-center flex-column">
         <Row className="d-flex justify-content-center align-items-center">
           <div className="header-wrapper text-center mb-5">
-            <h1 className="heading-big-medium">Countries We Serve</h1>
+            <div className="heading-big-medium">Countries We Serve</div>
             <p className="paragraph-big-medium text-content-secondary">
               Each destination offers unique opportunities and challenges. We
               provide tailored guidance on job markets, salary expectations,

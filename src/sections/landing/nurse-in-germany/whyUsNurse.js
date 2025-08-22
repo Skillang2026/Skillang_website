@@ -36,9 +36,9 @@ const WhyUsNurse = () => {
     <>
       <section className="justify-conent-center align-items-start d-flex d-none d-md-block">
         <div className="why-us-nurse-bg mx-lg-5 mx-2 justify-conent-center align-items-center d-flex flex-column ">
-          <h1 className="text-center heading-small-medium text-white py-lg-4 mb-4">
+          <div className="text-center heading-small-medium text-white py-lg-4 mb-4">
             Why Choose Us?
-          </h1>
+          </div>
           <Container>
             <div className="why-us-container px-1">
               {services.map((service, index) => (

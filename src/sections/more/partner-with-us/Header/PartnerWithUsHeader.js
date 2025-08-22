@@ -22,6 +22,7 @@ const PartnerWithUsHeader = () => {
           </Col>
           <Col sm={12} xs={12} md={6}>
             <Image
+              fluid
               src={ParterWithUsImgHeader}
               className="WhyGerOppCardImp"
               alt="Partner With us Header Image"

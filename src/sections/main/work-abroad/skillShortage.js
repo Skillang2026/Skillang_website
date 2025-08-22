@@ -46,9 +46,9 @@ const SkillShortage = () => {
               lg={6}
               className="d-flex flex-column justify-content-center left-content mb-4 mb-lg-0"
             >
-              <div className="mb-3 heading-big-medium text-content-primaryInverse">
+              <h1 className="mb-3 heading-big-medium text-content-primaryInverse">
                 Industries with Skill Shortages
-              </div>
+              </h1>
               <div className="paragraph-small-regular text-content-grey-500">
                 We focus on sectors with a high demand for skilled
                 professionals, increasing your chances of securing employment

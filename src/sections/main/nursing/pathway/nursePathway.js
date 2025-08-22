@@ -10,9 +10,9 @@ const NursePathwaySection = () => {
         <Row className="bg-primar">
           <Col lg={1}></Col>
           <Col lg={10}>
-            <div className="mb-md-5 mb-2 heading-big-medium">
+            <h1 className="mb-md-5 mb-2 heading-big-medium">
               Start your Pathway to a 🌐 Global Healthcare Career
-            </div>
+            </h1>
             <div className="paragraph-big-medium text-content-secondary">
               Free German Courses, Online & In-Person Training & Flexible
               Learning Schedules all in One Place

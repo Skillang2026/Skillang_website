@@ -44,7 +44,7 @@ const CommonFAQComp = ({
     <div>
       <Container className="d-flex flex-column align-items-center p-0">
         <Row className="text-center mb-4">
-          <h1 className="heading-big-medium">{title}</h1>
+          <div className="heading-big-medium">{title}</div>
         </Row>
 
         {/* Category Filter Buttons */}

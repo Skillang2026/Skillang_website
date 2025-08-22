@@ -29,6 +29,7 @@ const WhatIsGermanOppCardComp = () => {
           </Col>
           <Col sm={12} xs={12} md={6}>
             <Image
+              fluid
               src={WhyOppCardImp}
               className="WhyGerOppCardImp"
               alt="WhyOppCardImp"

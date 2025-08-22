@@ -12,9 +12,9 @@ const EligibilityBarCardsComponent = ({
     <div className={`${className}`}>
       <Container>
         <Row className="mt-lg-0 mb-5 text-lg-center">
-          <h1 className="heading-big-medium text-content-primary text-lg-center mb-2">
+          <div className="heading-big-medium text-content-primary text-lg-center mb-2">
             {title}
-          </h1>
+          </div>
           <div className="paragraph-big-medium text-content-secondary">
             {subheading}
           </div>

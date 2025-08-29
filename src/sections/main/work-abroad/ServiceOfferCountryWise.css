@@ -1,14 +1,13 @@
 /* Updated CSS for Service Offerings and Country Guidance */
 
 .service-bg {
-    background-image: url("https://cms.skillang.com/uploads/work_abroad_bg_0a163ce804.png");
+    background-image: url("/assets/images/work-abroad/service_offer_vis_guidence.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     width: 100% !important;
     background-position: top !important;
     min-height: 100vh;
-    /* Reduced top padding to start content higher */
 }
 
 .section-title {

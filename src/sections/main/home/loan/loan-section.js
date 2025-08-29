@@ -5,6 +5,8 @@ import { Container, Col, Row, Image } from "react-bootstrap";
 import "./loan-section.css";
 import { useRouter, usePathname } from "next/navigation"; // Next.js navigation hooks
 
+const loanSectionImg = "/assets/images/home/loan-scholarships-assistance.jpg";
+
 const LoanSection = () => {
   const router = useRouter(); // Next.js router
   const pathname = usePathname(); // Next.js pathname
@@ -21,7 +23,8 @@ const LoanSection = () => {
         <Col xs={12} sm={12} md={6} lg={5} className="mb-4 d-block d-md-none">
           <Image
             fluid
-            src="https://cms.skillang.com/uploads/loan_img_b98ce382ae.jpg"
+            src={loanSectionImg}
+            alt="Loan and Scholarships Assistance"
             className="loan-image rounded-4"
           />
         </Col>
@@ -53,7 +56,8 @@ const LoanSection = () => {
           <Col xs={12} sm={12} md={5} lg={6} className="mb-4 d-none d-md-block">
             <Image
               fluid
-              src="https://cms.skillang.com/uploads/loan_img_b98ce382ae.jpg"
+              src={loanSectionImg}
+              alt="Loan and Scholarships Assistance"
               className="loan-image rounded-4"
             />
           </Col>

@@ -52,7 +52,7 @@
   }
 
   .uni-partner-bg {
-    background-image: url('https://cms.skillang.com/uploads/uni_Partner_Bg_b66ddb929d.svg') !important;
+    background-image: url('/assets/images/reusable/uniPartnerBg.svg') !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: cover !important;
@@ -129,5 +129,4 @@
       height: 250px !important;
       padding: 50px 0px !important;
     }
-
   }

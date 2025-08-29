@@ -16,8 +16,7 @@ import {
 } from "react-bootstrap";
 import "./ourServices.css";
 
-const nurseService =
-  "https://cms.skillang.com/uploads/nurse_Service_c315ee7cb7.jpg";
+const nurseService = "/assets/images/nursing/foreign-nursing-job-agency.jpg";
 
 const services = [
   {
@@ -64,7 +63,7 @@ const OurServices = () => {
             <Image
               fluid
               src={nurseService}
-              alt="nurse"
+              alt="=Foreign Nursing Job Agency"
               className="nurse-service-img"
             />
           </Col>
@@ -87,7 +86,7 @@ const OurServices = () => {
             <Image
               fluid
               src={nurseService}
-              alt="nurse"
+              alt="Foreign Nursing Job Agency"
               className="nurse-service-img"
             />
           </Col>

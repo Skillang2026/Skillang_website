@@ -12,7 +12,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./footer.css";
 import Link from "next/link";
 
-const foorImg = "/assets/images/home/footer-img.png";
+const foorImg = "/assets/images/home/gateway-global-career.png";
 const logo = "/assets/images/logos/logo-3.svg";
 
 const Footer = () => {
@@ -27,7 +27,7 @@ const Footer = () => {
                   <div className="d-flex bg-primar justify-content-cente align-items-center">
                     <Image
                       src={foorImg}
-                      alt="Healthcare and Business Professionals"
+                      alt="Gateway To Global Career"
                       className="professionals-image d-none d-md-block"
                     />
                   </div>
@@ -55,7 +55,7 @@ const Footer = () => {
                 <Col sm={12} xs={12} className="d-block d-md-none ">
                   <Image
                     src={foorImg}
-                    alt="Healthcare and Business Professionals"
+                    alt="Gateway To Global Career"
                     className="professionals-image"
                   />
                 </Col>

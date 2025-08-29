@@ -17,7 +17,7 @@ const whyLearnIcon2 = "/assets/icons/lang-test/admission.svg";
 const whyLearnIcon3 = "/assets/icons/lang-test/communicate.svg";
 
 const whyLearnImg =
-  "https://cms.skillang.com/uploads/L_Why_Learn_Img_ea0793b3ad.jpg";
+  "/assets/images/lang-test/online-german-language-course.jpg";
 
 const cardData = [
   {
@@ -98,7 +98,7 @@ const WhyLangTraining = () => {
           >
             <Image
               src={whyLearnImg}
-              alt="Language Training Image"
+              alt="Online German Language Course"
               className="image-fluid why-lang-training-image"
             />
           </Col>

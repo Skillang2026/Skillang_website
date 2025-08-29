@@ -3,8 +3,7 @@
 import MainFormComp from "@/components/forms/MainForm";
 import React from "react";
 
-const headerbg =
-  "https://cms.skillang.com/uploads/work_Abroad_Main_Bg_ea965b705b.jpg";
+const headerbg = "/assets/images/work-abroad/job-abroad-consultants.jpg";
 
 const WorkAbroadHeader = () => {
   return (

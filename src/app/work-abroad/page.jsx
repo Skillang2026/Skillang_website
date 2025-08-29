@@ -7,7 +7,7 @@ export const metadata = {
   keywords:
     "job abroad consultants,overseas job consultants,foreign job consultancy ,chennai best abroad job consultancy,chennai job consultancy for abroad",
   alternates: {
-    canonical: "https://www.skillang.com/work-abroad", // Add this line
+    canonical: "https://www.skillang.com/work-abroad",
   },
 };
 

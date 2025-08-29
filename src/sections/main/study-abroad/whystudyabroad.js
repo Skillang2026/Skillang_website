@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card, CardBody } from "react-bootstrap";
-import "../study-abroad/whystudyabroad.css";
+import "./whystudyabroad.css";
 
 const globalIcon = "/assets/icons/study-abroad/globalexpose.svg";
 const educationIcon = "/assets/icons/study-abroad/topquality.svg";
@@ -8,18 +8,21 @@ const networkingIcon = "/assets/icons/study-abroad/network.svg";
 const careerIcon = "/assets/icons/study-abroad/careerboost.svg";
 
 const whystudyabroad =
-  "https://cms.skillang.com/uploads/whystudyabroad_00275f4de2.png";
+  "/assets/images/study-abroad/overseas-education-consultants.png";
 
 const WhyStudyAbroad = () => {
   return (
     <Container className="">
       <Row className="align-items-center">
         <Col lg={7} md={12} className="">
-          <div className="heading-big-medium">Why Study Abroad?</div>
-          <p className="paragraph-big-medium text-content-secondary mt-1">
-            Free German Courses, Online & In-Person Training & Flexible Learning
-            Schedules all in One Place
-          </p>
+          <div>
+            <div className="heading-big-medium">Why Study Abroad?</div>
+            <p className="paragraph-big-medium text-content-secondary mt-1">
+              Free German Courses, Online & In-Person Training & Flexible
+              Learning Schedules all in One Place
+            </p>
+          </div>
+
           <Row className="benefits">
             {[
               {
@@ -69,7 +72,7 @@ const WhyStudyAbroad = () => {
           <div className="image-container">
             <img
               src={whystudyabroad}
-              alt="Why Study Abroad"
+              alt="Overseas Education Consultants"
               className="why-study-abroad-right-icon responsive-img"
             />
           </div>

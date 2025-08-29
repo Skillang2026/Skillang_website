@@ -329,7 +329,7 @@ class CountryService {
       routes.push({
         id: 1,
         route: "Graduate route",
-        icon: "🎓",
+        icon: "/assets/icons/study-abroad-country-wise/graduate_route_icon.svg",
         color: "#4285F4",
         requirements: visaRoute.graduateRoute
           .split("\n")
@@ -341,7 +341,7 @@ class CountryService {
       routes.push({
         id: 2,
         route: "Skilled worker route",
-        icon: "💼",
+        icon: "/assets/icons/study-abroad-country-wise/skilled_work_route-icon.svg",
         color: "#F4B400",
         requirements: visaRoute.SkilledworkerRoute.split("\n").filter((req) =>
           req.trim()
@@ -353,7 +353,7 @@ class CountryService {
       routes.push({
         id: 3,
         route: "Start-up route",
-        icon: "🚀",
+        icon: "/assets/icons/study-abroad-country-wise/startup_route_icon.svg",
         color: "#0F9D58",
         requirements: visaRoute.startUpRoute
           .split("\n")
@@ -365,7 +365,7 @@ class CountryService {
       routes.push({
         id: 4,
         route: "Students' union sabbatical officers",
-        icon: "👥",
+        icon: "/assets/icons/study-abroad-country-wise/students_officers_icon.svg",
         color: "#DB4437",
         requirements: visaRoute.StudentsUnionSabbaticalOfficers.split(
           "\n"
@@ -377,7 +377,7 @@ class CountryService {
       routes.push({
         id: 5,
         route: "Innovator Founder",
-        icon: "💡",
+        icon: "/assets/icons/study-abroad-country-wise/innovator_founder_icon.svg",
         color: "#4B0082",
         requirements: visaRoute.InnovatorFounder.split("\n").filter((req) =>
           req.trim()
@@ -389,7 +389,7 @@ class CountryService {
       routes.push({
         id: 6,
         route: "India Young Professionals Scheme",
-        icon: "🇮🇳",
+        icon: "/assets/icons/study-abroad-country-wise/indiaYoung_professionals_scheme_icon.svg",
         color: "#00BFFF",
         requirements: visaRoute.IndiaYoungProfessionalsScheme.split(
           "\n"

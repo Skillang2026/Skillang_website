@@ -63,7 +63,13 @@ const WorkVisaRoute = ({ country, countryData }) => {
                       color: "#1966FA",
                     }}
                   >
-                    {route.icon}
+                    <img
+                      src={route.icon}
+                      alt={route.route}
+                      width="20"
+                      height="20"
+                      style={{ objectFit: "contain" }}
+                    />
                   </div>
                   <span>{route.route}</span>
                 </div>
@@ -106,7 +112,13 @@ const WorkVisaRoute = ({ country, countryData }) => {
                   color: "#1966FA",
                 }}
               >
-                {route.icon}
+                <img
+                  src={route.icon}
+                  alt={route.route}
+                  width="20"
+                  height="20"
+                  style={{ objectFit: "contain" }}
+                />
               </div>
               <strong className="caption-bold">{route.route}</strong>
             </div>

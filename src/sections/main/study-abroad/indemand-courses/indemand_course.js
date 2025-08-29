@@ -12,47 +12,53 @@ import { Container, Card, CardBody, CardImg } from "react-bootstrap";
 import { useRouter, usePathname } from "next/navigation"; // Next.js navigation
 
 const businessAdminImage =
-  "https://cms.skillang.com/uploads/indemandcardcontent_e4d75790a5.png";
+  "/assets/images/study-abroad/study-abroad-in-business-administration.png";
 const engineeringImage =
-  "https://cms.skillang.com/uploads/Engineering_4ab3e651a7.jpg";
+  "/assets/images/study-abroad/study-abroad-in-engineering.jpg";
 const computerScienceImage =
-  "https://cms.skillang.com/uploads/compsci_95ca348643.jpg";
-const medicineImg = "https://cms.skillang.com/uploads/medicine_77103029da.jpg";
-const itImg = "https://cms.skillang.com/uploads/it_32ebb44bab.jpg";
-const bioTechImg = "https://cms.skillang.com/uploads/biotech_dc8e72d98e.jpg";
-const backgroundImage =
-  "https://cms.skillang.com/uploads/demandcoursebg_17fe271827.png";
+  "/assets/images/study-abroad/study-abroad-in-computer-science.jpg";
+const medicineImg = "/assets/images/study-abroad/study-abroad-in-medicine.jpg";
+const itImg =
+  "/assets/images/study-abroad/study-abroad-in-information-technology.jpg";
+const bioTechImg =
+  "/assets/images/study-abroad/study-abroad-in-biotechnology.jpg";
 
 const courseData = [
   {
     title: "Business Administration",
-    paths: "Marketing, Finance, HR",
+    paths: "Marketing, Finance, HR, Business Analytics",
     image: businessAdminImage,
+    imgAlt: "Study Abroad in Business Administration",
   },
   {
     title: "Engineering",
     paths: "Mechanical, Civil, Electrical, Aerospace",
     image: engineeringImage,
+    imgAlt: "Study Abroad in Engineering",
   },
   {
     title: "Computer Science",
-    paths: "Software Dev, AI, Cybersecurity",
+    paths: "Software Development, AI, Cybersecurity",
     image: computerScienceImage,
+    imgAlt: "Study Abroad in Computer Science",
   },
   {
     title: "Medicine",
     paths: "Doctors, Surgeons, Medical Researchers",
     image: medicineImg,
+    imgAlt: "Study Abroad in Medicine",
   },
   {
     title: "Information Technology",
     paths: "Cloud, Data Science, Network Security",
     image: itImg,
+    imgAlt: "Study Abroad in Information Technology",
   },
   {
     title: "Biotechnology",
     paths: "Biomedical, Pharma, Genetic Research",
     image: bioTechImg,
+    imgAlt: "Study Abroad in Biotechnology",
   },
 ];
 
@@ -143,12 +149,12 @@ const IndemandCourse = () => {
             {displayedCourses.map((course, index) => (
               <Card key={index} className="course-card">
                 <CardImg
-                  className="card-image-wrapper course-image"
+                  className="card-image-wrapper course-image "
                   src={course.image}
                   alt={course.title}
                 />
 
-                <CardBody className="course-details px-0 d-flex flex-column justify-content-between gap-3">
+                <CardBody className="course-details px-2 d-flex flex-column justify-content-between gap-3">
                   <div className="subheading-small-medium text-content-primaryInverse">
                     {course.title}
                   </div>

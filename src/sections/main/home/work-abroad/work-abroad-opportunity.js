@@ -14,6 +14,10 @@ import {
 import "./work-abroad-opportunity.css";
 import { useRouter } from "next/navigation";
 
+const work1 = "/assets/images/home/abroad-nursing-job-consultants.jpg";
+const work3 = "/assets/images/home/overseas-consultancy.jpg";
+const work2 =
+  "/assets/images/home/foreign-university-admission-consultants.jpg";
 const work4 = "/assets/icons/home/electrical.svg";
 const work5 = "/assets/icons/home/plumbing.svg";
 const work6 = "/assets/icons/home/vpaintin.svg";
@@ -24,7 +28,8 @@ const work9 = "/assets/icons/home/welding.svg";
 const primCardData = [
   {
     title: "Nursing & Healthcare",
-    img: "https://cms.skillang.com/uploads/work_Abroad_Card1_27f26318d0.jpg",
+    img: work1,
+    imgAlt: "Abroad Nursing Job Consultants",
     color: "#FCEBC3",
     btnType: "btn-secondary",
     colSize: 6,
@@ -34,7 +39,8 @@ const primCardData = [
   },
   {
     title: "Hospitality Management",
-    img: "https://cms.skillang.com/uploads/work_Abroad_Card2_4c86752600.jpg",
+    img: work2,
+    imgAlt: "Foreign University Admission Consultants",
     color: "#FFFFFF",
     btnType: "btn-secondary-outline",
     colSize: 3,
@@ -44,7 +50,8 @@ const primCardData = [
   },
   {
     title: "Information Technology",
-    img: "https://cms.skillang.com/uploads/work_Abroad_Card3_dc7b25ef0e.jpg",
+    img: work3,
+    imgAlt: "Overseas Consultancy",
     color: "#FFFFFF",
     btnType: "btn-secondary-outline",
     colSize: 3,
@@ -92,7 +99,7 @@ const WorkAbroadOpportunity = () => {
                     variant="top"
                     className="work-card-img"
                     src={card.img}
-                    alt="Card image"
+                    alt={card.imgAlt}
                   />
                   <CardBody className="d-flex flex-column justify-content-between p-0 pt-2">
                     <div className="card-header-sectio flex-column">

@@ -1,22 +1,22 @@
 "use client";
 import React, { useEffect } from "react";
 import "./uni-partner.css";
-const uni1 = "https://cms.skillang.com/uploads/uni_1_1fd6ae85ea.png";
-const uni2 = "https://cms.skillang.com/uploads/uni_2_29b43a56a9.png";
-const uni3 = "https://cms.skillang.com/uploads/uni_3_b97c1e0e36.png";
-const uni4 = "https://cms.skillang.com/uploads/uni_4_a8b9812d20.png";
-const uni5 = "https://cms.skillang.com/uploads/uni_5_368c6f1c01.png";
-const uni6 = "https://cms.skillang.com/uploads/uni_6_777cd29e1e.png";
-const uni7 = "https://cms.skillang.com/uploads/uni_7_edc4d32ee7.png";
-const uni8 = "https://cms.skillang.com/uploads/uni_8_567e07f445.png";
-const uni9 = "https://cms.skillang.com/uploads/uni_9_981818ce51.png";
-const uni10 = "https://cms.skillang.com/uploads/uni_10_1a4614ea56.png";
-const uni11 = "https://cms.skillang.com/uploads/uni_11_13055aab21.png";
-const uni12 = "https://cms.skillang.com/uploads/uni_12_83873c92ab.png";
-const uni13 = "https://cms.skillang.com/uploads/uni_13_49d1b8fef5.png";
-const uni14 = "https://cms.skillang.com/uploads/uni_14_c2431ba219.png";
-const uni15 = "https://cms.skillang.com/uploads/uni_15_ad8832ecde.png";
-const uni16 = "https://cms.skillang.com/uploads/uni_16_fbf09ac6cd.png";
+const uni1 = "/assets/images/home/uni-1.png";
+const uni2 = "/assets/images/home/uni-2.png";
+const uni3 = "/assets/images/home/uni-3.png";
+const uni4 = "/assets/images/home/uni-4.png";
+const uni5 = "/assets/images/home/uni-5.png";
+const uni6 = "/assets/images/home/uni-6.png";
+const uni7 = "/assets/images/home/uni-7.png";
+const uni8 = "/assets/images/home/uni-8.png";
+const uni9 = "/assets/images/home/uni-9.png";
+const uni10 = "/assets/images/home/uni-10.png";
+const uni11 = "/assets/images/home/uni-11.png";
+const uni12 = "/assets/images/home/uni-12.png";
+const uni13 = "/assets/images/home/uni-13.png";
+const uni14 = "/assets/images/home/uni-14.png";
+const uni15 = "/assets/images/home/uni-15.png";
+const uni16 = "/assets/images/home/uni-16.png";
 
 const ScrollEle = () => {
   useEffect(() => {

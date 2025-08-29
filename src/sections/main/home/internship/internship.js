@@ -12,33 +12,24 @@ import {
 import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
 import "./internship.css";
 
-// Import desktop images
-const intern1 = "https://cms.skillang.com/uploads/intern_1_9b7f4aa9b7.jpg";
-const intern2 = "https://cms.skillang.com/uploads/intern_2_47226cd931.jpg";
-const intern3 = "https://cms.skillang.com/uploads/intern_3_5ec013ac6d.jpg";
-const intern4 = "https://cms.skillang.com/uploads/intern_4_7351ac6f62.jpg";
-const intern5 = "https://cms.skillang.com/uploads/intern_5_e8905e8149.jpg";
-const intern6 = "https://cms.skillang.com/uploads/intern_6_34b605b73e.jpg";
-const intern7 = "https://cms.skillang.com/uploads/intern_7_aad21314c5.jpg";
-const intern8 = "https://cms.skillang.com/uploads/intern_8_64e2ba8297.jpg";
+const intern1 = "/assets/images/home/intern-1.jpg";
+const intern2 = "/assets/images/home/intern-2.jpg";
+const intern3 = "/assets/images/home/intern-3.jpg";
+const intern4 = "/assets/images/home/intern-4.jpg";
+const intern5 = "/assets/images/home/intern-5.jpg";
+const intern6 = "/assets/images/home/intern-6.jpg";
+const intern7 = "/assets/images/home/intern-7.jpg";
+const intern8 = "/assets/images/home/intern-8.jpg";
 
 // const mobile images
-const intern1Mobile =
-  "https://cms.skillang.com/uploads/intenr_mobile_1_4e1ad30e1d.jpg";
-const intern2Mobile =
-  "https://cms.skillang.com/uploads/intenr_mobile_2_444bbaa234.jpg";
-const intern3Mobile =
-  "https://cms.skillang.com/uploads/intenr_mobile_3_4a0e370a2d.jpg";
-const intern4Mobile =
-  "https://cms.skillang.com/uploads/intenr_mobile_4_7193261df2.jpg";
-const intern5Mobile =
-  "https://cms.skillang.com/uploads/intenr_mobile_5_850187fca9.jpg";
-const intern6Mobile =
-  "https://cms.skillang.com/uploads/intenr_mobile_6_c79306abe6.jpg";
-const intern7Mobile =
-  "https://cms.skillang.com/uploads/intenr_mobile_7_47a4efb1e5.jpg";
-const intern8Mobile =
-  "https://cms.skillang.com/uploads/intenr_mobile_8_4634962685.jpg";
+const intern1Mobile = "/assets/images/home/intenr-mobile-1.jpg";
+const intern2Mobile = "/assets/images/home/intenr-mobile-2.jpg";
+const intern3Mobile = "/assets/images/home/intenr-mobile-3.jpg";
+const intern4Mobile = "/assets/images/home/intenr-mobile-4.jpg";
+const intern5Mobile = "/assets/images/home/intenr-mobile-5.jpg";
+const intern6Mobile = "/assets/images/home/intenr-mobile-6.jpg";
+const intern7Mobile = "/assets/images/home/intenr-mobile-7.jpg";
+const intern8Mobile = "/assets/images/home/intenr-mobile-8.jpg";
 
 const internCardData = [
   {
@@ -55,7 +46,7 @@ const internCardData = [
     img: intern2,
     mobileImg: intern2Mobile,
     id: "intern-mobile-card-half",
-    desc: "There is no block account required to show the fund backup",
+    desc: "Except if salary is below 832 € (school) or 939 € (in-firm + Berufsschule), then a blocked account or sponsor is required.",
     colSpan: 4,
     mobileColSpan: 6,
   },

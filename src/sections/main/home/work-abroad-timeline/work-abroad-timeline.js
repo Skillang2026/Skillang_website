@@ -10,11 +10,11 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import { Container, Image } from "react-bootstrap";
 
-// const wjourney1 = "/assets/images/home/workJourney1.jpg";
-// const wjourney2 = "/assets/images/home/workJourney2.jpg";
-// const wjourney3 = "/assets/images/home/workJoureny3.jpg";
-// const wjourney4 = "/assets/images/home/workJoureny4.jpg";
-// const wjourney5 = "/assets/images/home/workJoureny5.jpg";
+const wjourney1 = "/assets/images/home/explore-opportunities.jpg";
+const wjourney2 = "/assets/images/home/language-test-prep.jpg";
+const wjourney3 = "/assets/images/home/cv-application-support.jpg";
+const wjourney4 = "/assets/images/home/application-interview-support.jpg";
+const wjourney5 = "/assets/images/home/visa-relocation-support.jpg";
 
 import "./work-abroad-timeline.css";
 
@@ -88,35 +88,40 @@ const WorkAbroadJourneyTimeline = () => {
       title: "Explore Opportunities",
       description:
         "Explore the work abroad opportunities that fit your interest, education, and experience background.",
-      image: "https://cms.skillang.com/uploads/work_Journey1_c5cb43e438.jpg",
+      image: wjourney1,
+      imgAlt: "Explore Opportunities",
       color: "#E53935",
     },
     {
       title: "Language & Test Prep",
       description:
         "Enhance your language skills and test readiness with expert-led training, personalized courses, and flexible study options for a successful career abroad.",
-      image: "https://cms.skillang.com/uploads/work_Journey2_8eb54ad137.jpg",
+      image: wjourney2,
+      imgAlt: "Language & Test Prep",
       color: "#FB8C00",
     },
     {
       title: "CV & Application Support",
       description:
         "Receive expert assistance in creating an international-standard CV and stay on track with a transparent application process, including real-time updates on your offer letter.",
-      image: "https://cms.skillang.com/uploads/work_Joureny3_c20ffee9d8.jpg",
+      image: wjourney3,
+      imgAlt: "Cv & Application Support",
       color: "#FDD835",
     },
     {
       title: "Application & Interview Support",
       description:
         "Stay on track with our transparent application process and real-time updates. Get expert mentorship and training to ace your interviews and secure your offer letter.",
-      image: "https://cms.skillang.com/uploads/work_Joureny4_6dcba9684b.jpg",
+      image: wjourney4,
+      imgAlt: "Application & Interview Support",
       color: "#1E88E5",
     },
     {
       title: "Visa & Relocation Support",
       description:
         "We guide you through the visa process for a higher success rate and assist with travel and accommodation to ensure a smooth, secure, and affordable transition.",
-      image: "https://cms.skillang.com/uploads/work_Joureny5_41d4b3bd04.jpg",
+      image: wjourney5,
+      imgAlt: "Visa & Relocation Support",
       color: "#8E24AA",
     },
   ];

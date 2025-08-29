@@ -7,7 +7,7 @@ export const metadata = {
   keywords:
     "upcoming events & webinars, study abroad events, work abroad programs",
   alternates: {
-    canonical: "https://www.skillang.com/events", // Add this line
+    canonical: "https://www.skillang.com/events",
   },
 };
 

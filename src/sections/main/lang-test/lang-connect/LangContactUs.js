@@ -6,7 +6,7 @@ import "./LangContactUs.css";
 import ConsultationModal from "../../../resuable/forms/calendly/LeadFormCalendly";
 
 const LPartnerImg =
-  "https://cms.skillang.com/uploads/Partner_Img_8040b41d1b.png";
+  "assets/images/lang-test/connect-with-our-skillang-team.png";
 
 const LangContactUs = () => {
   const [showModal, setShowModal] = useState(false);
@@ -18,7 +18,7 @@ const LangContactUs = () => {
       <Container className="lang-conteact-us-bg">
         <Row>
           <Col lg={6} md={12} sm={12} xs={12} className="d-none d-lg-block">
-            <img src={LPartnerImg} />
+            <img src={LPartnerImg} alt="Connect With Our Skillang Team" />
           </Col>
           <Col
             lg={6}
@@ -58,7 +58,11 @@ const LangContactUs = () => {
             </div>
           </Col>
           <Col lg={6} md={12} sm={12} xs={12} className="d-block d-lg-none">
-            <img src={LPartnerImg} className="img-fluid" />
+            <img
+              src={LPartnerImg}
+              className="img-fluid"
+              alt="Connect With Our Skillang Team"
+            />
           </Col>
         </Row>
       </Container>

@@ -8,7 +8,7 @@ export const metadata = {
   keywords:
     "german language course chennai, german classes in chennai, german language course in trivandrum, german language course",
   alternates: {
-    canonical: "https://www.skillang.com/lang-test-prep", // Add this line
+    canonical: "https://www.skillang.com/lang-test-prep",
   },
 };
 

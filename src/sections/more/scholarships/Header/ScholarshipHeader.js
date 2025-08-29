@@ -1,7 +1,7 @@
 import React from "react";
 import MorePageHeader from "../../../resuable/common-header/morePageHeader";
 
-const desktopBackground = "/assets/images/ScholarHeaderBg.jpg";
+const desktopBackground = "/assets/images/scholarships/ScholarHeaderBg.jpg";
 
 const ScholarshipHeader = () => {
   return (

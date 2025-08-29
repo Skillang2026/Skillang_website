@@ -14,7 +14,7 @@ import {
 } from "react-bootstrap";
 import "./permResidentSection.css";
 
-const nurseResi = "https://cms.skillang.com/uploads/resi_6b8aafb9b3.jpg";
+const nurseResi = "/assets/images/nursing/german-nursing-consultancy.jpg";
 
 const benefits = [
   {
@@ -48,7 +48,7 @@ const PermResidentSection = () => {
             <Image
               fluid
               src={nurseResi}
-              alt="Permanent Residency"
+              alt="German Nursing Consultancy"
               className="nurse-perm-resi-image mb-3"
             />
           </Col>
@@ -57,11 +57,11 @@ const PermResidentSection = () => {
               Permanent Residency and Citizenship Pathways
             </div>
           </Col>
-          <Col lg={7} className="d-none d-md-block">
+          <Col lg={7} className="d-none d-md-block mb-3">
             <Image
               fluid
               src={nurseResi}
-              alt="Permanent Residency"
+              alt="German Nursing Consultancy"
               className="nurse-perm-resi-image"
             />
           </Col>

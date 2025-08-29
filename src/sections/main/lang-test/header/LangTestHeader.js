@@ -3,13 +3,13 @@
 import MainFormComp from "@/components/forms/MainForm";
 import React from "react";
 
-const headerbg = "https://cms.skillang.com/uploads/Lheader_bg_ccf6a9bd27.jpg";
+const headerbg = "/assets/images/lang-test/german-language-course.jpg";
 
 const LangTestHeader = () => {
   return (
     <MainFormComp
-      headerImage="https://cms.skillang.com/uploads/Lheader_bg_ccf6a9bd27.jpg"
-      imageAlt="German Language Course Chennai"
+      headerImage={headerbg}
+      imageAlt="German Language Course"
       formType="language-test"
       showLookingForField={true}
       showExperienceField={false}

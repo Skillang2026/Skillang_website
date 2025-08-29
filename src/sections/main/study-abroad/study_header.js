@@ -2,8 +2,7 @@
 import MainFormComp from "@/components/forms/MainForm";
 import React, { useEffect } from "react";
 
-const headerbg =
-  "https://cms.skillang.com/uploads/headerimagebg_f6e0827d66.png";
+const headerbg = "/assets/images/study-abroad/study-abroad-consultants.png";
 
 const StudyAbroadHeader = () => {
   return (

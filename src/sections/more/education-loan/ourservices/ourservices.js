@@ -8,7 +8,7 @@ import {
   CardText,
   CardBody,
 } from "react-bootstrap";
-const eduourserviceImg = "/assets/images/education-loan/ourservice1.png";
+const eduourserviceImg = "/assets/images/education-loan/education-loan.png";
 const eduourserviceIcon1 =
   "/assets/images/education-loan/ourserviceicon/eduourserviceIcon1.svg";
 const eduourserviceIcon2 =
@@ -116,7 +116,7 @@ const EduLoanOurServices = () => {
           >
             <img
               src={eduourserviceImg}
-              alt="Language Training Image"
+              alt="Education Loan For Abroad Without Collateral"
               className="image-fluid edu-ourservice-image"
             />
           </Col>

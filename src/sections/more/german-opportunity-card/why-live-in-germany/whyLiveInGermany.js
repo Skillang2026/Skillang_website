@@ -10,7 +10,8 @@ import {
   CardTitle,
 } from "react-bootstrap";
 
-const whyLiveGerImg = "/assets/images/german-opp-card/WhyLiveGerImg.jpg";
+const whyLiveGerImg =
+  "/assets/images/german-opp-card/why-live-work-in-germany.jpg";
 const whyLiveGerIcon1 = "/assets/icons/german-opp-card/whyLiveGerIcon1.svg";
 const whyLiveGerIcon2 = "/assets/icons/german-opp-card/whyLiveGerIcon2.svg";
 const whyLiveGerIcon3 = "/assets/icons/german-opp-card/whyLiveGerIcon3.svg";
@@ -40,7 +41,7 @@ const WhyLiveInGermanyComp = () => {
         <Row className="mb-4">
           <Image
             src={whyLiveGerImg}
-            alt="whyLiveGerImg"
+            alt="Why Live & Work In Germany?"
             className="whyLiveGerMainImg"
           />
         </Row>

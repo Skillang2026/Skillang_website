@@ -7,7 +7,7 @@ export const metadata = {
   keywords:
     "abroad nursing job consultants, best nursing consultancy, best abroad nursing job consultants",
   alternates: {
-    canonical: "https://www.skillang.com/nursing", // Add this line
+    canonical: "https://www.skillang.com/nursing",
   },
 };
 

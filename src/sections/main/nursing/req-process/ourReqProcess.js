@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Image } from "react-bootstrap";
 import "./ourReqProcess.css";
 
-const reqImg = "https://cms.skillang.com/uploads/req_Process_c5dee14dcd.jpg";
+const reqImg = "/assets/images/nursing/reqProcess.jpg";
 
 const OurReqProcess = () => {
   return (

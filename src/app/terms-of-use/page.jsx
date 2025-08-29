@@ -7,7 +7,7 @@ export const metadata = {
   keywords:
     "nursing job consultancy in coimbatore, nursing job consultancy, abroad nursing job consultants in coimbatore, nursing job consultancy in coimbatore, best nursing consultancy in coimbatore, german nursing consultancy in coimbatore, best abroad nursing job consultants in coimbatore, nursing job consultancy in coimbatore",
   alternates: {
-    canonical: "https://www.skillang.com/terms-of-use", // Add this line
+    canonical: "https://www.skillang.com/terms-of-use",
   },
 };
 

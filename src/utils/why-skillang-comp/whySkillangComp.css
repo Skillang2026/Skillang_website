@@ -13,7 +13,7 @@
 }
 
 .lang-why-skill-bg {
-    background-image: url("https://cms.skillang.com/uploads/why_Skillang_Bg_6fc2185ea8.svg");
+    background-image: url("/assets/images/lang-test/LwhySkillBg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left !important;
@@ -21,7 +21,7 @@
 }
 
 .why-skillang-bg {
-    background-image: url('https://cms.skillang.com/uploads/why_Skillang_Bg_6fc2185ea8.svg');
+    background-image: url('/assets/images/lang-test/LwhySkillBg.png');
     background-size: cover !important;
     background-position: center !important;
     width: 100% !important;

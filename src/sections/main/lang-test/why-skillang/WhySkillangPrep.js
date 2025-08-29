@@ -9,36 +9,42 @@ import {
 } from "react-bootstrap";
 import "./WhySkillangPrep.css";
 
-const LwhySkill1 =
-  "https://cms.skillang.com/uploads/Lwhy_Skill1_a2db1f31c6.jpg";
+const LwhySkill1 = "/assets/images/lang-test/free-german-language-training.jpg";
 const LwhySkill2 =
-  "https://cms.skillang.com/uploads/Lwhy_Skill2_78da29ebb8.jpg";
+  "/assets/images/lang-test/german-language-personalized-coaching.jpg";
 const LwhySkill3 =
-  "https://cms.skillang.com/uploads/Lwhy_Skill3_8a71aaf9ee.jpg";
+  "/assets/images/lang-test/german-language-flexible-learning-options.jpg";
 const LwhySkill4 =
-  "https://cms.skillang.com/uploads/Lwhy_Skill4_c763c40e39.jpg";
+  "/assets/images/lang-test/german-language-mock-tests-performance-analysis.jpg";
 
 const cardData = [
   {
     title: "Free German Language Training",
     text: "Specially designed for nursing aspirants to help you succeed in Germany",
     img: LwhySkill1,
+    imgAlt: "Free German Language Training",
     id: "LSkill1",
   },
   {
     title: "Personalized Coaching",
     text: "Learn from certified trainers with tailored guidance to match your learning pace",
     img: LwhySkill2,
+    imgAlt: "German Language Personalized Coaching",
+    id: "LSkill2",
   },
   {
     title: "Flexible Learning Options",
     text: "Choose from online or in-person classes that fit your schedule",
     img: LwhySkill3,
+    imgAlt: "German Language Flexible Learning Options",
+    id: "LSkill3",
   },
   {
     title: "Mock Tests & Performance Analysis",
     text: "Practice with full-length tests and get detailed feedback to improve",
     img: LwhySkill4,
+    imgAlt: "German Language Mock Tests & Performance Analysis",
+    id: "LSkill4",
   },
 ];
 
@@ -60,7 +66,7 @@ const WhySkillangPrep = () => {
               <Card className="lang-why-skill-card" id={card.id}>
                 <img
                   src={card.img}
-                  alt={card.title}
+                  alt={card.imgAlt}
                   style={{ borderRadius: "12px" }}
                 />
                 <CardTitle className="subheading-small-medium text-content-primaryInverse">

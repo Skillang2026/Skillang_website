@@ -4,9 +4,9 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import "./ErrorPage.css";
 
-const errorImg = "/assets/images/error-img.jpg";
+const errorImg = "/assets/images/reusable/error-img.jpg";
 
-const   ErrorPage = () => {
+const ErrorPage = () => {
   const handleGoHome = () => {
     window.location.href = "/";
   };

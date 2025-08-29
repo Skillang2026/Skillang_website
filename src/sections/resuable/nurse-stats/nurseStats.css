@@ -1,5 +1,5 @@
 .nurseStatsbg {
-    background-image: url('https://cms.skillang.com/uploads/stats_bg_f508add02b.png') !important;
+    background-image: url('/assets/images/landing/stats-bg.png') !important;
     background-repeat: no-repeat !important;
     background-position: top right !important;
     background-size: cover !important;
@@ -33,7 +33,7 @@
 
 @media (max-width: 768px) {
     .nurseStatsbg {
-        background-image: url('https://cms.skillang.com/uploads/stats_bg_f508add02b.png') !important;
+        background-image: url('/assets/images/landing/stats-bg.png') !important;
         background-repeat: no-repeat !important;
         background-position: top left !important;
         background-size: cover !important;

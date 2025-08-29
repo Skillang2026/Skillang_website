@@ -3,54 +3,83 @@
 import React, { useEffect, useRef } from "react";
 import { Card, CardImg, Container } from "react-bootstrap";
 import "./study-abroad-journey.css";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
+
+const studyJourney1 = "/assets/images/reusable/universities-courses.jpg";
+const studyJourney2 = "/assets/images/reusable/personalised-counselling.jpg";
+const studyJourney3 = "/assets/images/reusable/test-preparation.jpg";
+const studyJourney4 =
+  "/assets/images/reusable/alumni-university-rep-connect.jpg";
+const studyJourney5 =
+  "/assets/images/reusable/university-application-process.jpg";
+const studyJourney6 = "/assets/images/reusable/education-loan-assistance.jpg";
+const studyJourney7 = "/assets/images/reusable/travel-accommodations.jpg";
+const studyJourney8 = "/assets/images/reusable/post-travel-support.jpg";
+const studyJourney9 = "/assets/images/reusable/skillang-job-assistance.jpg";
 
 const cardData = [
   {
     title: "Explore Universities and Courses",
     desc: "Experts guide you based on interests and background. Recommendations tailored to fit your budget.",
-    img: "https://cms.skillang.com/uploads/s_journey_1_da7f000a8d.jpg",
+    img: studyJourney1,
+    imgAlt: "Explore Universities and Courses",
     id: "study-abroad-card1",
   },
   {
     title: "Personalised counselling",
     desc: "Clarify doubts before finalizing decisions. Multiple sessions ensure thorough understanding.",
-    img: "https://cms.skillang.com/uploads/s_journey_2_fde53009eb.jpg",
+    img: studyJourney2,
+    imgAlt: "Personalised counselling",
+    id: "study-abroad-card2",
   },
   {
     title: "Test Preparation",
     desc: "Personalized plans based on your strengths and challenges. Expert guidance for IELTS, TOEFL, and more.",
-    img: "https://cms.skillang.com/uploads/s_journey_3_8d0c1e410e.jpg",
+    img: studyJourney3,
+    imgAlt: "Test Preparation",
+    id: "study-abroad-card3",
   },
   {
     title: "Alumni & University Rep Connect",
     desc: "Connect with alumni for personalized insights. One-on-one discussions with university representatives.",
-    img: "https://cms.skillang.com/uploads/s_journey_4_1dac72164d.jpg",
+    img: studyJourney4,
+    imgAlt: "Alumni & University Rep Connect",
+    id: "study-abroad-card4",
   },
   {
     title: "University Application Process",
     desc: "Our team guides you through the university application process. Real-time tracking of your application status.",
-    img: "https://cms.skillang.com/uploads/s_journey_5_f43d4ccc38.jpg",
+    img: studyJourney5,
+    imgAlt: "University Application Process",
+    id: "study-abroad-card5",
   },
   {
     title: "Education Loan Assistance",
     desc: "Our Loan team connects you with financial institutions. Assistance provided for seamless loan processing.",
-    img: "https://cms.skillang.com/uploads/s_journey_6_31692fb714.jpg",
+    img: studyJourney6,
+    imgAlt: "Education Loan Assistance",
+    id: "study-abroad-card6",
   },
   {
     title: "Travel and Accommodations",
     desc: "End-to-end guidance for travel and accommodation. Secure and affordable cost options.",
-    img: "https://cms.skillang.com/uploads/s_journey_7_21f8312af9.jpg",
+    img: studyJourney7,
+    imgAlt: "Travel and Accommodations",
+    id: "study-abroad-card7",
   },
   {
     title: "Post Travel Support",
     desc: "Skillang membership grants access to alumni network. Connect, learn, and network in your destination country.",
-    img: "https://cms.skillang.com/uploads/s_journey_8_ee608651cb.jpg",
+    img: studyJourney8,
+    imgAlt: "Post Travel Support",
+    id: "study-abroad-card8",
   },
   {
     title: "Job Assistance",
     desc: "Our Career support team assists with job applications. Guidance for part-time and full-time jobs abroad.",
-    img: "https://cms.skillang.com/uploads/s_journey_9_bba69c49ba.jpg",
+    img: studyJourney9,
+    imgAlt: "Job Assistance",
+    id: "study-abroad-card9",
   },
 ];
 
@@ -136,8 +165,9 @@ export default function StudyAbroad({ showAll = true }) {
               <Card className="custom-card my-4 border-0 " id={card.id}>
                 {showAll && (
                   <CardImg
-                    className="study-abroad-jounrey-card-image bg-primary"
+                    className="study-abroad-jounrey-card-image"
                     src={card.img}
+                    alt={card.imgAlt}
                   />
                 )}
                 <Card.Body className="">

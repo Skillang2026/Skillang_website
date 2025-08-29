@@ -3,10 +3,13 @@
 import MainFormComp from "@/components/forms/MainForm";
 import React from "react";
 
+const headBg =
+  "/assets/images/nursing/abroad-nursing-job-consultants-in-chennai.jpg";
+
 const NurseMainHeader = () => {
   return (
     <MainFormComp
-      headerImage="https://cms.skillang.com/uploads/nurse_Header_Img_1b260fe32f.jpg"
+      headerImage={headBg}
       imageAlt="Abroad Nursing Job Consultants In Chennai"
       formType="nurse"
       showLookingForField={false}

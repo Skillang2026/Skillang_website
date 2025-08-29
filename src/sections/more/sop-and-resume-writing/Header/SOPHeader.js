@@ -1,6 +1,6 @@
 import React from "react";
 import MorePageHeader from "../../../resuable/common-header/morePageHeader";
-const desktopBackground = "/assets/images/sop=desktop-bg.png";
+const desktopBackground = "/assets/images/SOP/sop-desktop-bg.png";
 // const mobileBackground = "/assets/images/SOP/sop-mobile-header.jpg";
 
 const SOPHeaderComp = () => {

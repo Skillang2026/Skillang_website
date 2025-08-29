@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Image, Row, Col } from "react-bootstrap";
 const WhyOppCardImp =
-  "/assets/images/german-opp-card/WhatGermanOppCardVisaImg.jpg";
+  "/assets/images/german-opp-card/opportunity-card-germany.jpg";
 import "./WhyIsGermanOppCard.css";
 
 const WhatIsGermanOppCardComp = () => {
@@ -32,7 +32,7 @@ const WhatIsGermanOppCardComp = () => {
               fluid
               src={WhyOppCardImp}
               className="WhyGerOppCardImp"
-              alt="WhyOppCardImp"
+              alt="Opportunity Card Germany"
             />
           </Col>
         </Row>

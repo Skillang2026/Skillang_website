@@ -1,6 +1,6 @@
 import React from "react";
 const GermanOppCardHeaderImg =
-  "/assets/images/german-opp-card/GermanOppCardHeaderImg.jpg";
+  "/assets/images/german-opp-card/germany-opportunity-card.jpg";
 import ImageHeaderComponent from "../../../../components/common-headers/ImageMainHeader";
 
 const GermanOppCardHeaderComp = () => {
@@ -8,7 +8,7 @@ const GermanOppCardHeaderComp = () => {
     <div>
       <ImageHeaderComponent
         imageSrc={GermanOppCardHeaderImg}
-        imageAlt={"GermanOppCardHeaderImg"}
+        imageAlt={"Germany Opportunity Card"}
         title={"Explore Germany with the Opportunity Card Visa"}
         subheading={
           "Start your new chapter in Germany - one of the world's most vibrant and opportunity-rich countries"

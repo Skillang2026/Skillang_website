@@ -7,7 +7,7 @@ export const metadata = {
   keywords:
     "education loan for abroad without collateral,education loan,abroad education loan,study loan for abroad,abroad education loan without collateral",
   alternates: {
-    canonical: "https://www.skillang.com/education-loan", // Add this line
+    canonical: "https://www.skillang.com/education-loan",
   },
 };
 

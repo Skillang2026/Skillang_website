@@ -30,7 +30,7 @@
 }
 
 .work-abroad-bg-card {
-  background-image: url('https://cms.skillang.com/uploads/work_Abroad_Bg_d511ca397e.jpg');
+  background-image: url('/assets/images/home/workAbroadBg.jpg');
   background-size: cover;
   width: 100% !important;
   background-repeat: no-repeat;
@@ -40,7 +40,7 @@
 }
 
 .work-abroad-left-bg {
-  background-image: url('https://cms.skillang.com/uploads/ops_Left_Img_ee864866e5.jpg');
+  background-image: url('/assets/images/home/opsLeftImg.jpg');
   background-size: cover;
   background-position: bottom !important;
   background-repeat: no-repeat;
@@ -51,7 +51,7 @@
 
 
 .work-abroad-right-bg {
-  background-image: url('https://cms.skillang.com/uploads/ops_Bg_47fa4a75be.jpg');
+  background-image: url('/assets/images/home/opsBg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 24px !important;
@@ -130,7 +130,7 @@
   }
 
   .work-abroad-left-bg {
-    background-image: url('https://cms.skillang.com/uploads/ops_Left_Img_Mob_9901581ba9.jpg');
+    background-image: url('/assets/images/home/opsLeftImgMob.jpg');
     background-size: cover !important;
     background-color: #1966FA !important;
     background-repeat: no-repeat !important;

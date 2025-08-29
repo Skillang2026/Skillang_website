@@ -1,5 +1,5 @@
 .test-lag-bg {
-  background-image: url('https://cms.skillang.com/uploads/test_Langbg_e0af37b545.png') !important;
+  background-image: url('/assets/images/home/testLangbg.png') !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
   border-radius: 24px !important;
@@ -7,7 +7,7 @@
 }
 
 .test-lang-left-bg {
-  background-image: url('https://cms.skillang.com/uploads/test_Lang_Left_Bg_e8ba12a2c9.png') !important;
+  background-image: url('/assets/images/home/testLangLeftBg.png') !important;
   background-size: contain !important;
   background-repeat: no-repeat !important;
   padding: 40px !important;
@@ -54,7 +54,7 @@
 @media (max-width: 768px) {
 
   .test-lang-left-bg {
-    background-image: url('https://cms.skillang.com/uploads/test_Lang_Left_Bg_e8ba12a2c9.png') !important;
+    background-image: url('/assets/images/home/testLangLeftBg.png') !important;
     background-size: contain;
     background-repeat: no-repeat !important;
     padding: 24px !important;

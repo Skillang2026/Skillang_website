@@ -2,20 +2,33 @@ import React from "react";
 import { CardTitle, Container, Col, Card, Row } from "react-bootstrap";
 import "./typesHealthCareSection.css";
 
-const ntype1 = "https://cms.skillang.com/uploads/n_Type1_92f3840669.jpg";
-const ntype2 = "https://cms.skillang.com/uploads/n_Type2_cb90a45f32.jpg";
-const ntype3 = "https://cms.skillang.com/uploads/n_Type3_ab88679daa.jpg";
-const ntype4 = "https://cms.skillang.com/uploads/n_Type4_18a3bff56d.jpg";
-const ntype5 = "https://cms.skillang.com/uploads/n_Type5_734afb3ede.jpg";
-const ntype6 = "https://cms.skillang.com/uploads/n_Type6_70a7960d99.jpg";
+const ntype1 =
+  "/assets/images/nursing/types-of-healthcare-facilities-hiring-nurses.jpg";
+const ntype2 = "/assets/images/nursing/nursing-homes.jpg";
+const ntype3 = "/assets/images/nursing/home-care-services.jpg";
+const ntype4 = "/assets/images/nursing/rehab-centers.jpg";
+const ntype5 = "/assets/images/nursing/clinics-specialized-medical-centres.jpg";
+const ntype6 = "/assets/images/nursing/research-academic-institutions.jpg";
 
 const nurseTypes = [
-  { title: "Hospital  (public and private)", img: ntype1 },
-  { title: "Nursing Homes", img: ntype2 },
-  { title: "Home Care  Services", img: ntype3 },
-  { title: "Rehab Centers", img: ntype4 },
-  { title: "Clinics & Specialized Medical Centres", img: ntype5 },
-  { title: "Research & Academic Institutions", img: ntype6 },
+  {
+    title: "Hospital  (public and private)",
+    img: ntype1,
+    imgAlt: "Types Of Healthcare Facilities Hiring Nurses",
+  },
+  { title: "Nursing Homes", img: ntype2, imgAlt: "Nursing Homes" },
+  { title: "Home Care  Services", img: ntype3, imgAlt: "Home Care Services" },
+  { title: "Rehab Centers", img: ntype4, imgAlt: "Rehab Centers" },
+  {
+    title: "Clinics & Specialized Medical Centres",
+    img: ntype5,
+    imgAlt: "Clinics & Specialized Medical Centres",
+  },
+  {
+    title: "Research & Academic Institutions",
+    img: ntype6,
+    imgAlt: "Research & Academic Institutions",
+  },
 ];
 
 const TypesHealthCareSection = () => {
@@ -33,7 +46,7 @@ const TypesHealthCareSection = () => {
               <Card className="nurse-types-card">
                 <img
                   src={challenge.img}
-                  alt="."
+                  alt={challenge.imgAlt}
                   className="nurse-types-card-img mb-3"
                 />
                 <CardTitle className="subheading-small-medium text-start">

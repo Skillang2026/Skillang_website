@@ -1,12 +1,10 @@
 import React from "react";
 import "./CourseFeeInfoComp.css";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { CashStack } from "react-bootstrap-icons";
-import { FaExternalLinkAlt } from "react-icons/fa";
 
-// Fixed paths - corrected based on your actual file structure
 const CourseInfoNurseImage =
-  "assets/images/nursing/nurse-course-info-image.png";
+  "assets/images/nursing/global-nursing-career-consultants.png";
 const ArrowIcon = "assets/icons/nurse/ArrowIcon.svg";
 const OnlineIcon = "assets/icons/nurse/online.svg";
 const OfflineIcon = "assets/icons/nurse/offline.svg";
@@ -96,11 +94,11 @@ const CourseFeeInfoComp = () => {
                 </span>
               </div>
               <div className="paragraph-small-regular text-content-tertiaryInverse">
-                Pedagogy, LMS access, interactive live sessions, mock
-                interviews, flashcards, gamified learning, medical terminology,
-                cultural integration, recruiter interactions, Job matching,
-                document management, visa assistance, skill recognition, housing
-                support, guided tours, career mentorship
+                Structured lesson plan, LMS Access, Interactive Live sessions,
+                Mock Interviews, Flash Cards, Gamified Learning, Practical
+                scenarios, Medical terminology training, Cultural Integration
+                training, Career Counselling and guidance, Expert career
+                mentorship.
               </div>
             </div>
             <div className="caption-regular mt-4 text-content-secondary">
@@ -116,7 +114,7 @@ const CourseFeeInfoComp = () => {
           >
             <img
               src={CourseInfoNurseImage}
-              alt="German Language Program for Nurses"
+              alt="Global Nursing Career Consultants"
             />
           </Col>
         </Row>

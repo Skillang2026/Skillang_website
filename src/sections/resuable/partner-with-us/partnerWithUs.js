@@ -7,8 +7,7 @@ import "./partnerWithUs.css";
 const institudeIcon = "/assets/icons/resuable/instituteIcon.svg";
 const companyIcon = "/assets/icons/resuable/companyIcon.svg";
 const recruiterIcon = "/assets/icons/resuable/recruitIcon.svg";
-const nursePartnerImg =
-  "https://cms.skillang.com/uploads/partner_image_5fac58e764.png";
+const nursePartnerImg = "/assets/images/reusable/skillang-partner-with-us.png";
 
 const PartnerWithUsSection = () => {
   const [showModal, setShowModal] = useState(false);
@@ -19,7 +18,7 @@ const PartnerWithUsSection = () => {
       <Container className="nurse-partner-bg text-start rounded-5">
         <Row className="py-">
           <Col className="d-none d-md-block" md={6} sm={12} xs={12}>
-            <Image fluid src={nursePartnerImg} alt="" />
+            <Image fluid src={nursePartnerImg} alt="Skillang Partner With Us" />
           </Col>
           <Col
             className="d-flex flex-column justify-content-center align-items-start text-start"

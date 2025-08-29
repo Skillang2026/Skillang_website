@@ -26,6 +26,7 @@ import "./whySkillangComp.css";
  * @param {string} props.badgeText - Text to display in the badge (default: "Empowering Global Careers")
  * @returns {JSX.Element}
  */
+
 const ReusableWhyComponent = ({
   title = "Why Choose",
   highlightText = "Skillang?",
@@ -63,7 +64,9 @@ const ReusableWhyComponent = ({
                 {card.img && (
                   <img
                     src={card.img}
-                    alt={`${card.title || `why-reason-${index + 1}`}`}
+                    alt={`${
+                      card.imgAlt || card.title || `why-reason-${index + 1}`
+                    }`}
                     className="why-skillang-card-img"
                     style={{ borderRadius: "12px" }}
                   />

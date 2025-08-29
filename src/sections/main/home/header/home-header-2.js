@@ -2,12 +2,13 @@
 
 import React from "react";
 import MainFormComp from "@/components/forms/MainForm";
+const abroadConsultancy = "/assets/images/home/abroad-consultancy.jpg";
 
 const HomeHeader2 = () => {
   return (
     <MainFormComp
-      headerImage="https://cms.skillang.com/uploads/header_bg1_1b4c8fe074.jpg"
-      imageAlt="Best Abroad Consultancy In Chennai"
+      headerImage={abroadConsultancy}
+      imageAlt="Abroad Consultancy"
       formType="home"
       // Enable dynamic fields based on selection
       dynamicFields={true}

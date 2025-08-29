@@ -1,22 +1,9 @@
 import React from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-} from "react-bootstrap";
-import "./whySkillangSection.css";
 import ReusableWhyComponent from "../../../utils/why-skillang-comp/whySkillangComp";
 
-const whySkill1 =
-  "https://cms.skillang.com/uploads/why_Skillang_a2a03fb683.jpg";
-const whySkill2 =
-  "https://cms.skillang.com/uploads/why_Skillang2_9000c78852.jpg";
-const whySkill3 =
-  "https://cms.skillang.com/uploads/why_Skillang3_6a6be41623.jpg";
+const whySkill1 = "/assets/images/reusable/expert-guidance-for-nursing.jpg";
+const whySkill2 = "/assets/images/reusable/ethical-recruitment-nursing.jpg";
+const whySkill3 = "/assets/images/reusable/high-success-rate-of-nursing.jpg";
 
 const WhySkillangSection = () => {
   const whySkillangCardData = [
@@ -24,16 +11,19 @@ const WhySkillangSection = () => {
       img: whySkill1,
       title: "Expert Guidance",
       text: "Our expert team specializes in international healthcare recruitment, guiding in every step.",
+      imgAlt: "Expert Guidance For Nursing",
     },
     {
       img: whySkill2,
       title: "Ethical Recruitment",
       text: "We uphold ethical recruitment standards, ensuring transparency and integrity in all operations.",
+      imgAlt: "Ethical Recruitment For Nursing",
     },
     {
       img: whySkill3,
       title: "High Success Rate",
       text: "We have a proven track record of placing healthcare professionals in top global institutions.",
+      imgAlt: "High Success Rate For Nursing",
     },
   ];
   return (

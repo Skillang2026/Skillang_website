@@ -15,7 +15,7 @@ const nurseEligibilityData = [
   },
   {
     img: eli2,
-    text: "Language proficiency proof in German (usually B2 level) via any authorized institutes (GOETHE / TELC / ECL/ OSD).",
+    text: "German Language proficiency: B1&B2 level. 12th passed with above 50%. Age limit: Below 35 years.",
   },
   { img: eli3, text: "A valid nursing license from your home country. " },
   {

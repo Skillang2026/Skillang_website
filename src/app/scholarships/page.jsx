@@ -7,7 +7,7 @@ export const metadata = {
   keywords:
     "study abroad scholarships,abroad university scholarships, scholarships for indian students,scholarship abroad,scholarships to study abroad",
   alternates: {
-    canonical: "https://www.skillang.com/scholarships", // Add this line
+    canonical: "https://www.skillang.com/scholarships",
   },
 };
 

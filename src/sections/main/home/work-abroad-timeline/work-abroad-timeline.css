@@ -1,0 +1,61 @@
+/* Timeline Dot Animation */
+.timeline-dot {
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    background-color: white !important;
+    border-width: 5px !important;
+}
+
+.timeline-dot.active {
+    transform: scale(1.2);
+}
+
+/* Timeline Connector Wrapper */
+.timeline-connector-wrapper {
+    position: relative;
+    width: 5px;
+    flex-grow: 1;
+}
+
+/* Timeline Connector Base */
+.timeline-connector {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #ccc !important;
+}
+
+/* Timeline Connector Fill Animation */
+.timeline-connector-fill {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transition: height 0.3s ease-out;
+    z-index: 2;
+}
+
+.custom-image {
+    height: 100%;
+    width: 100% !important;
+    object-fit: contain !important;
+}
+
+@media (max-width: 480px) {
+    .custom-image {
+        height: 180px;
+        width: 100% !important;
+        object-fit: contain !important;
+    }
+}
+
+.MuiTimelineItem-missingOppositeContent::before {
+    display: none !important;
+}
+
+.MuiTimelineItem-missingOppositeContent {
+    min-height: auto !important;
+}
+
+.MuiTimelineItem-positionRight .MuiTimelineContent-root {
+    padding-left: 16px !important;
+}

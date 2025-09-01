@@ -1,0 +1,30 @@
+.whyLiveGerMainImg {
+    height: 281px !important;
+    border-radius: 32px !important;
+    object-fit: cover !important;
+    object-position: bottom !important;
+    /* Inside auto layout */
+    /* flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0; */
+}
+
+.whyLiveGerCards {
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    padding: 16px !important;
+    gap: 16px !important;
+    /* height: 164px; */
+    border: 1px solid #E3E3E3 !important;
+    border-radius: 16px !important;
+    margin-bottom: 12px !important;
+}
+
+.whyLiveGerCardsImg {
+    height: 56px !important;
+    width: auto !important;
+}

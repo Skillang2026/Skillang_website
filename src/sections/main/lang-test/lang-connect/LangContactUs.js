@@ -1,0 +1,79 @@
+"use client";
+
+import React, { useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import "./LangContactUs.css";
+import ConsultationModal from "../../../resuable/forms/calendly/LeadFormCalendly";
+
+const LPartnerImg =
+  "assets/images/lang-test/connect-with-our-skillang-team.png";
+
+const LangContactUs = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClose = () => setShowModal(false);
+  const handleShow = () => setShowModal(true);
+  return (
+    <div>
+      <Container className="lang-conteact-us-bg">
+        <Row>
+          <Col lg={6} md={12} sm={12} xs={12} className="d-none d-lg-block">
+            <img src={LPartnerImg} alt="Connect With Our Skillang Team" />
+          </Col>
+          <Col
+            lg={6}
+            md={12}
+            sm={12}
+            xs={12}
+            className="d-flex flex-column align-items-start justify-content-center"
+          >
+            <div className="lang-contact-us-title-content">
+              <div>
+                <div
+                  className="heading-big-medium"
+                  style={{ color: "#023655" }}
+                >
+                  Still have queries? Let's Connect
+                </div>
+                <div
+                  className="paragraph-big-medium  "
+                  style={{ color: "#044971" }}
+                >
+                  Get in touch with our Program Advisors & get your queries
+                  clarified.
+                </div>
+              </div>
+
+              <div>
+                <button
+                  className="btn-primary"
+                  onClick={() => {
+                    // window.scrollTo({ top: 0, behavior: "smooth" });
+                    handleShow();
+                  }}
+                >
+                  Connect with us
+                </button>
+              </div>
+            </div>
+          </Col>
+          <Col lg={6} md={12} sm={12} xs={12} className="d-block d-lg-none">
+            <img
+              src={LPartnerImg}
+              className="img-fluid"
+              alt="Connect With Our Skillang Team"
+            />
+          </Col>
+        </Row>
+      </Container>
+      <ConsultationModal
+        show={showModal}
+        handleClose={handleClose}
+        showCalendly={true}
+        // lookingFor={"Contact us back"}
+      />
+    </div>
+  );
+};
+
+export default LangContactUs;

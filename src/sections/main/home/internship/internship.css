@@ -1,0 +1,78 @@
+.intern-card {
+  background-color: #F8F8F8 !important;
+  color: #5B5B5B !important;
+  font-weight: 400 !important;
+  width: 100% !important;
+  height: 200px !important;
+  overflow: hidden !important;
+  text-align: start !important;
+  border-radius: 8px !important;
+  /* min-width: 250px !important; */
+  justify-items: start !important;
+  justify-content: start !important;
+background-repeat: no-repeat !important;
+  padding: 24px !important;
+}
+
+.intern-heading-wrapper{
+  width: 75% !important;
+}
+
+@media (max-width: 640px) {
+
+  .intern-card{
+    width: 100% !important;
+    height: 290px !important;
+    background-position: bottom right !important;
+    min-width: none !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    padding: 16px !important;
+    border: #E3E3E3 1px solid !important;
+    border-radius: 8px !important;
+
+  }
+
+  .intern-card-text-wrapper{
+   width: 100% !important;
+  text-align: start !important;
+}
+
+.intern-heading-wrapper{
+  width: 100% !important;
+}
+
+#intern-mobile-card-half{
+  height: 290px !important;
+}
+
+#intern-mobile-card-full .intern-card-text-wrapper{
+   width: 50% !important;
+  text-align: start !important;
+}
+
+
+#intern-mobile-card-full{
+  height: 200px !important;
+}
+
+
+
+
+}
+
+
+.intern-card-text-wrapper{
+  /* background-color: pink; */
+   width: 65%;
+  text-align: start !important;
+}
+
+.internship-slider-wrapper{
+  /* background-color: pink !important; */
+  /* row-gap: 20px !important; */
+  /* border-radius: 24px !important; */
+  padding: 10px !important;
+  /* padding: 0 !important; */
+  overflow: hidden !important;
+}

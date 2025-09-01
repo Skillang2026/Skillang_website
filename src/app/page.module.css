@@ -1,0 +1,10 @@
+.header-wrapper {
+    width: 60% !important;
+}
+
+@media (max-width: 768px) {
+
+    .header-wrapper {
+        width: 100% !important;
+    }
+}

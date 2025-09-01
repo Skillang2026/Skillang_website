@@ -1,0 +1,128 @@
+.nursing-our-services-bg {
+    background-color: #DBD0FB !important;
+}
+
+/* Existing image styling */
+.nurse-service-img {
+    width: 100% !important;
+    height: 250px !important;
+    border-radius: 24px !important;
+    object-fit: cover !important;
+}
+
+/* New card styling for grid layout */
+.our-services-card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    width: 100%;
+    height: 160px;
+    background-color: var(--navy-blue-800) !important;
+    box-shadow: 0px 4px 52px rgba(219, 208, 251, 0.12);
+    border-radius: 24px;
+    border: none;
+}
+
+.our-services-card .card-title {
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.our-services-card .card-text {
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .nurse-service-img {
+        height: 206px !important;
+        border-radius: 12px !important;
+        object-fit: cover !important;
+        object-position: top !important;
+    }
+
+    .our-services-card {
+        height: auto;
+        min-height: 140px;
+        padding: 20px;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .our-services-card {
+        height: auto;
+        min-height: 120px;
+        padding: 16px;
+        gap: 12px;
+    }
+}
+
+/* Add this to your existing ourServices.css file */
+
+/* Accordion styling for mobile - Navy Blue Theme (Fixed Version) */
+.our-services-accordion {
+    --bs-accordion-border-width: 0;
+    --bs-accordion-border-radius: 0;
+}
+
+.our-services-accordion .our-services-accordion-item {
+    background-color: var(--navy-blue-900) !important;
+    border: 1px solid var(--navy-blue-700) !important;
+    border-radius: 12px !important;
+}
+
+.our-services-accordion .our-services-accordion-item .accordion-header {
+    border: none !important;
+}
+
+.our-services-accordion .accordion-button {
+    background-color: var(--navy-blue-900) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 16px 20px;
+    box-shadow: none !important;
+    font-weight: 600;
+}
+
+.our-services-accordion .accordion-button:focus {
+    background-color: var(--navy-blue-900) !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.our-services-accordion .accordion-button:hover {
+    background-color: var(--navy-blue-800) !important;
+    color: white !important;
+}
+
+.our-services-accordion .accordion-button:not(.collapsed) {
+    background-color: var(--navy-blue-800) !important;
+    color: white !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+/* Plus/Minus icon styling */
+.our-services-accordion .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z'/%3E%3C/svg%3E") !important;
+}
+
+/* Minus icon when expanded */
+.our-services-accordion .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E") !important;
+}
+
+.our-services-accordion .accordion-body {
+    background-color: var(--navy-blue-800) !important;
+    color: white !important;
+    border-top: 1px solid var(--navy-blue-700) !important;
+    border-bottom-left-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+    padding: 16px 20px;
+}

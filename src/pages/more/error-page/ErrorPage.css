@@ -1,0 +1,14 @@
+.error-page-bg {
+    height: 80vh !important;
+}
+
+.error-page-circle {
+    background-color: #DBD0FB !important;
+    position: absolute;
+    width: 544px;
+    height: 544px;
+    left: calc(50% - 544px/2);
+    top: 99px;
+    z-index: -1 !important;
+    filter: blur(230px);
+}

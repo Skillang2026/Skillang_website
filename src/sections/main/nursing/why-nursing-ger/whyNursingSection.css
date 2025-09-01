@@ -1,0 +1,62 @@
+.why-nurse-cards-container {
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out;
+    
+}
+
+.why-nurse-cards-container.expanded {
+    -webkit-mask-image: none;
+    mask-image: none;
+}
+
+.why-nurse-card {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    height: 100% !important;
+    padding: 20px !important;
+    border-radius: 24px !important;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animation for appearing cards */
+.why-nurse-card.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.why-nurse-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Image scaling */
+.why-nurse-card-img {
+    width: 80px !important;
+    height: 80px !important;
+    transition: transform 0.3s ease-in-out;
+}
+
+.why-nurse-card:hover  {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+
+    .why-nurse-cards-container {
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out;
+    -webkit-mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+    mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+}
+    .why-nurse-card-img {
+        width: 48px !important;
+        height: auto !important;
+    }
+
+    .why-nurse-card {
+        flex-direction: row !important;
+        padding: 10px !important;
+    }
+}

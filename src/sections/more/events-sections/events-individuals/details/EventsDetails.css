@@ -1,0 +1,79 @@
+.event-details-agenda-table {
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    border: 1px solid #e0e0e0 !important;
+    width: 100% !important;
+}
+
+.event-details-agenda-table thead {
+    background-color: #ebf2ff !important;
+}
+
+.event-details-agenda-table tbody tr:nth-child(even) {
+    background-color: var(--grey-200) !important;
+}
+
+
+.event-details-agenda-table td {
+    box-sizing: border-box !important;
+    padding: 14px 16px !important;
+    gap: 12px !important;
+}
+
+
+/* Table / Header / Cell */
+.event-details-agenda-table th {
+    box-sizing: border-box;
+    padding: 14px 12px !important;
+    gap: 12px;
+}
+
+
+.eventsIndiOverviewImg {
+    border-radius: 32px;
+    object-fit: cover !important;
+    object-position: center !important;
+    max-height: 378px !important;
+    width: 100% !important;
+}
+
+/* Custom Tab Styling */
+.nav-tabs {
+    border-bottom: 1px solid #e5e7eb !important;
+    gap: 40px !important;
+}
+
+.events-nav-link {
+    border: none !important;
+    background: none !important;
+    color: #9ca3af !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    padding: 12px 0 !important;
+    position: relative !important;
+    border-radius: 0 !important;
+    margin-bottom: -1px !important;
+}
+
+.events-nav-link:hover {
+    border: none !important;
+    color: #f97316 !important;
+}
+
+.events-nav-link.active {
+    color: #f97316 !important;
+    background: none !important;
+    border: none !important;
+    border-bottom: none !important;
+}
+
+.events-nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #f97316;
+    border-radius: 2px 2px 0 0;
+}

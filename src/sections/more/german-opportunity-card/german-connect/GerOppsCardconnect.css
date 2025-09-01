@@ -1,0 +1,19 @@
+.university-choice-section {
+    background: linear-gradient(90deg,
+            rgba(230, 230, 255, 0.5) 0%,
+            rgba(240, 224, 255, 0.5) 35%,
+            rgba(255, 226, 240, 0.5) 100%);
+    background-image: url("/assets/images/study-abroad-county-wise/countryBG.jpg");
+    border-radius: 16px;
+    background-repeat: no-repeat !important;
+    background-position: left !important;
+    background-size: cover !important;
+    padding: 45px !important;
+}
+
+@media (max-width: 768px) {
+    .university-choice-section {
+        padding: 20px !important;
+        background-position: center !important;
+    }
+}

@@ -1,0 +1,32 @@
+.lang-program-card {
+  box-sizing: border-box !important;
+  padding: 16px !important;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #E3E3E3 !important;
+  border-radius: 16px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* This pushes content to top and button to bottom */
+}
+
+.card-content {
+  flex-grow: 1;
+  /* Takes up available space */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-button {
+  margin-top: auto;
+  /* Pushes button to bottom */
+}
+
+#lang-program-card-1 {
+  background-image: url('/assets/images/lang-test/langTestprepBg1.png') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 24px !important;
+  border: 2px solid #F7D6C8 !important;
+}

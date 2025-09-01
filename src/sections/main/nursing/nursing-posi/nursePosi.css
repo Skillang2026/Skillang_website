@@ -1,0 +1,91 @@
+.nurse-cards-container {
+    padding-top: 40px !important;
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out;
+    
+    /* background-color: tomato !important; */
+}
+
+.nurse-cards-container.expanded {
+    -webkit-mask-image: none;
+    mask-image: none;
+}
+
+.nurse-posi-card {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    padding: 20px !important;
+    border-radius: 12px !important;
+    border:  2px solid #EAEAEC !important;
+    background-color: #F8F8F9 !important;
+    /* transition: transform 0.3s ease, opacity 0.3s ease; */
+    position: relative;
+    border-radius: 12px !important;
+}
+
+/* .nurse-posi-card:hover{
+    transform: scale(1.02) !important;
+} */
+
+/* Left border line */
+.nurse-posi-card::before {
+    content: "";
+    position: absolute;
+    left: 0 !important;
+    top: 10%;
+    height: 80%;
+    width: 4px;
+background: #9473F2;
+border-radius: 2px;
+
+
+}
+
+/* .nurse-posi-card::before {
+    content: "";
+    position: absolute;
+    left: -5 !important;
+    top: 10%;
+    height: 80%;
+    width: 4px;
+    background-color: pink;
+    border-radius: 2px;
+} */
+
+.tab-circle {
+
+position: absolute;
+width: 9px;
+height: 24px;
+left: -5px;
+top: calc(50% - 24px/2 - 0.09px);
+
+background: #9473F2;
+border-radius: 4px;
+
+
+    }
+
+/* Hide extra cards on mobile */
+.nurse-posi-card.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nurse-posi-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .nurse-posi-card {
+        flex-direction: row !important;
+        padding: 10px !important;
+    }
+    .nurse-cards-container{
+        -webkit-mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+    mask-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+    }
+}

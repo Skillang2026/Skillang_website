@@ -1,0 +1,174 @@
+.edu-ranking-table {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  border: 1px solid #e0e0e0 !important;
+  width: 100% !important;
+}
+
+.edu-ranking-table thead {
+  background-color: #ebf2ff !important;
+}
+
+.edu-ranking-table tbody tr:nth-child(even) {
+  background-color: var(--grey-200) !important;
+}
+
+.edu-ranking-table th,
+.edu-ranking-table td {
+  border: none !important;
+}
+
+.rank-success-pill {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 2px 8px !important;
+  gap: 4px !important;
+  font-size: 12px !important;
+  width: 56px !important;
+  color: #02a971 !important;
+  height: 20px !important;
+  background: #e6f6f1 !important;
+  border-radius: 16px !important;
+}
+
+.rank-danger-pill {
+  background-color: #fdecec;
+  color: #e95454;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 2px 8px !important;
+  gap: 4px !important;
+  font-size: 12px !important;
+  width: 56px !important;
+  height: 20px !important;
+  border-radius: 16px !important;
+}
+
+.edu-ranking-table th,
+.edu-ranking-table td {
+  vertical-align: middle;
+}
+
+.uni-rank-text {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 20px !important;
+  text-align: start !important;
+}
+
+.edu-rank-badge {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 4px 10px !important;
+  color: var(--grey-200) !important;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: rgba(0, 0, 0, 0.2) !important;
+  backdrop-filter: blur(18px) !important;
+  border-radius: 8px !important;
+}
+
+.edu-top-progs-card {
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  padding: 16px !important;
+  gap: 16px !important;
+  border: 1px solid #e3e3e3 !important;
+  border-radius: 24px !important;
+  height: 100% !important;
+}
+
+.edu-top-progs-container {
+  scrollbar-width: none !important;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  transition: all 0.3s ease !important;
+  /* d-flex flex-nowrap overflow-auto */
+}
+
+/* Custom styles for the program tabs */
+.program-tabs .nav-link.active {
+  background-color: #212529 !important;
+  color: white !important;
+}
+
+.program-tabs .nav-link {
+  transition: all 0.3s ease;
+}
+
+/* Make sure the card body expands to fill the available space */
+.edu-top-progs-card .card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  flex: 1 !important;
+}
+
+/* Remove scrollbar for a cleaner look */
+.edu-top-progs-container::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Mobile/Desktop view control */
+@media (max-width: 767.98px) {
+  #desktop-programs {
+    display: none !important;
+  }
+
+  #mobile-programs {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  #desktop-programs {
+    display: flex !important;
+  }
+
+  #mobile-programs {
+    display: none !important;
+  }
+}
+
+/* Partner Universities Component Styles */
+
+/* Mobile view styles */
+@media (max-width: 767.98px) {
+  .mobile-university-card {
+    margin-bottom: 24px;
+  }
+
+  .mobile-view-all-btn {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+}
+
+/* Desktop view styles */
+@media (min-width: 768px) {
+  .mobile-view-all-btn {
+    display: none;
+  }
+}
+
+/* Hide scrollbar for the horizontal scroll container */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

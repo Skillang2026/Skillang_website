@@ -1,0 +1,54 @@
+.landing-country-card {
+    background: white !important;
+    padding: 24px !important;
+    border-radius: 24px !important;
+    display: flex !important;
+    height: 100% !important;
+    flex-direction: column !important;
+    /* justify-content: space-between; */
+    /* box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 24px;
+     */
+    border: 1px solid #E3E3E3 !important;
+}
+
+#landing-card-1 {
+    background: #FCF2ED !important;
+    border: 1px solid #F2BBA3 !important;
+    flex-grow: 0;
+}
+
+.country-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.country-flag {
+    width: 56px !important;
+    height: auto !important;
+    border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .country-flag {
+        width: 40px !important;
+    }
+
+    .landing-country-card {
+        margin-bottom: 10px;
+        position: relative;
+        height: fit-content !important;
+        /* Enables movement */
+
+        /* margin-bottom: ; */
+        padding: 12px !important;
+    }
+}

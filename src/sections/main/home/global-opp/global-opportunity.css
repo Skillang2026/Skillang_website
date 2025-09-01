@@ -1,0 +1,14 @@
+.global-opp-container{
+    text-align: center !important;
+}
+
+.global-opp-text-wrap{
+    width: 75% !important;
+}
+
+@media (max-width: 768px) {
+.global-opp-text-wrap{
+    width: 100% !important;
+}
+
+}

@@ -1,0 +1,19 @@
+.nurse-path-card {
+    background-image: url('/assets/images/nursing/nursePathBg.jpg');
+    background-repeat: no-repeat !important;
+    background-position: bottom !important;
+    background-size: cover !important;
+    width: 100% !important;
+    height: 500px !important;
+    /* padding: 24px !important; */
+}
+
+
+
+@media (max-width: 768px) {
+    .nurse-path-card {
+        background-image: url('/assets/images/nursing/nursePathMobileBg.jpg');
+        height: 360px !important;
+        background-size: contain !important;
+    }
+}

@@ -1,0 +1,14 @@
+.loan-eligible-bg {
+  background-image: url("/assets/images/education-loan/eligblitybg.png") !important;
+  background-size: cover !important;
+  background-position: top !important;
+  background-repeat: no-repeat !important;
+  /* height: 700px !important; */
+  padding-top: 30px !important;
+}
+
+@media (max-width: 768px) {
+  .loan-eligible-bg {
+    padding-top: 0px !important;
+  }
+}

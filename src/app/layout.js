@@ -35,6 +35,119 @@ export default function RootLayout({ children }) {
           content="-VICBophpmm2uIkWMB4GMrQg7Yvr3aFeVsoTOvZA33o"
         />
 
+        {/* JSON-LD Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  name: "Skillang Careers Private Limited",
+                  alternateName: "Skillang Careers",
+                  url: "https://www.skillang.com",
+                  logo: "https://www.skillang.com/logo.png",
+                  foundingDate: "2025",
+                  description:
+                    "Skillang Careers Private Limited specializes in nursing recruitment to Germany, as well as study abroad and work abroad opportunities. We help students and professionals build international careers with trusted guidance and placement support.",
+                  slogan:
+                    "Empowering Global Careers in Nursing, Study Abroad & Work Abroad",
+                  address: {
+                    "@type": "PostalAddress",
+                    streetAddress:
+                      "The Executive Zone, 766, Anna Salai, Shakti Tower-1, Thousand Lights",
+                    addressLocality: "Chennai",
+                    addressRegion: "Tamil Nadu",
+                    postalCode: "600002",
+                    addressCountry: "IN",
+                  },
+                  contactPoint: {
+                    "@type": "ContactPoint",
+                    telephone: "+91-7200630336",
+                    contactType: "customer support",
+                    areaServed: ["IN", "DE", "EU"],
+                    availableLanguage: ["English", "German", "Tamil", "Hindi"],
+                  },
+                  sameAs: [
+                    "https://www.instagram.com/skillang_careers/",
+                    "https://in.linkedin.com/company/skillang",
+                    "https://www.facebook.com/people/Skillang/61567723155875/",
+                  ],
+                  knowsAbout: [
+                    "Nursing Recruitment to Germany",
+                    "Study Abroad Programs",
+                    "Work Abroad Opportunities",
+                    "Overseas Education Consulting",
+                  ],
+                  serviceOffered: [
+                    {
+                      "@type": "Service",
+                      name: "Nursing Recruitment to Germany",
+                      serviceType: "Healthcare Recruitment",
+                      areaServed: "Germany",
+                    },
+                    {
+                      "@type": "Service",
+                      name: "Study Abroad",
+                      serviceType: "Overseas Education Consulting",
+                      areaServed: ["Germany", "Europe", "Worldwide"],
+                    },
+                    {
+                      "@type": "Service",
+                      name: "Work Abroad",
+                      serviceType: "International Career Placement",
+                      areaServed: ["Germany", "Europe", "Worldwide"],
+                    },
+                  ],
+                },
+                {
+                  "@type": "LocalBusiness",
+                  name: "Skillang Careers Private Limited",
+                  image: "https://www.skillang.com/logo.png",
+                  url: "https://www.skillang.com",
+                  telephone: "+91-7200630336",
+                  priceRange: "₹₹",
+                  address: {
+                    "@type": "PostalAddress",
+                    streetAddress:
+                      "The Executive Zone, 766, Anna Salai, Shakti Tower-1, Thousand Lights",
+                    addressLocality: "Chennai",
+                    addressRegion: "Tamil Nadu",
+                    postalCode: "600002",
+                    addressCountry: "IN",
+                  },
+                  geo: {
+                    "@type": "GeoCoordinates",
+                    latitude: "13.0604",
+                    longitude: "80.2508",
+                  },
+                  openingHoursSpecification: [
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      dayOfWeek: [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday",
+                        "Saturday",
+                      ],
+                      opens: "09:30",
+                      closes: "18:30",
+                    },
+                  ],
+                  sameAs: [
+                    "https://www.instagram.com/skillang_careers/",
+                    "https://in.linkedin.com/company/skillang",
+                    "https://www.facebook.com/people/Skillang/61567723155875/",
+                  ],
+                },
+              ],
+            }),
+          }}
+        />
+
         {/* Google Analytics */}
         <script
           async
